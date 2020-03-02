@@ -1,4 +1,13 @@
-# Existing solutions
+# Solutions in this repo
+
+## dart.json
+
+A [TextMate](https://macromates.com/manual/en/language_grammars) language grammer for Dart.
+
+* Used by:
+  * The [DartCode](https://github.com/Dart-Code/Dart-Code) Dart plugin for VS Code.
+
+# Other solutions
 
 ## highlight.js
 
