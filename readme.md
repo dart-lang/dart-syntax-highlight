@@ -11,7 +11,7 @@ A [TextMate](https://macromates.com/manual/en/language_grammars) language gramme
 
 ## highlight.js
 
-[highlight.js](https://highlightjs.org/) is web based syntax highlighter that can syntax highlight &lt;code&gt; references on a web page.
+[highlight.js](https://highlightjs.org/) is web based syntax highlighter that can syntax highlight `<code>` references on a web page.
 
 * [Dart-specific code](https://github.com/highlightjs/highlight.js/blob/master/src/languages/dart.js)
 * Used by:
