@@ -2,10 +2,11 @@
 
 ## dart.json
 
-A [TextMate](https://macromates.com/manual/en/language_grammars) language grammer for Dart.
+A [TextMate](https://macromates.com/manual/en/language_grammars) language grammar for Dart.
 
 * Used by:
   * The [DartCode](https://github.com/Dart-Code/Dart-Code) Dart plugin for VS Code.
+  * [GitHub](https://github.com) via [Linguist](https://github.com/github/linguist).
 
 # Other solutions
 
