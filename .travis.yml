@@ -1,0 +1,12 @@
+language: dart
+
+dart:
+  - dev
+
+script:
+  - dartanalyzer --fatal-warnings tool/
+  - dart tool/verify.dart
+
+# Only building on selected branches means that we don't run two builds for each pull request.
+branches:
+  only: [master]
