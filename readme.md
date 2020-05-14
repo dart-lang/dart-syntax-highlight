@@ -1,5 +1,7 @@
 # Solutions in this repo
 
+![](https://github.com/dart-lang/dart-syntax-highlight/workflows/Dart/badge.svg)
+
 ## dart.json
 
 A [TextMate](https://macromates.com/manual/en/language_grammars) language grammar for Dart.
