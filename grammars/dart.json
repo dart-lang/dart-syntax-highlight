@@ -1,10 +1,13 @@
 {
+	"name": "Dart",
 	"fileTypes": [
 		"dart"
 	],
+	"scopeName": "source.dart",
+
 	"foldingStartMarker": "\\{\\s*$",
 	"foldingStopMarker": "^\\s*\\}",
-	"name": "Dart",
+
 	"patterns": [
 		{
 			"name": "meta.preprocessor.script.dart",
@@ -56,6 +59,7 @@
 			"include": "#strings"
 		}
 	],
+
 	"repository": {
 		"dartdoc": {
 			"patterns": [
@@ -433,6 +437,5 @@
 				}
 			]
 		}
-	},
-	"scopeName": "source.dart"
+	}
 }
