@@ -35,8 +35,8 @@
 					"include": "#comments"
 				},
 				{
-					"match": "\\b(as|show|hide)\\b",
-					"name": "keyword.other.import.dart"
+					"name": "keyword.other.import.dart",
+					"match": "\\b(as|show|hide)\\b"
 				}
 			]
 		},
@@ -80,9 +80,9 @@
 					}
 				},
 				{
+					"contentName": "variable.other.source.dart",
 					"begin": "```.*?$",
-					"end": "```",
-					"contentName": "variable.other.source.dart"
+					"end": "```"
 				},
 				{
 					"match": "(`.*?`)",
