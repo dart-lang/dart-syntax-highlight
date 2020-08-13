@@ -19,8 +19,8 @@ jobs:
     - name: Print Dart version
       run: dart --version
     - name: Install dependencies
-      run: pub get
+      run: dart pub get
     - name: Analyze
-      run: dartanalyzer --fatal-warnings tool/
+      run: dart analyze
     - name: Verify grammar file
-      run: dart tool/verify.dart
+      run: dart run tool/verify.dart
