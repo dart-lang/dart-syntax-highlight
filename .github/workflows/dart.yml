@@ -12,10 +12,12 @@ jobs:
     runs-on: ubuntu-latest
 
     container:
-      image:  google/dart:latest
+      image:  google/dart:dev
 
     steps:
     - uses: actions/checkout@v2
+    - name: Print Dart version
+      run: dart --version
     - name: Install dependencies
       run: pub get
     - name: Analyze
