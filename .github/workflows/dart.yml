@@ -1,6 +1,9 @@
 name: Dart
 
 on:
+  schedule:
+    # “At 00:00 (UTC) on Sunday.”
+    - cron: '0 0 * * 0'
   push:
     branches: [ master ]
   pull_request:
