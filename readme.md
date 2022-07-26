@@ -6,11 +6,17 @@
 
 A [TextMate](https://macromates.com/manual/en/language_grammars) language grammar for Dart.
 
-* Used by:
-  * The [Dart-Code](https://github.com/Dart-Code/Dart-Code) Dart extension for VS Code.
-  * VS Code's [built-in Dart](https://github.com/microsoft/vscode/tree/main/extensions/dart) basic language support.
-  * [Dart & Flutter DevTools](https://github.com/flutter/devtools).
-  * [GitHub](https://github.com) via [Linguist](https://github.com/github/linguist).
+Used by:
+
+* The [Dart-Code](https://github.com/Dart-Code/Dart-Code) Dart extension for VS Code.
+* VS Code's [built-in Dart](https://github.com/microsoft/vscode/tree/main/extensions/dart) basic language support.
+* [Dart & Flutter DevTools](https://github.com/flutter/devtools).
+* [GitHub](https://github.com) via [Linguist](https://github.com/github/linguist).
+
+When updating the grammar, consider raising issues (or PRs) to update the following files which do not have automated updates from this grammar:
+
+* [Dart-Code/Dart-Code/syntaxes/dart.json](https://github.com/Dart-Code/Dart-Code/blob/master/syntaxes/dart.json)
+* [flutter/devtools/packages/devtools_app/assets/dart_syntax.json](https://github.com/flutter/devtools/blob/master/packages/devtools_app/assets/dart_syntax.json)
 
 # Other solutions
 
