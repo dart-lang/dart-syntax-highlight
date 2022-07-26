@@ -2,12 +2,14 @@
 
 ![](https://github.com/dart-lang/dart-syntax-highlight/workflows/Dart/badge.svg)
 
-## dart.json
+## grammars/dart.json
 
 A [TextMate](https://macromates.com/manual/en/language_grammars) language grammar for Dart.
 
 * Used by:
-  * The [DartCode](https://github.com/Dart-Code/Dart-Code) Dart plugin for VS Code.
+  * The [Dart-Code](https://github.com/Dart-Code/Dart-Code) Dart extension for VS Code.
+  * VS Code's [built-in Dart](https://github.com/microsoft/vscode/tree/main/extensions/dart) basic language support.
+  * [Dart & Flutter DevTools](https://github.com/flutter/devtools).
   * [GitHub](https://github.com) via [Linguist](https://github.com/github/linguist).
 
 # Other solutions
