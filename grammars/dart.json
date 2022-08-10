@@ -1,6 +1,6 @@
 {
 	"name": "Dart",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"fileTypes": [
 		"dart"
 	],
@@ -234,7 +234,15 @@
 		"class-identifier": {
 			"patterns": [
 				{
-					"match": "(?<![a-zA-Z0-9_$])([_$]*[A-Z][a-zA-Z0-9_$]*(<(?:[a-zA-Z0-9_$<>?]|,\\s*|\\s+extends\\s+)+>)?|bool\\b|num\\b|int\\b|double\\b|dynamic\\b|(void)\\b)",
+					"name": "storage.type.primitive.dart",
+					"match": "\\bvoid\\b"
+				},
+				{
+					"name": "support.class.dart",
+					"match": "\\b(bool|num|int|double|dynamic)\\b"
+				},
+				{
+					"match": "\\b([_$]*[A-Z][a-zA-Z0-9_$]*)(<(?:[a-zA-Z0-9_$<>?]|,\\s*|\\s+extends\\s+)+>)?",
 					"captures": {
 						"1": {
 							"name": "support.class.dart"
@@ -245,9 +253,6 @@
 									"include": "#type-args"
 								}
 							]
-						},
-						"3": {
-							"name": "storage.type.primitive.dart"
 						}
 					}
 				}
