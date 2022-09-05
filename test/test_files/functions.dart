@@ -40,3 +40,5 @@ Stream<String> asyncYieldStar() async* {
   await Future.delayed(const Duration(seconds: 1));
   yield* asyncYield();
 }
+
+T foo<T extends String>(String a) => throw UnimplementedError();

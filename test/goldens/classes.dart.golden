@@ -121,3 +121,55 @@
 #          ^^^^^^^^^^^^^^^ support.class.dart
 #                          ^^ keyword.control.catch-exception.dart
 #                             ^^^^^^ support.class.dart
+>
+>extension StringListExtension on List<String> {}
+#^^^^^^^^^ keyword.declaration.dart
+#          ^^^^^^^^^^^^^^^^^^^ support.class.dart
+#                              ^^ keyword.control.catch-exception.dart
+#                                 ^^^^ support.class.dart
+#                                     ^ other.source.dart
+#                                      ^^^^^^ support.class.dart
+#                                            ^ other.source.dart
+>
+>extension<T extends String> on T {}
+#^^^^^^^^^ keyword.declaration.dart
+#         ^ keyword.operator.comparison.dart
+#          ^ support.class.dart
+#            ^^^^^^^ keyword.declaration.dart
+#                    ^^^^^^ support.class.dart
+#                          ^ keyword.operator.comparison.dart
+#                            ^^ keyword.control.catch-exception.dart
+#                               ^ support.class.dart
+>
+>class my_lowercase_class {
+#^^^^^ keyword.declaration.dart
+>  my_lowercase_class? foo() => null;
+#                    ^ keyword.operator.ternary.dart
+#                      ^^^ entity.name.function.dart
+#                            ^^ keyword.operator.closure.dart
+#                               ^^^^ constant.language.dart
+#                                   ^ punctuation.terminator.dart
+>  List<my_lowercase_class>? bar() => null;
+#  ^^^^ support.class.dart
+#      ^ other.source.dart
+#                         ^ other.source.dart
+#                          ^ keyword.operator.ternary.dart
+#                            ^^^ entity.name.function.dart
+#                                  ^^ keyword.operator.closure.dart
+#                                     ^^^^ constant.language.dart
+#                                         ^ punctuation.terminator.dart
+>}
+>
+>class A1<T> {}
+#^^^^^ keyword.declaration.dart
+#      ^^ support.class.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#          ^ other.source.dart
+>
+>class A2<T> extends A1<T> {}
+#^^^^^ keyword.declaration.dart
+#      ^^ support.class.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#          ^ other.source.dart

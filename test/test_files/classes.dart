@@ -39,3 +39,16 @@ mixin MyMixin2 on Class1 {}
 extension on String {}
 
 extension StringExtension on String {}
+
+extension StringListExtension on List<String> {}
+
+extension<T extends String> on T {}
+
+class my_lowercase_class {
+  my_lowercase_class? foo() => null;
+  List<my_lowercase_class>? bar() => null;
+}
+
+class A1<T> {}
+
+class A2<T> extends A1<T> {}

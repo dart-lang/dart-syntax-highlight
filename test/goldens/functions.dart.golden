@@ -150,3 +150,17 @@
 #         ^^^^^^^^^^ entity.name.function.dart
 #                     ^ punctuation.terminator.dart
 >}
+>
+>T foo<T extends String>(String a) => throw UnimplementedError();
+#^ support.class.dart
+#  ^^^ entity.name.function.dart
+#     ^ other.source.dart
+#      ^ support.class.dart
+#        ^^^^^^^ keyword.declaration.dart
+#                ^^^^^^ support.class.dart
+#                      ^ other.source.dart
+#                        ^^^^^^ support.class.dart
+#                                  ^^ keyword.operator.closure.dart
+#                                     ^^^^^ keyword.control.catch-exception.dart
+#                                           ^^^^^^^^^^^^^^^^^^ support.class.dart
+#                                                               ^ punctuation.terminator.dart
