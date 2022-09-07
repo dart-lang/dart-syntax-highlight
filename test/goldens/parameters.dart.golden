@@ -1,0 +1,46 @@
+>void f1() {}
+#^^^^ storage.type.primitive.dart
+#     ^^ entity.name.function.dart
+>void f2(String a) {}
+#^^^^ storage.type.primitive.dart
+#     ^^ entity.name.function.dart
+#        ^^^^^^ support.class.dart
+>void f3(String a, [int? b]) {}
+#^^^^ storage.type.primitive.dart
+#     ^^ entity.name.function.dart
+#        ^^^^^^ support.class.dart
+#                ^ punctuation.comma.dart
+#                   ^^^ support.class.dart
+#                      ^ keyword.operator.ternary.dart
+>void f4(String a, {int? b}) {}
+#^^^^ storage.type.primitive.dart
+#     ^^ entity.name.function.dart
+#        ^^^^^^ support.class.dart
+#                ^ punctuation.comma.dart
+#                   ^^^ support.class.dart
+#                      ^ keyword.operator.ternary.dart
+>void f5(String a, {required int b}) {}
+#^^^^ storage.type.primitive.dart
+#     ^^ entity.name.function.dart
+#        ^^^^^^ support.class.dart
+#                ^ punctuation.comma.dart
+#                   ^^^^^^^^ storage.modifier.dart
+#                            ^^^ support.class.dart
+>void f6(
+#^^^^ storage.type.primitive.dart
+#     ^^ entity.name.function.dart
+>  String a,
+#  ^^^^^^ support.class.dart
+#          ^ punctuation.comma.dart
+>  List<Map<String, String>> Function(String a) b,
+#  ^^^^ support.class.dart
+#      ^ other.source.dart
+#       ^^^ support.class.dart
+#          ^ other.source.dart
+#           ^^^^^^ support.class.dart
+#                   ^^^^^^ support.class.dart
+#                         ^ other.source.dart
+#                            ^^^^^^^^ support.class.dart
+#                                     ^^^^^^ support.class.dart
+#                                                ^ punctuation.comma.dart
+>) {}

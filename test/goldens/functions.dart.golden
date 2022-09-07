@@ -1,0 +1,166 @@
+>// Copyright 2022 The Chromium Authors. All rights reserved.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// Use of this source code is governed by a BSD-style license that can be
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>void simplePrint() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^ entity.name.function.dart
+>  print('hello world');
+#  ^^^^^ entity.name.function.dart
+#        ^^^^^^^^^^^^^ string.interpolated.single.dart
+#                      ^ punctuation.terminator.dart
+>}
+>
+>noReturnValue() {
+#^^^^^^^^^^^^^ entity.name.function.dart
+>  print('hello world');
+#  ^^^^^ entity.name.function.dart
+#        ^^^^^^^^^^^^^ string.interpolated.single.dart
+#                      ^ punctuation.terminator.dart
+>}
+>
+>void returns() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^ entity.name.function.dart
+>  return;
+#  ^^^^^^ keyword.control.dart
+#        ^ punctuation.terminator.dart
+>}
+>
+>Future<void> asyncPrint() async {
+#^^^^^^ support.class.dart
+#      ^ other.source.dart
+#       ^^^^ storage.type.primitive.dart
+#           ^ other.source.dart
+#             ^^^^^^^^^^ entity.name.function.dart
+#                          ^^^^^ keyword.control.dart
+>  await Future.delayed(const Duration(seconds: 1));
+#  ^^^^^ keyword.control.dart
+#        ^^^^^^ support.class.dart
+#              ^ punctuation.dot.dart
+#               ^^^^^^^ entity.name.function.dart
+#                       ^^^^^ storage.modifier.dart
+#                             ^^^^^^^^ support.class.dart
+#                                             ^ keyword.operator.ternary.dart
+#                                               ^ constant.numeric.dart
+#                                                  ^ punctuation.terminator.dart
+>  print('hello world');
+#  ^^^^^ entity.name.function.dart
+#        ^^^^^^^^^^^^^ string.interpolated.single.dart
+#                      ^ punctuation.terminator.dart
+>}
+>
+>Map<T1, List<T2>> nestedGenerics<T1, T2 extends String>() {
+#^^^ support.class.dart
+#   ^ other.source.dart
+#    ^^ support.class.dart
+#        ^^^^ support.class.dart
+#            ^ other.source.dart
+#             ^^ support.class.dart
+#               ^ other.source.dart
+#                  ^^^^^^^^^^^^^^ entity.name.function.dart
+#                                ^ other.source.dart
+#                                 ^^ support.class.dart
+#                                     ^^ support.class.dart
+#                                        ^^^^^^^ keyword.declaration.dart
+#                                                ^^^^^^ support.class.dart
+#                                                      ^ other.source.dart
+>  return {};
+#  ^^^^^^ keyword.control.dart
+#           ^ punctuation.terminator.dart
+>}
+>
+>Iterable<String> syncYield() sync* {
+#^^^^^^^^ support.class.dart
+#        ^ other.source.dart
+#         ^^^^^^ support.class.dart
+#               ^ other.source.dart
+#                 ^^^^^^^^^ entity.name.function.dart
+#                             ^^^^ keyword.control.dart
+#                                 ^ keyword.operator.arithmetic.dart
+>  yield '';
+#  ^^^^^ keyword.control.dart
+#        ^^ string.interpolated.single.dart
+#          ^ punctuation.terminator.dart
+>}
+>
+>Iterable<String> syncYieldStar() sync* {
+#^^^^^^^^ support.class.dart
+#        ^ other.source.dart
+#         ^^^^^^ support.class.dart
+#               ^ other.source.dart
+#                 ^^^^^^^^^^^^^ entity.name.function.dart
+#                                 ^^^^ keyword.control.dart
+#                                     ^ keyword.operator.arithmetic.dart
+>  yield* syncYield();
+#  ^^^^^ keyword.control.dart
+#       ^ keyword.operator.arithmetic.dart
+#         ^^^^^^^^^ entity.name.function.dart
+#                    ^ punctuation.terminator.dart
+>}
+>
+>Stream<String> asyncYield() async* {
+#^^^^^^ support.class.dart
+#      ^ other.source.dart
+#       ^^^^^^ support.class.dart
+#             ^ other.source.dart
+#               ^^^^^^^^^^ entity.name.function.dart
+#                            ^^^^^ keyword.control.dart
+#                                 ^ keyword.operator.arithmetic.dart
+>  await Future.delayed(const Duration(seconds: 1));
+#  ^^^^^ keyword.control.dart
+#        ^^^^^^ support.class.dart
+#              ^ punctuation.dot.dart
+#               ^^^^^^^ entity.name.function.dart
+#                       ^^^^^ storage.modifier.dart
+#                             ^^^^^^^^ support.class.dart
+#                                             ^ keyword.operator.ternary.dart
+#                                               ^ constant.numeric.dart
+#                                                  ^ punctuation.terminator.dart
+>  yield '';
+#  ^^^^^ keyword.control.dart
+#        ^^ string.interpolated.single.dart
+#          ^ punctuation.terminator.dart
+>}
+>
+>Stream<String> asyncYieldStar() async* {
+#^^^^^^ support.class.dart
+#      ^ other.source.dart
+#       ^^^^^^ support.class.dart
+#             ^ other.source.dart
+#               ^^^^^^^^^^^^^^ entity.name.function.dart
+#                                ^^^^^ keyword.control.dart
+#                                     ^ keyword.operator.arithmetic.dart
+>  await Future.delayed(const Duration(seconds: 1));
+#  ^^^^^ keyword.control.dart
+#        ^^^^^^ support.class.dart
+#              ^ punctuation.dot.dart
+#               ^^^^^^^ entity.name.function.dart
+#                       ^^^^^ storage.modifier.dart
+#                             ^^^^^^^^ support.class.dart
+#                                             ^ keyword.operator.ternary.dart
+#                                               ^ constant.numeric.dart
+#                                                  ^ punctuation.terminator.dart
+>  yield* asyncYield();
+#  ^^^^^ keyword.control.dart
+#       ^ keyword.operator.arithmetic.dart
+#         ^^^^^^^^^^ entity.name.function.dart
+#                     ^ punctuation.terminator.dart
+>}
+>
+>T foo<T extends String>(String a) => throw UnimplementedError();
+#^ support.class.dart
+#  ^^^ entity.name.function.dart
+#     ^ other.source.dart
+#      ^ support.class.dart
+#        ^^^^^^^ keyword.declaration.dart
+#                ^^^^^^ support.class.dart
+#                      ^ other.source.dart
+#                        ^^^^^^ support.class.dart
+#                                  ^^ keyword.operator.closure.dart
+#                                     ^^^^^ keyword.control.catch-exception.dart
+#                                           ^^^^^^^^^^^^^^^^^^ support.class.dart
+#                                                               ^ punctuation.terminator.dart

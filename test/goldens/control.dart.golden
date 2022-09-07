@@ -1,0 +1,118 @@
+>// Copyright 2022 The Chromium Authors. All rights reserved.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// Use of this source code is governed by a BSD-style license that can be
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>void err() {
+#^^^^ storage.type.primitive.dart
+#     ^^^ entity.name.function.dart
+>  try {
+#  ^^^ keyword.control.catch-exception.dart
+>    throw '';
+#    ^^^^^ keyword.control.catch-exception.dart
+#          ^^ string.interpolated.single.dart
+#            ^ punctuation.terminator.dart
+>  } on ArgumentError {
+#    ^^ keyword.control.catch-exception.dart
+#       ^^^^^^^^^^^^^ support.class.dart
+>    rethrow;
+#    ^^^^^^^ keyword.control.catch-exception.dart
+#           ^ punctuation.terminator.dart
+>  } catch (e) {
+#    ^^^^^ keyword.control.catch-exception.dart
+>    print('e');
+#    ^^^^^ entity.name.function.dart
+#          ^^^ string.interpolated.single.dart
+#              ^ punctuation.terminator.dart
+>  }
+>}
+>
+>void loops() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^ entity.name.function.dart
+>  while (1 > 2) {
+#  ^^^^^ keyword.control.dart
+#         ^ constant.numeric.dart
+#           ^ keyword.operator.comparison.dart
+#             ^ constant.numeric.dart
+>    if (3 > 4) {
+#    ^^ keyword.control.dart
+#        ^ constant.numeric.dart
+#          ^ keyword.operator.comparison.dart
+#            ^ constant.numeric.dart
+>      continue;
+#      ^^^^^^^^ keyword.control.dart
+#              ^ punctuation.terminator.dart
+>    } else {
+#      ^^^^ keyword.control.dart
+>      break;
+#      ^^^^^ keyword.control.dart
+#           ^ punctuation.terminator.dart
+>    }
+>    return;
+#    ^^^^^^ keyword.control.dart
+#          ^ punctuation.terminator.dart
+>  }
+>
+>  do {
+#  ^^ keyword.control.dart
+>    print('');
+#    ^^^^^ entity.name.function.dart
+#          ^^ string.interpolated.single.dart
+#             ^ punctuation.terminator.dart
+>  } while (1 > 2);
+#    ^^^^^ keyword.control.dart
+#           ^ constant.numeric.dart
+#             ^ keyword.operator.comparison.dart
+#               ^ constant.numeric.dart
+#                 ^ punctuation.terminator.dart
+>}
+>
+>void switches() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^ entity.name.function.dart
+>  Object? i = 1;
+#  ^^^^^^ support.class.dart
+#        ^ keyword.operator.ternary.dart
+#            ^ keyword.operator.assignment.dart
+#              ^ constant.numeric.dart
+#               ^ punctuation.terminator.dart
+>  switch (i as int) {
+#  ^^^^^^ keyword.control.dart
+#            ^^ keyword.cast.dart
+#               ^^^ support.class.dart
+>    case 1:
+#    ^^^^ keyword.control.dart
+#         ^ constant.numeric.dart
+#          ^ keyword.operator.ternary.dart
+>      break;
+#      ^^^^^ keyword.control.dart
+#           ^ punctuation.terminator.dart
+>    default:
+#    ^^^^^^^ keyword.control.dart
+#           ^ keyword.operator.ternary.dart
+>      return;
+#      ^^^^^^ keyword.control.dart
+#            ^ punctuation.terminator.dart
+>  }
+>}
+>
+>void conditions() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^ entity.name.function.dart
+>  if (1 > 2) {
+#  ^^ keyword.control.dart
+#      ^ constant.numeric.dart
+#        ^ keyword.operator.comparison.dart
+#          ^ constant.numeric.dart
+>  } else if (3 > 4) {
+#    ^^^^ keyword.control.dart
+#         ^^ keyword.control.dart
+#             ^ constant.numeric.dart
+#               ^ keyword.operator.comparison.dart
+#                 ^ constant.numeric.dart
+>  } else {}
+#    ^^^^ keyword.control.dart
+>}

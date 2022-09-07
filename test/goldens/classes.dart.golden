@@ -1,0 +1,175 @@
+>// Copyright 2022 The Chromium Authors. All rights reserved.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// Use of this source code is governed by a BSD-style license that can be
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>class Class1 {}
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^ support.class.dart
+>
+>abstract class Class2 implements Class1 {
+#^^^^^^^^ keyword.declaration.dart
+#         ^^^^^ keyword.declaration.dart
+#               ^^^^^^ support.class.dart
+#                      ^^^^^^^^^^ keyword.declaration.dart
+#                                 ^^^^^^ support.class.dart
+>  String get a;
+#  ^^^^^^ support.class.dart
+#         ^^^ keyword.declaration.dart
+#              ^ punctuation.terminator.dart
+>  set a(String value);
+#  ^^^ keyword.declaration.dart
+#      ^ entity.name.function.dart
+#        ^^^^^^ support.class.dart
+#                     ^ punctuation.terminator.dart
+>}
+>
+>class Class3 extends Class2 with MyMixin {
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^ support.class.dart
+#             ^^^^^^^ keyword.declaration.dart
+#                     ^^^^^^ support.class.dart
+#                            ^^^^ keyword.declaration.dart
+#                                 ^^^^^^^ support.class.dart
+>  @override
+#  ^^^^^^^^^ storage.type.annotation.dart
+>  String get a => '';
+#  ^^^^^^ support.class.dart
+#         ^^^ keyword.declaration.dart
+#             ^ entity.name.function.dart
+#                  ^^ string.interpolated.single.dart
+#                    ^ punctuation.terminator.dart
+>
+>  @override
+#  ^^^^^^^^^ storage.type.annotation.dart
+>  set a(String value) {}
+#  ^^^ keyword.declaration.dart
+#      ^ entity.name.function.dart
+#        ^^^^^^ support.class.dart
+>
+>  void method() {}
+#  ^^^^ storage.type.primitive.dart
+#       ^^^^^^ entity.name.function.dart
+>}
+>
+>class Class4<T extends Class2> implements Class1 {}
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^ support.class.dart
+#            ^ other.source.dart
+#             ^ support.class.dart
+#               ^^^^^^^ keyword.declaration.dart
+#                       ^^^^^^ support.class.dart
+#                             ^ other.source.dart
+#                               ^^^^^^^^^^ keyword.declaration.dart
+#                                          ^^^^^^ support.class.dart
+>
+>class MyClass {
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^ support.class.dart
+>  void method1() {}
+#  ^^^^ storage.type.primitive.dart
+#       ^^^^^^^ entity.name.function.dart
+>  void Method2() {}
+#  ^^^^ storage.type.primitive.dart
+#       ^^^^^^^ support.class.dart
+>  void get() {}
+#  ^^^^ storage.type.primitive.dart
+#       ^^^ keyword.declaration.dart
+>  void set() {}
+#  ^^^^ storage.type.primitive.dart
+#       ^^^ keyword.declaration.dart
+>
+>  String? _foo;
+#  ^^^^^^ support.class.dart
+#        ^ keyword.operator.ternary.dart
+#              ^ punctuation.terminator.dart
+>  String? get foo => _foo;
+#  ^^^^^^ support.class.dart
+#        ^ keyword.operator.ternary.dart
+#          ^^^ keyword.declaration.dart
+#              ^^^ entity.name.function.dart
+#                         ^ punctuation.terminator.dart
+>  set foo(String? value) => _foo = value;
+#  ^^^ keyword.declaration.dart
+#      ^^^ entity.name.function.dart
+#          ^^^^^^ support.class.dart
+#                ^ keyword.operator.ternary.dart
+#                         ^^ keyword.operator.closure.dart
+#                                 ^ keyword.operator.assignment.dart
+#                                        ^ punctuation.terminator.dart
+>}
+>
+>mixin MyMixin {}
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^ support.class.dart
+>
+>mixin MyMixin2 on Class1 {}
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^^ support.class.dart
+#               ^^ keyword.control.catch-exception.dart
+#                  ^^^^^^ support.class.dart
+>
+>extension on String {}
+#^^^^^^^^^ keyword.declaration.dart
+#          ^^ keyword.control.catch-exception.dart
+#             ^^^^^^ support.class.dart
+>
+>extension StringExtension on String {}
+#^^^^^^^^^ keyword.declaration.dart
+#          ^^^^^^^^^^^^^^^ support.class.dart
+#                          ^^ keyword.control.catch-exception.dart
+#                             ^^^^^^ support.class.dart
+>
+>extension StringListExtension on List<String> {}
+#^^^^^^^^^ keyword.declaration.dart
+#          ^^^^^^^^^^^^^^^^^^^ support.class.dart
+#                              ^^ keyword.control.catch-exception.dart
+#                                 ^^^^ support.class.dart
+#                                     ^ other.source.dart
+#                                      ^^^^^^ support.class.dart
+#                                            ^ other.source.dart
+>
+>extension<T extends String> on T {}
+#^^^^^^^^^ keyword.declaration.dart
+#         ^ keyword.operator.comparison.dart
+#          ^ support.class.dart
+#            ^^^^^^^ keyword.declaration.dart
+#                    ^^^^^^ support.class.dart
+#                          ^ keyword.operator.comparison.dart
+#                            ^^ keyword.control.catch-exception.dart
+#                               ^ support.class.dart
+>
+>class my_lowercase_class {
+#^^^^^ keyword.declaration.dart
+>  my_lowercase_class? foo() => null;
+#                    ^ keyword.operator.ternary.dart
+#                      ^^^ entity.name.function.dart
+#                            ^^ keyword.operator.closure.dart
+#                               ^^^^ constant.language.dart
+#                                   ^ punctuation.terminator.dart
+>  List<my_lowercase_class>? bar() => null;
+#  ^^^^ support.class.dart
+#      ^ other.source.dart
+#                         ^ other.source.dart
+#                          ^ keyword.operator.ternary.dart
+#                            ^^^ entity.name.function.dart
+#                                  ^^ keyword.operator.closure.dart
+#                                     ^^^^ constant.language.dart
+#                                         ^ punctuation.terminator.dart
+>}
+>
+>class A1<T> {}
+#^^^^^ keyword.declaration.dart
+#      ^^ support.class.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#          ^ other.source.dart
+>
+>class A2<T> extends A1<T> {}
+#^^^^^ keyword.declaration.dart
+#      ^^ support.class.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#          ^ other.source.dart

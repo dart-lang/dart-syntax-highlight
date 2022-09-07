@@ -1,0 +1,72 @@
+>// Copyright 2022 The Chromium Authors. All rights reserved.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// Use of this source code is governed by a BSD-style license that can be
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>import 'dart:io';
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                ^ meta.declaration.dart punctuation.terminator.dart
+>import 'dart:io' as io;
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                ^ meta.declaration.dart
+#                 ^^ meta.declaration.dart keyword.other.import.dart
+#                   ^^^ meta.declaration.dart
+#                      ^ meta.declaration.dart punctuation.terminator.dart
+>import 'dart:io' show File;
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                ^ meta.declaration.dart
+#                 ^^^^ meta.declaration.dart keyword.other.import.dart
+#                     ^^^^^ meta.declaration.dart
+#                          ^ meta.declaration.dart punctuation.terminator.dart
+>import 'dart:io' hide Directory;
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                ^ meta.declaration.dart
+#                 ^^^^ meta.declaration.dart keyword.other.import.dart
+#                     ^^^^^^^^^^ meta.declaration.dart
+#                               ^ meta.declaration.dart punctuation.terminator.dart
+>import 'dart:io' show File hide Directory;
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                ^ meta.declaration.dart
+#                 ^^^^ meta.declaration.dart keyword.other.import.dart
+#                     ^^^^^^ meta.declaration.dart
+#                           ^^^^ meta.declaration.dart keyword.other.import.dart
+#                               ^^^^^^^^^^ meta.declaration.dart
+#                                         ^ meta.declaration.dart punctuation.terminator.dart
+>import 'dart:io' as io show Directory;
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                ^ meta.declaration.dart
+#                 ^^ meta.declaration.dart keyword.other.import.dart
+#                   ^^^^ meta.declaration.dart
+#                       ^^^^ meta.declaration.dart keyword.other.import.dart
+#                           ^^^^^^^^^^ meta.declaration.dart
+#                                     ^ meta.declaration.dart punctuation.terminator.dart
+>import 'dart:async' deferred as deferredAsync show Future;
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                   ^^^^^^^^^^ meta.declaration.dart
+#                             ^^ meta.declaration.dart keyword.other.import.dart
+#                               ^^^^^^^^^^^^^^^ meta.declaration.dart
+#                                              ^^^^ meta.declaration.dart keyword.other.import.dart
+#                                                  ^^^^^^^ meta.declaration.dart
+#                                                         ^ meta.declaration.dart punctuation.terminator.dart
+>
+>export 'comments.dart';
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                      ^ meta.declaration.dart punctuation.terminator.dart
