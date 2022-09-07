@@ -9,6 +9,9 @@ on:
   pull_request:
     branches: [ master ]
 
+env:
+  PUB_ENVIRONMENT: bot.github
+
 jobs:
   build:
 
@@ -27,3 +30,5 @@ jobs:
       run: dart analyze
     - name: Verify grammar file
       run: dart run tool/verify.dart
+    - name: Test
+      run: dart test
