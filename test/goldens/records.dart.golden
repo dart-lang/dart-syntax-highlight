@@ -1,0 +1,70 @@
+>// Copyright 2022 The Chromium Authors. All rights reserved.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// Use of this source code is governed by a BSD-style license that can be
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>(int aaa, int, {String? ccc})? ddd;
+# ^^^ support.class.dart
+#        ^ punctuation.comma.dart
+#          ^^^ support.class.dart
+#             ^ punctuation.comma.dart
+#                ^^^^^^ support.class.dart
+#                      ^ keyword.operator.ternary.dart
+#                             ^ keyword.operator.ternary.dart
+#                                  ^ punctuation.terminator.dart
+>
+>(int aaa, int bbb) foo((String aaaa, String? bbbb) ccc) {
+# ^^^ support.class.dart
+#        ^ punctuation.comma.dart
+#          ^^^ support.class.dart
+#                   ^^^ entity.name.function.dart
+#                        ^^^^^^ support.class.dart
+#                                   ^ punctuation.comma.dart
+#                                     ^^^^^^ support.class.dart
+#                                           ^ keyword.operator.ternary.dart
+>  final ddd = (1, 2, eee: '');
+#  ^^^^^ storage.modifier.dart
+#            ^ keyword.operator.assignment.dart
+#               ^ constant.numeric.dart
+#                ^ punctuation.comma.dart
+#                  ^ constant.numeric.dart
+#                   ^ punctuation.comma.dart
+#                        ^ keyword.operator.ternary.dart
+#                          ^^ string.interpolated.single.dart
+#                             ^ punctuation.terminator.dart
+>  return (1, 2);
+#  ^^^^^^ keyword.control.dart
+#          ^ constant.numeric.dart
+#           ^ punctuation.comma.dart
+#             ^ constant.numeric.dart
+#               ^ punctuation.terminator.dart
+>}
+>
+>class R {
+#^^^^^ keyword.declaration.dart
+#      ^ support.class.dart
+>  (int aaa, int, {String? ccc})? get ddd => null;
+#   ^^^ support.class.dart
+#          ^ punctuation.comma.dart
+#            ^^^ support.class.dart
+#               ^ punctuation.comma.dart
+#                  ^^^^^^ support.class.dart
+#                        ^ keyword.operator.ternary.dart
+#                               ^ keyword.operator.ternary.dart
+#                                 ^^^ keyword.declaration.dart
+#                                     ^^^ entity.name.function.dart
+#                                            ^^^^ constant.language.dart
+#                                                ^ punctuation.terminator.dart
+>  final eee = (1, 2, eee: '');
+#  ^^^^^ storage.modifier.dart
+#            ^ keyword.operator.assignment.dart
+#               ^ constant.numeric.dart
+#                ^ punctuation.comma.dart
+#                  ^ constant.numeric.dart
+#                   ^ punctuation.comma.dart
+#                        ^ keyword.operator.ternary.dart
+#                          ^^ string.interpolated.single.dart
+#                             ^ punctuation.terminator.dart
+>}
