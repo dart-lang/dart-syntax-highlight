@@ -5,7 +5,19 @@
 >// found in the LICENSE file.
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
->(int aaa, int, {String? ccc})? ddd;
+>(int, int)? aaa;
+# ^^^ support.class.dart
+#    ^ punctuation.comma.dart
+#      ^^^ support.class.dart
+#          ^ keyword.operator.ternary.dart
+#               ^ punctuation.terminator.dart
+>(int aaa, int bbb)? bbb;
+# ^^^ support.class.dart
+#        ^ punctuation.comma.dart
+#          ^^^ support.class.dart
+#                  ^ keyword.operator.ternary.dart
+#                       ^ punctuation.terminator.dart
+>(int aaa, int, {String? ccc})? ccc;
 # ^^^ support.class.dart
 #        ^ punctuation.comma.dart
 #          ^^^ support.class.dart
@@ -14,16 +26,26 @@
 #                      ^ keyword.operator.ternary.dart
 #                             ^ keyword.operator.ternary.dart
 #                                  ^ punctuation.terminator.dart
+>(int, (int, (int, String)))? ddd;
+# ^^^ support.class.dart
+#    ^ punctuation.comma.dart
+#       ^^^ support.class.dart
+#          ^ punctuation.comma.dart
+#             ^^^ support.class.dart
+#                ^ punctuation.comma.dart
+#                  ^^^^^^ support.class.dart
+#                           ^ keyword.operator.ternary.dart
+#                                ^ punctuation.terminator.dart
 >
->(int aaa, int bbb) foo((String aaaa, String? bbbb) ccc) {
+>(int aaa, int bbb) func((String aaaa, String? bbbb) ccc) {
 # ^^^ support.class.dart
 #        ^ punctuation.comma.dart
 #          ^^^ support.class.dart
-#                   ^^^ entity.name.function.dart
-#                        ^^^^^^ support.class.dart
-#                                   ^ punctuation.comma.dart
-#                                     ^^^^^^ support.class.dart
-#                                           ^ keyword.operator.ternary.dart
+#                   ^^^^ entity.name.function.dart
+#                         ^^^^^^ support.class.dart
+#                                    ^ punctuation.comma.dart
+#                                      ^^^^^^ support.class.dart
+#                                            ^ keyword.operator.ternary.dart
 >  final ddd = (1, 2, eee: '');
 #  ^^^^^ storage.modifier.dart
 #            ^ keyword.operator.assignment.dart
@@ -45,7 +67,7 @@
 >class R {
 #^^^^^ keyword.declaration.dart
 #      ^ support.class.dart
->  (int aaa, int, {String? ccc})? get ddd => null;
+>  (int aaa, int, {String? ccc})? get getter => null;
 #   ^^^ support.class.dart
 #          ^ punctuation.comma.dart
 #            ^^^ support.class.dart
@@ -54,17 +76,17 @@
 #                        ^ keyword.operator.ternary.dart
 #                               ^ keyword.operator.ternary.dart
 #                                 ^^^ keyword.declaration.dart
-#                                     ^^^ entity.name.function.dart
-#                                            ^^^^ constant.language.dart
-#                                                ^ punctuation.terminator.dart
->  final eee = (1, 2, eee: '');
+#                                     ^^^^^^ entity.name.function.dart
+#                                               ^^^^ constant.language.dart
+#                                                   ^ punctuation.terminator.dart
+>  final variable = (1, 2, eee: '');
 #  ^^^^^ storage.modifier.dart
-#            ^ keyword.operator.assignment.dart
-#               ^ constant.numeric.dart
-#                ^ punctuation.comma.dart
-#                  ^ constant.numeric.dart
-#                   ^ punctuation.comma.dart
-#                        ^ keyword.operator.ternary.dart
-#                          ^^ string.interpolated.single.dart
-#                             ^ punctuation.terminator.dart
+#                 ^ keyword.operator.assignment.dart
+#                    ^ constant.numeric.dart
+#                     ^ punctuation.comma.dart
+#                       ^ constant.numeric.dart
+#                        ^ punctuation.comma.dart
+#                             ^ keyword.operator.ternary.dart
+#                               ^^ string.interpolated.single.dart
+#                                  ^ punctuation.terminator.dart
 >}
