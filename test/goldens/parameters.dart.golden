@@ -39,7 +39,7 @@
 #          ^ other.source.dart
 #           ^^^^^^ support.class.dart
 #                   ^^^^^^ support.class.dart
-#                         ^ other.source.dart
+#                         ^^ other.source.dart
 #                            ^^^^^^^^ support.class.dart
 #                                     ^^^^^^ support.class.dart
 #                                                ^ punctuation.comma.dart

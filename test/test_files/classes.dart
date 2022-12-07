@@ -34,7 +34,7 @@ class MyClass {
 
 mixin MyMixin {}
 
-mixin MyMixin2 on Class1 {}
+mixin MyMixin2<T> on Class1 {}
 
 extension on String {}
 
@@ -52,3 +52,7 @@ class my_lowercase_class {
 class A1<T> {}
 
 class A2<T> extends A1<T> {}
+
+class A3<T> implements A1<T> {}
+
+class A4<T> with MyMixin2<T> {}

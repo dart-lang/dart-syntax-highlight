@@ -10,6 +10,8 @@ typedef StringAlias = String;
 typedef void FunctionAlias1(String a, String b);
 typedef FunctionAlias2 = void Function(String a, String b);
 
+Map<List<String>, List<List<String>>>? nestedTypeArguments;
+
 void misc(int a, {required int b}) {
   assert(true);
   assert(1 == 1, 'fail');
