@@ -105,11 +105,14 @@
 #^^^^^ keyword.declaration.dart
 #      ^^^^^^^ support.class.dart
 >
->mixin MyMixin2 on Class1 {}
+>mixin MyMixin2<T> on Class1 {}
 #^^^^^ keyword.declaration.dart
 #      ^^^^^^^^ support.class.dart
-#               ^^ keyword.control.catch-exception.dart
-#                  ^^^^^^ support.class.dart
+#              ^ other.source.dart
+#               ^ support.class.dart
+#                ^ other.source.dart
+#                  ^^ keyword.control.catch-exception.dart
+#                     ^^^^^^ support.class.dart
 >
 >extension on String {}
 #^^^^^^^^^ keyword.declaration.dart
@@ -173,3 +176,27 @@
 #        ^ other.source.dart
 #         ^ support.class.dart
 #          ^ other.source.dart
+>
+>class A3<T> implements A1<T> {}
+#^^^^^ keyword.declaration.dart
+#      ^^ support.class.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#          ^ other.source.dart
+#            ^^^^^^^^^^ keyword.declaration.dart
+#                       ^^ support.class.dart
+#                         ^ other.source.dart
+#                          ^ support.class.dart
+#                           ^ other.source.dart
+>
+>class A4<T> with MyMixin2<T> {}
+#^^^^^ keyword.declaration.dart
+#      ^^ support.class.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#          ^ other.source.dart
+#            ^^^^ keyword.declaration.dart
+#                 ^^^^^^^^ support.class.dart
+#                         ^ other.source.dart
+#                          ^ support.class.dart
+#                           ^ other.source.dart

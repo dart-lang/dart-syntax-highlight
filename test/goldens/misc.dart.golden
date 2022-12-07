@@ -41,6 +41,16 @@
 #                                                 ^^^^^^ support.class.dart
 #                                                          ^ punctuation.terminator.dart
 >
+>Map<List<String>, List<List<String>>>? nestedTypeArguments;
+#^^^ support.class.dart
+#   ^ other.source.dart
+#    ^^^^ support.class.dart
+#        ^ other.source.dart
+#         ^^^^^^ support.class.dart
+#               ^ other.source.dart
+#                                     ^ keyword.operator.ternary.dart
+#                                                          ^ punctuation.terminator.dart
+>
 >void misc(int a, {required int b}) {
 #^^^^ storage.type.primitive.dart
 #     ^^^^ entity.name.function.dart
