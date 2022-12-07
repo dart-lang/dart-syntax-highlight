@@ -48,6 +48,12 @@
 #        ^ other.source.dart
 #         ^^^^^^ support.class.dart
 #               ^ other.source.dart
+#                  ^^^^ support.class.dart
+#                      ^ other.source.dart
+#                       ^^^^ support.class.dart
+#                           ^ other.source.dart
+#                            ^^^^^^ support.class.dart
+#                                  ^^^ other.source.dart
 #                                     ^ keyword.operator.ternary.dart
 #                                                          ^ punctuation.terminator.dart
 >

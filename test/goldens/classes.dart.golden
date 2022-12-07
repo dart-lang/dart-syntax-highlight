@@ -76,10 +76,10 @@
 #       ^^^^^^^ support.class.dart
 >  void get() {}
 #  ^^^^ storage.type.primitive.dart
-#       ^^^ keyword.declaration.dart
+#       ^^^ entity.name.function.dart
 >  void set() {}
 #  ^^^^ storage.type.primitive.dart
-#       ^^^ keyword.declaration.dart
+#       ^^^ entity.name.function.dart
 >
 >  String? _foo;
 #  ^^^^^^ support.class.dart
@@ -176,6 +176,11 @@
 #        ^ other.source.dart
 #         ^ support.class.dart
 #          ^ other.source.dart
+#            ^^^^^^^ keyword.declaration.dart
+#                    ^^ support.class.dart
+#                      ^ other.source.dart
+#                       ^ support.class.dart
+#                        ^ other.source.dart
 >
 >class A3<T> implements A1<T> {}
 #^^^^^ keyword.declaration.dart
