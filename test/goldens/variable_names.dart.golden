@@ -40,12 +40,11 @@
 #              ^ keyword.operator.assignment.dart
 #                ^^^^ constant.language.dart
 #                    ^ punctuation.terminator.dart
->const double = null;
+>const double$ = null;
 #^^^^^ storage.modifier.dart
-#      ^^^^^^ support.class.dart
-#             ^ keyword.operator.assignment.dart
-#               ^^^^ constant.language.dart
-#                   ^ punctuation.terminator.dart
+#              ^ keyword.operator.assignment.dart
+#                ^^^^ constant.language.dart
+#                    ^ punctuation.terminator.dart
 >const $dynamic = null;
 #^^^^^ storage.modifier.dart
 #               ^ keyword.operator.assignment.dart
