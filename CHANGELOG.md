@@ -1,3 +1,7 @@
+## 1.1.1 (2022-12-13)
+
+- Fixed highlighting of names that match some reserved words/classes with a `$` prefix/suffix.
+
 ## 1.1.0 (2022-12-07)
 
 - Improved handling of nested type parameters/arguments.
