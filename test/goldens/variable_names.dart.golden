@@ -7,43 +7,36 @@
 >
 >const $bool = null;
 #^^^^^ storage.modifier.dart
-#       ^^^^ support.class.dart
 #            ^ keyword.operator.assignment.dart
 #              ^^^^ constant.language.dart
 #                  ^ punctuation.terminator.dart
 >const bool$ = null;
 #^^^^^ storage.modifier.dart
-#      ^^^^ support.class.dart
 #            ^ keyword.operator.assignment.dart
 #              ^^^^ constant.language.dart
 #                  ^ punctuation.terminator.dart
 >const $num = null;
 #^^^^^ storage.modifier.dart
-#       ^^^ support.class.dart
 #           ^ keyword.operator.assignment.dart
 #             ^^^^ constant.language.dart
 #                 ^ punctuation.terminator.dart
 >const num$ = null;
 #^^^^^ storage.modifier.dart
-#      ^^^ support.class.dart
 #           ^ keyword.operator.assignment.dart
 #             ^^^^ constant.language.dart
 #                 ^ punctuation.terminator.dart
 >const $int = null;
 #^^^^^ storage.modifier.dart
-#       ^^^ support.class.dart
 #           ^ keyword.operator.assignment.dart
 #             ^^^^ constant.language.dart
 #                 ^ punctuation.terminator.dart
 >const int$ = null;
 #^^^^^ storage.modifier.dart
-#      ^^^ support.class.dart
 #           ^ keyword.operator.assignment.dart
 #             ^^^^ constant.language.dart
 #                 ^ punctuation.terminator.dart
 >const $double = null;
 #^^^^^ storage.modifier.dart
-#       ^^^^^^ support.class.dart
 #              ^ keyword.operator.assignment.dart
 #                ^^^^ constant.language.dart
 #                    ^ punctuation.terminator.dart
@@ -55,13 +48,11 @@
 #                   ^ punctuation.terminator.dart
 >const $dynamic = null;
 #^^^^^ storage.modifier.dart
-#       ^^^^^^^ support.class.dart
 #               ^ keyword.operator.assignment.dart
 #                 ^^^^ constant.language.dart
 #                     ^ punctuation.terminator.dart
 >const dynamic$ = null;
 #^^^^^ storage.modifier.dart
-#      ^^^^^^^ support.class.dart
 #               ^ keyword.operator.assignment.dart
 #                 ^^^^ constant.language.dart
 #                     ^ punctuation.terminator.dart
@@ -387,13 +378,11 @@
 #                   ^ punctuation.terminator.dart
 >const $enum = null;
 #^^^^^ storage.modifier.dart
-#        ^^^ support.class.dart
 #            ^ keyword.operator.assignment.dart
 #              ^^^^ constant.language.dart
 #                  ^ punctuation.terminator.dart
 >const enum$ = null;
 #^^^^^ storage.modifier.dart
-#       ^^^ support.class.dart
 #            ^ keyword.operator.assignment.dart
 #              ^^^^ constant.language.dart
 #                  ^ punctuation.terminator.dart
@@ -579,13 +568,11 @@
 #                  ^ punctuation.terminator.dart
 >const $void = null;
 #^^^^^ storage.modifier.dart
-#       ^^^^ storage.type.primitive.dart
 #            ^ keyword.operator.assignment.dart
 #              ^^^^ constant.language.dart
 #                  ^ punctuation.terminator.dart
 >const void$ = null;
 #^^^^^ storage.modifier.dart
-#      ^^^^ storage.type.primitive.dart
 #            ^ keyword.operator.assignment.dart
 #              ^^^^ constant.language.dart
 #                  ^ punctuation.terminator.dart
