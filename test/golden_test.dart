@@ -116,5 +116,5 @@ String _buildGoldenText(String content, List<ScopeSpan> spans) {
   return buffer.toString();
 }
 
-/// Normalises newlines in code for comparing.
+/// Normalizes newlines in code for comparing.
 String _normalize(String code) => code.replaceAll('\r', '');

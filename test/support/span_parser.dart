@@ -106,11 +106,11 @@ class ScopeSpan {
 
   bool contains(int token) => (start <= token) && (token < end);
 
-  /// Splits the current [ScopeSpan] into multiple spans separated by [cond].
+  /// Splits the current [ScopeSpan] into multiple spans separated by [condition].
   /// This is useful for post-processing the results from a rule with a while
   /// condition as formatting should not be applied to the characters that
   /// match the while condition.
-  List<ScopeSpan> split(LineScanner scanner, RegExp cond) {
+  List<ScopeSpan> split(LineScanner scanner, RegExp condition) {
     final splitSpans = <ScopeSpan>[];
 
     // Create a temporary scanner, copying [0, end] to ensure that line/column
@@ -128,13 +128,13 @@ class ScopeSpan {
     );
 
     while (!splitScanner.isDone) {
-      if (splitScanner.matches(cond)) {
+      if (splitScanner.matches(condition)) {
         // Update the end position for this span as it's been fully processed.
         current._endLocation = splitScanner.location;
         splitSpans.add(current);
 
         // Move the scanner position past the matched condition.
-        splitScanner.scan(cond);
+        splitScanner.scan(condition);
 
         // Create a new span based on the current position.
         current = ScopeSpan(
@@ -300,7 +300,7 @@ class _MultilineMatcher extends _Matcher {
             : RegExp(json['end'] as String, multiLine: true),
         endCaptures = json['endCaptures'] as Map<String, Object?>?,
         captures = json['captures'] as Map<String, Object?>?,
-        whileCond = json['while'] == null
+        whileCondition = json['while'] == null
             ? null
             : RegExp(json['while'] as String, multiLine: true),
         patterns = (json['patterns'] as List<Object?>?)
@@ -348,7 +348,7 @@ class _MultilineMatcher extends _Matcher {
   /// of matches found in the first line.
   ///
   /// This property is mutually exclusive with the `end` property.
-  final RegExp? whileCond;
+  final RegExp? whileCondition;
 
   /// A set of scopes to apply to groups captured by `begin` and `end`.
   /// Providing this property is the equivalent of setting `beginCaptures` and
@@ -456,11 +456,11 @@ class _MultilineMatcher extends _Matcher {
       _scanUpToEndMatch(grammar, scanner, scopeStack);
       scopeStack.pop(contentName, scanner.location);
       _scanEnd(grammar, scanner, scopeStack);
-    } else if (whileCond != null) {
+    } else if (whileCondition != null) {
       // Find the range of the string that is matched by the while condition.
       final start = scanner.position;
       _skipLine(scanner);
-      while (!scanner.isDone && whileCond != null && scanner.scan(whileCond!)) {
+      while (!scanner.isDone && whileCondition != null && scanner.scan(whileCondition!)) {
         _skipLine(scanner);
       }
       final end = scanner.position;
@@ -480,16 +480,16 @@ class _MultilineMatcher extends _Matcher {
 
       // Process each line until the `while` condition fails.
       while (!contentScanner.isDone &&
-          whileCond != null &&
-          contentScanner.scan(whileCond!)) {
+          whileCondition != null &&
+          contentScanner.scan(whileCondition!)) {
         _scanToEndOfLine(grammar, contentScanner, scopeStack);
       }
 
-      // Now, split any spans produced whileContentBeginMarker by `whileCond`.
+      // Now, split any spans produced whileContentBeginMarker by `whileCondition`.
       scopeStack.splitFromMarker(
         scanner,
         whileContentBeginMarker,
-        whileCond!,
+        whileCondition!,
       );
     } else {
       throw StateError(
@@ -512,7 +512,7 @@ class _MultilineMatcher extends _Matcher {
       if (beginCaptures != null) 'beginCaptures': beginCaptures,
       if (end != null) 'end': end!.pattern,
       if (endCaptures != null) 'endCaptures': endCaptures,
-      if (whileCond != null) 'while': whileCond!.pattern,
+      if (whileCondition != null) 'while': whileCondition!.pattern,
       if (patterns != null)
         'patterns': patterns!.map((e) => e.toJson()).toList(),
     };
