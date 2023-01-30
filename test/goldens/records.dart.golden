@@ -76,7 +76,7 @@
 #                        ^ keyword.operator.ternary.dart
 #                               ^ keyword.operator.ternary.dart
 #                                 ^^^ keyword.declaration.dart
-#                                     ^^^^^^ entity.name.function.dart
+#                                            ^^ keyword.operator.closure.dart
 #                                               ^^^^ constant.language.dart
 #                                                   ^ punctuation.terminator.dart
 >  final variable = (1, 2, eee: '');

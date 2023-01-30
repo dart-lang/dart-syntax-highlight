@@ -91,7 +91,7 @@
 #                              ^^ keyword.operator.bitwise.dart
 #                                 ^^^^^ support.class.dart
 #                                      ^ punctuation.dot.dart
-#                                       ^^^^ entity.name.function.dart
+#                                            ^^ keyword.operator.closure.dart
 #                                               ^^^^ constant.language.dart
 #                                                   ^ punctuation.comma.dart
 >    _ => false
@@ -160,26 +160,26 @@
 #         ^^^^^^ keyword.control.dart
 >    < space => 'control',
 #    ^ keyword.operator.comparison.dart
-#      ^^^^^ entity.name.function.dart
+#            ^^ keyword.operator.closure.dart
 #               ^^^^^^^^^ string.interpolated.single.dart
 #                        ^ punctuation.comma.dart
 >    == space => 'space',
 #    ^^ keyword.operator.comparison.dart
-#       ^^^^^ entity.name.function.dart
+#             ^^ keyword.operator.closure.dart
 #                ^^^^^^^ string.interpolated.single.dart
 #                       ^ punctuation.comma.dart
 >    > space && < zero => 'punctuation',
 #    ^ keyword.operator.comparison.dart
 #            ^^ keyword.operator.bitwise.dart
 #               ^ keyword.operator.comparison.dart
-#                 ^^^^ entity.name.function.dart
+#                      ^^ keyword.operator.closure.dart
 #                         ^^^^^^^^^^^^^ string.interpolated.single.dart
 #                                      ^ punctuation.comma.dart
 >    >= zero && <= nine => 'digit'
 #    ^^ keyword.operator.comparison.dart
 #            ^^ keyword.operator.bitwise.dart
 #               ^^ keyword.operator.comparison.dart
-#                  ^^^^ entity.name.function.dart
+#                       ^^ keyword.operator.closure.dart
 #                          ^^^^^^^ string.interpolated.single.dart
 >  };
 #   ^ punctuation.terminator.dart
