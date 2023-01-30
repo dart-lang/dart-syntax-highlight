@@ -111,6 +111,7 @@
 #                                ^^^^^^ support.class.dart
 #                                           ^ keyword.operator.ternary.dart
 #                                             ^^^ storage.type.primitive.dart
+#                                                    ^^^^ keyword.control.dart
 #                                                           ^ keyword.operator.comparison.dart
 #                                                             ^ constant.numeric.dart
 #                                                              ^ keyword.operator.ternary.dart

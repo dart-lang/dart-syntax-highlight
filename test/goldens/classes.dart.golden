@@ -209,12 +209,15 @@
 #                                          ^ other.source.dart
 >
 >base class MyBaseClass {}
+#^^^^ keyword.declaration.dart
 #     ^^^^^ keyword.declaration.dart
 #           ^^^^^^^^^^^ support.class.dart
 >interface class MyInterfaceClass {}
+#^^^^^^^^^ keyword.declaration.dart
 #          ^^^^^ keyword.declaration.dart
 #                ^^^^^^^^^^^^^^^^ support.class.dart
 >sealed class MySealedClass {}
+#^^^^^^ keyword.declaration.dart
 #       ^^^^^ keyword.declaration.dart
 #             ^^^^^^^^^^^^^ support.class.dart
 >final class MyFinalClass {}
