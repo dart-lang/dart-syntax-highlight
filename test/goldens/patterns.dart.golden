@@ -1,0 +1,442 @@
+>// Copyright (c) 2023, the Dart project authors. All rights reserved.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// Use of this source code is governed by a BSD-style license that can be
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>import 'dart:math' as math;
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                  ^ meta.declaration.dart
+#                   ^^ meta.declaration.dart keyword.other.import.dart
+#                     ^^^^^ meta.declaration.dart
+#                          ^ meta.declaration.dart punctuation.terminator.dart
+>
+>import 'support.dart';
+#^^^^^^ meta.declaration.dart keyword.other.import.dart
+#      ^ meta.declaration.dart
+#       ^^^^^^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                     ^ meta.declaration.dart punctuation.terminator.dart
+>
+>// Samples taken from
+#^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// https://github.com/dart-lang/language/blob/master/accepted/future-releases/0546-patterns/feature-specification.md
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>void destructuring() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^^^ entity.name.function.dart
+>  var (lat, long) = testRecord;
+#  ^^^ storage.type.primitive.dart
+#          ^ punctuation.comma.dart
+#                  ^ keyword.operator.assignment.dart
+#                              ^ punctuation.terminator.dart
+>  var [a, b, c] = testList;
+#  ^^^ storage.type.primitive.dart
+#        ^ punctuation.comma.dart
+#           ^ punctuation.comma.dart
+#                ^ keyword.operator.assignment.dart
+#                          ^ punctuation.terminator.dart
+>  var {'first': first, 'second': second} = testMap;
+#  ^^^ storage.type.primitive.dart
+#       ^^^^^^^ string.interpolated.single.dart
+#              ^ keyword.operator.ternary.dart
+#                     ^ punctuation.comma.dart
+#                       ^^^^^^^^ string.interpolated.single.dart
+#                               ^ keyword.operator.ternary.dart
+#                                         ^ keyword.operator.assignment.dart
+#                                                  ^ punctuation.terminator.dart
+>}
+>
+>double algebraicDataTypes(Shape shape) =>
+#^^^^^^ support.class.dart
+#       ^^^^^^^^^^^^^^^^^^ entity.name.function.dart
+#                          ^^^^^ support.class.dart
+#                                       ^^ keyword.operator.closure.dart
+>  switch (shape) {
+#  ^^^^^^ keyword.control.dart
+>    Square(length: var l) => l * l,
+#    ^^^^^^ support.class.dart
+#                 ^ keyword.operator.ternary.dart
+#                   ^^^ storage.type.primitive.dart
+#                          ^^ keyword.operator.closure.dart
+#                               ^ keyword.operator.arithmetic.dart
+#                                  ^ punctuation.comma.dart
+>    Circle(radius: var r) => math.pi * r * r
+#    ^^^^^^ support.class.dart
+#                 ^ keyword.operator.ternary.dart
+#                   ^^^ storage.type.primitive.dart
+#                          ^^ keyword.operator.closure.dart
+#                                 ^ punctuation.dot.dart
+#                                     ^ keyword.operator.arithmetic.dart
+#                                         ^ keyword.operator.arithmetic.dart
+>  };
+#   ^ punctuation.terminator.dart
+>
+>void logicalOr() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^ entity.name.function.dart
+>  var isPrimary = switch (testColor) {
+#  ^^^ storage.type.primitive.dart
+#                ^ keyword.operator.assignment.dart
+#                  ^^^^^^ keyword.control.dart
+>    Color.red || Color.yellow || Color.blue => true,
+#    ^^^^^ support.class.dart
+#         ^ punctuation.dot.dart
+#              ^^ keyword.operator.bitwise.dart
+#                 ^^^^^ support.class.dart
+#                      ^ punctuation.dot.dart
+#                              ^^ keyword.operator.bitwise.dart
+#                                 ^^^^^ support.class.dart
+#                                      ^ punctuation.dot.dart
+#                                       ^^^^ entity.name.function.dart
+#                                               ^^^^ constant.language.dart
+#                                                   ^ punctuation.comma.dart
+>    _ => false
+#      ^^ keyword.operator.closure.dart
+#         ^^^^^ constant.language.dart
+>  };
+#   ^ punctuation.terminator.dart
+>
+>  switch (testShape) {
+#  ^^^^^^ keyword.control.dart
+>    case Square(size: var s) || Circle(size: var s) when s > 0:
+#    ^^^^ keyword.control.dart
+#         ^^^^^^ support.class.dart
+#                    ^ keyword.operator.ternary.dart
+#                      ^^^ storage.type.primitive.dart
+#                             ^^ keyword.operator.bitwise.dart
+#                                ^^^^^^ support.class.dart
+#                                           ^ keyword.operator.ternary.dart
+#                                             ^^^ storage.type.primitive.dart
+#                                                           ^ keyword.operator.comparison.dart
+#                                                             ^ constant.numeric.dart
+#                                                              ^ keyword.operator.ternary.dart
+>      print('Non-empty symmetric shape');
+#      ^^^^^ entity.name.function.dart
+#            ^^^^^^^^^^^^^^^^^^^^^^^^^^^ string.interpolated.single.dart
+#                                        ^ punctuation.terminator.dart
+>    case Square() || Circle():
+#    ^^^^ keyword.control.dart
+#         ^^^^^^ support.class.dart
+#                  ^^ keyword.operator.bitwise.dart
+#                     ^^^^^^ support.class.dart
+#                             ^ keyword.operator.ternary.dart
+>      print('Empty symmetric shape');
+#      ^^^^^ entity.name.function.dart
+#            ^^^^^^^^^^^^^^^^^^^^^^^ string.interpolated.single.dart
+#                                    ^ punctuation.terminator.dart
+>    default:
+#    ^^^^^^^ keyword.control.dart
+#           ^ keyword.operator.ternary.dart
+>      print('Asymmetric shape');
+#      ^^^^^ entity.name.function.dart
+#            ^^^^^^^^^^^^^^^^^^ string.interpolated.single.dart
+#                               ^ punctuation.terminator.dart
+>  }
+>
+>  switch (testList) {
+#  ^^^^^^ keyword.control.dart
+>    case ['a' || 'b', var c]:
+#    ^^^^ keyword.control.dart
+#          ^^^ string.interpolated.single.dart
+#              ^^ keyword.operator.bitwise.dart
+#                 ^^^ string.interpolated.single.dart
+#                    ^ punctuation.comma.dart
+#                      ^^^ storage.type.primitive.dart
+#                            ^ keyword.operator.ternary.dart
+>  }
+>}
+>
+>String logicalAnd_relational(int char) {
+#^^^^^^ support.class.dart
+#       ^^^^^^^^^^^^^^^^^^^^^ entity.name.function.dart
+#                             ^^^ support.class.dart
+>  return switch (char) {
+#  ^^^^^^ keyword.control.dart
+#         ^^^^^^ keyword.control.dart
+>    < space => 'control',
+#    ^ keyword.operator.comparison.dart
+#      ^^^^^ entity.name.function.dart
+#               ^^^^^^^^^ string.interpolated.single.dart
+#                        ^ punctuation.comma.dart
+>    == space => 'space',
+#    ^^ keyword.operator.comparison.dart
+#       ^^^^^ entity.name.function.dart
+#                ^^^^^^^ string.interpolated.single.dart
+#                       ^ punctuation.comma.dart
+>    > space && < zero => 'punctuation',
+#    ^ keyword.operator.comparison.dart
+#            ^^ keyword.operator.bitwise.dart
+#               ^ keyword.operator.comparison.dart
+#                 ^^^^ entity.name.function.dart
+#                         ^^^^^^^^^^^^^ string.interpolated.single.dart
+#                                      ^ punctuation.comma.dart
+>    >= zero && <= nine => 'digit'
+#    ^^ keyword.operator.comparison.dart
+#            ^^ keyword.operator.bitwise.dart
+#               ^^ keyword.operator.comparison.dart
+#                  ^^^^ entity.name.function.dart
+#                          ^^^^^^^ string.interpolated.single.dart
+>  };
+#   ^ punctuation.terminator.dart
+>}
+>
+>void castPattern() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^ entity.name.function.dart
+>  var (i as int, j as int) = testRecord;
+#  ^^^ storage.type.primitive.dart
+#         ^^ keyword.cast.dart
+#            ^^^ support.class.dart
+#               ^ punctuation.comma.dart
+#                   ^^ keyword.cast.dart
+#                      ^^^ support.class.dart
+#                           ^ keyword.operator.assignment.dart
+#                                       ^ punctuation.terminator.dart
+>}
+>
+>void nullCheckPattern_nullAssertPattern() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ entity.name.function.dart
+>  switch (maybeString) {
+#  ^^^^^^ keyword.control.dart
+>    case var s?:
+#    ^^^^ keyword.control.dart
+#         ^^^ storage.type.primitive.dart
+#              ^^ keyword.operator.ternary.dart
+>  }
+>
+>  var (x!, y!) = testRecord;
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.logical.dart
+#         ^ punctuation.comma.dart
+#            ^ keyword.operator.logical.dart
+#               ^ keyword.operator.assignment.dart
+#                           ^ punctuation.terminator.dart
+>
+>  switch (testList) {
+#  ^^^^^^ keyword.control.dart
+>    case ['user', var name!]:
+#    ^^^^ keyword.control.dart
+#          ^^^^^^ string.interpolated.single.dart
+#                ^ punctuation.comma.dart
+#                  ^^^ storage.type.primitive.dart
+#                          ^ keyword.operator.logical.dart
+#                            ^ keyword.operator.ternary.dart
+>  }
+>}
+>
+>void variablePattern() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^^^^^ entity.name.function.dart
+>  switch ((1, 2, 3)) {
+#  ^^^^^^ keyword.control.dart
+#           ^ constant.numeric.dart
+#            ^ punctuation.comma.dart
+#              ^ constant.numeric.dart
+#               ^ punctuation.comma.dart
+#                 ^ constant.numeric.dart
+>    case (var a, final b, _):
+#    ^^^^ keyword.control.dart
+#          ^^^ storage.type.primitive.dart
+#               ^ punctuation.comma.dart
+#                 ^^^^^ storage.modifier.dart
+#                        ^ punctuation.comma.dart
+#                            ^ keyword.operator.ternary.dart
+>  }
+>  switch ((1, 2, 3)) {
+#  ^^^^^^ keyword.control.dart
+#           ^ constant.numeric.dart
+#            ^ punctuation.comma.dart
+#              ^ constant.numeric.dart
+#               ^ punctuation.comma.dart
+#                 ^ constant.numeric.dart
+>    case (int a, String b, String _):
+#    ^^^^ keyword.control.dart
+#          ^^^ support.class.dart
+#               ^ punctuation.comma.dart
+#                 ^^^^^^ support.class.dart
+#                         ^ punctuation.comma.dart
+#                           ^^^^^^ support.class.dart
+#                                    ^ keyword.operator.ternary.dart
+>  }
+>}
+>
+>void listPatterns() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^^ entity.name.function.dart
+>  var [_, two, _] = testList;
+#  ^^^ storage.type.primitive.dart
+#        ^ punctuation.comma.dart
+#             ^ punctuation.comma.dart
+#                  ^ keyword.operator.assignment.dart
+#                            ^ punctuation.terminator.dart
+>  var [a, b, ...rest, c, d] = [1, 2, 3, 4, 5, 6, 7];
+#  ^^^ storage.type.primitive.dart
+#        ^ punctuation.comma.dart
+#           ^ punctuation.comma.dart
+#             ^^^ punctuation.dot.dart
+#                    ^ punctuation.comma.dart
+#                       ^ punctuation.comma.dart
+#                            ^ keyword.operator.assignment.dart
+#                               ^ constant.numeric.dart
+#                                ^ punctuation.comma.dart
+#                                  ^ constant.numeric.dart
+#                                   ^ punctuation.comma.dart
+#                                     ^ constant.numeric.dart
+#                                      ^ punctuation.comma.dart
+#                                        ^ constant.numeric.dart
+#                                         ^ punctuation.comma.dart
+#                                           ^ constant.numeric.dart
+#                                            ^ punctuation.comma.dart
+#                                              ^ constant.numeric.dart
+#                                               ^ punctuation.comma.dart
+#                                                 ^ constant.numeric.dart
+#                                                   ^ punctuation.terminator.dart
+>}
+>
+>void mapPatterns() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^ entity.name.function.dart
+>  var {'field1': String field1, ... } = { 'field1': 'value1', 'field2': 'value2' };
+#  ^^^ storage.type.primitive.dart
+#       ^^^^^^^^ string.interpolated.single.dart
+#               ^ keyword.operator.ternary.dart
+#                 ^^^^^^ support.class.dart
+#                              ^ punctuation.comma.dart
+#                                ^^^ punctuation.dot.dart
+#                                      ^ keyword.operator.assignment.dart
+#                                          ^^^^^^^^ string.interpolated.single.dart
+#                                                  ^ keyword.operator.ternary.dart
+#                                                    ^^^^^^^^ string.interpolated.single.dart
+#                                                            ^ punctuation.comma.dart
+#                                                              ^^^^^^^^ string.interpolated.single.dart
+#                                                                      ^ keyword.operator.ternary.dart
+#                                                                        ^^^^^^^^ string.interpolated.single.dart
+#                                                                                  ^ punctuation.terminator.dart
+>}
+>
+>void recordPatterns() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^^^^ entity.name.function.dart
+>  // Variable:
+#  ^^^^^^^^^^^^ comment.line.double-slash.dart
+>  var (untyped: untyped, typed: int typed) = testRecord;
+#  ^^^ storage.type.primitive.dart
+#              ^ keyword.operator.ternary.dart
+#                       ^ punctuation.comma.dart
+#                              ^ keyword.operator.ternary.dart
+#                                ^^^ support.class.dart
+#                                           ^ keyword.operator.assignment.dart
+#                                                       ^ punctuation.terminator.dart
+>  var (:untyped, :int typed) = testRecord;
+#  ^^^ storage.type.primitive.dart
+#       ^ keyword.operator.ternary.dart
+#               ^ punctuation.comma.dart
+#                 ^ keyword.operator.ternary.dart
+#                  ^^^ support.class.dart
+#                             ^ keyword.operator.assignment.dart
+#                                         ^ punctuation.terminator.dart
+>
+>  switch (testObject) {
+#  ^^^^^^ keyword.control.dart
+>    case (untyped: var untyped, typed: int typed):
+#    ^^^^ keyword.control.dart
+#                 ^ keyword.operator.ternary.dart
+#                   ^^^ storage.type.primitive.dart
+#                              ^ punctuation.comma.dart
+#                                     ^ keyword.operator.ternary.dart
+#                                       ^^^ support.class.dart
+#                                                 ^ keyword.operator.ternary.dart
+>    case (:var untyped, :int typed):
+#    ^^^^ keyword.control.dart
+#          ^ keyword.operator.ternary.dart
+#           ^^^ storage.type.primitive.dart
+#                      ^ punctuation.comma.dart
+#                        ^ keyword.operator.ternary.dart
+#                         ^^^ support.class.dart
+#                                   ^ keyword.operator.ternary.dart
+>  }
+>
+>  // Null-check and null-assert:
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>  switch (testObject) {
+#  ^^^^^^ keyword.control.dart
+>    case (checked: var checked?, asserted: var asserted!):
+#    ^^^^ keyword.control.dart
+#                 ^ keyword.operator.ternary.dart
+#                   ^^^ storage.type.primitive.dart
+#                              ^ keyword.operator.ternary.dart
+#                               ^ punctuation.comma.dart
+#                                         ^ keyword.operator.ternary.dart
+#                                           ^^^ storage.type.primitive.dart
+#                                                       ^ keyword.operator.logical.dart
+#                                                         ^ keyword.operator.ternary.dart
+>    case (:var checked?, :var asserted!):
+#    ^^^^ keyword.control.dart
+#          ^ keyword.operator.ternary.dart
+#           ^^^ storage.type.primitive.dart
+#                      ^ keyword.operator.ternary.dart
+#                       ^ punctuation.comma.dart
+#                         ^ keyword.operator.ternary.dart
+#                          ^^^ storage.type.primitive.dart
+#                                      ^ keyword.operator.logical.dart
+#                                        ^ keyword.operator.ternary.dart
+>  }
+>
+>  // Cast:
+#  ^^^^^^^^ comment.line.double-slash.dart
+>  var (field: field as int) = testRecord;
+#  ^^^ storage.type.primitive.dart
+#            ^ keyword.operator.ternary.dart
+#                    ^^ keyword.cast.dart
+#                       ^^^ support.class.dart
+#                            ^ keyword.operator.assignment.dart
+#                                        ^ punctuation.terminator.dart
+>  var (:field as int) = testRecord;
+#  ^^^ storage.type.primitive.dart
+#       ^ keyword.operator.ternary.dart
+#              ^^ keyword.cast.dart
+#                 ^^^ support.class.dart
+#                      ^ keyword.operator.assignment.dart
+#                                  ^ punctuation.terminator.dart
+>}
+>
+>void objectPatterns(Object obj) {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^^^^^ entity.name.function.dart
+#                    ^^^^^^ support.class.dart
+>  switch (obj) {
+#  ^^^^^^ keyword.control.dart
+>    case Rect(width: var w, height: var h):
+#    ^^^^ keyword.control.dart
+#         ^^^^ support.class.dart
+#                   ^ keyword.operator.ternary.dart
+#                     ^^^ storage.type.primitive.dart
+#                          ^ punctuation.comma.dart
+#                                  ^ keyword.operator.ternary.dart
+#                                    ^^^ storage.type.primitive.dart
+#                                          ^ keyword.operator.ternary.dart
+>    default:
+#    ^^^^^^^ keyword.control.dart
+#           ^ keyword.operator.ternary.dart
+>  }
+>  switch (obj) {
+#  ^^^^^^ keyword.control.dart
+>    case Rect(:var width, :var height):
+#    ^^^^ keyword.control.dart
+#         ^^^^ support.class.dart
+#              ^ keyword.operator.ternary.dart
+#               ^^^ storage.type.primitive.dart
+#                        ^ punctuation.comma.dart
+#                          ^ keyword.operator.ternary.dart
+#                           ^^^ storage.type.primitive.dart
+#                                      ^ keyword.operator.ternary.dart
+>    default:
+#    ^^^^^^^ keyword.control.dart
+#           ^ keyword.operator.ternary.dart
+>  }
+>}
