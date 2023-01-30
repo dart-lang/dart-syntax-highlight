@@ -38,7 +38,7 @@
 >  String get a => '';
 #  ^^^^^^ support.class.dart
 #         ^^^ keyword.declaration.dart
-#             ^ entity.name.function.dart
+#               ^^ keyword.operator.closure.dart
 #                  ^^ string.interpolated.single.dart
 #                    ^ punctuation.terminator.dart
 >
@@ -89,7 +89,7 @@
 #  ^^^^^^ support.class.dart
 #        ^ keyword.operator.ternary.dart
 #          ^^^ keyword.declaration.dart
-#              ^^^ entity.name.function.dart
+#                  ^^ keyword.operator.closure.dart
 #                         ^ punctuation.terminator.dart
 >  set foo(String? value) => _foo = value;
 #  ^^^ keyword.declaration.dart
@@ -194,14 +194,37 @@
 #                          ^ support.class.dart
 #                           ^ other.source.dart
 >
->class A4<T> with MyMixin2<T> {}
+>class A4<T> extends Class1 with MyMixin2<T> {}
 #^^^^^ keyword.declaration.dart
 #      ^^ support.class.dart
 #        ^ other.source.dart
 #         ^ support.class.dart
 #          ^ other.source.dart
-#            ^^^^ keyword.declaration.dart
-#                 ^^^^^^^^ support.class.dart
-#                         ^ other.source.dart
-#                          ^ support.class.dart
-#                           ^ other.source.dart
+#            ^^^^^^^ keyword.declaration.dart
+#                    ^^^^^^ support.class.dart
+#                           ^^^^ keyword.declaration.dart
+#                                ^^^^^^^^ support.class.dart
+#                                        ^ other.source.dart
+#                                         ^ support.class.dart
+#                                          ^ other.source.dart
+>
+>base class MyBaseClass {}
+#^^^^ keyword.declaration.dart
+#     ^^^^^ keyword.declaration.dart
+#           ^^^^^^^^^^^ support.class.dart
+>interface class MyInterfaceClass {}
+#^^^^^^^^^ keyword.declaration.dart
+#          ^^^^^ keyword.declaration.dart
+#                ^^^^^^^^^^^^^^^^ support.class.dart
+>sealed class MySealedClass {}
+#^^^^^^ keyword.declaration.dart
+#       ^^^^^ keyword.declaration.dart
+#             ^^^^^^^^^^^^^ support.class.dart
+>final class MyFinalClass {}
+#^^^^^ storage.modifier.dart
+#      ^^^^^ keyword.declaration.dart
+#            ^^^^^^^^^^^^ support.class.dart
+>mixin class MyMixinClass {}
+#^^^^^ keyword.declaration.dart
+#      ^^^^^ keyword.declaration.dart
+#            ^^^^^^^^^^^^ support.class.dart

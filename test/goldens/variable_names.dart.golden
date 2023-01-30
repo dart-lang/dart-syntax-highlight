@@ -595,3 +595,33 @@
 #          ^ keyword.operator.assignment.dart
 #            ^^^^ constant.language.dart
 #                ^ punctuation.terminator.dart
+>const $sealed = null;
+#^^^^^ storage.modifier.dart
+#              ^ keyword.operator.assignment.dart
+#                ^^^^ constant.language.dart
+#                    ^ punctuation.terminator.dart
+>const sealed$ = null;
+#^^^^^ storage.modifier.dart
+#              ^ keyword.operator.assignment.dart
+#                ^^^^ constant.language.dart
+#                    ^ punctuation.terminator.dart
+>const $interface = null;
+#^^^^^ storage.modifier.dart
+#                 ^ keyword.operator.assignment.dart
+#                   ^^^^ constant.language.dart
+#                       ^ punctuation.terminator.dart
+>const interface$ = null;
+#^^^^^ storage.modifier.dart
+#                 ^ keyword.operator.assignment.dart
+#                   ^^^^ constant.language.dart
+#                       ^ punctuation.terminator.dart
+>const $base = null;
+#^^^^^ storage.modifier.dart
+#            ^ keyword.operator.assignment.dart
+#              ^^^^ constant.language.dart
+#                  ^ punctuation.terminator.dart
+>const base$ = null;
+#^^^^^ storage.modifier.dart
+#            ^ keyword.operator.assignment.dart
+#              ^^^^ constant.language.dart
+#                  ^ punctuation.terminator.dart

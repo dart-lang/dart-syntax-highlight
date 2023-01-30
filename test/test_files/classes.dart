@@ -55,4 +55,10 @@ class A2<T> extends A1<T> {}
 
 class A3<T> implements A1<T> {}
 
-class A4<T> with MyMixin2<T> {}
+class A4<T> extends Class1 with MyMixin2<T> {}
+
+base class MyBaseClass {}
+interface class MyInterfaceClass {}
+sealed class MySealedClass {}
+final class MyFinalClass {}
+mixin class MyMixinClass {}

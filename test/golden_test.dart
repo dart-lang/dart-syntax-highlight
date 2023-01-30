@@ -26,7 +26,9 @@ void main() {
     final testFiles = testFileDirectory
         .listSync()
         .whereType<File>()
-        .where((file) => path.extension(file.path) == '.dart');
+        .where((file) => path.extension(file.path) == '.dart')
+        .where((file) =>
+            path.withoutExtension(path.basename(file.path)) != 'support');
 
     for (final testFile in testFiles) {
       final goldenFile = File(path.join(
