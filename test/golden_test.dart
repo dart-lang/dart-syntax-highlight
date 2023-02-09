@@ -11,29 +11,16 @@ import 'package:path/path.dart' as path;
 
 import 'support/span_parser.dart';
 
+
 void main() {
-  final projectRoot = path.normalize(
-    path.join(path.basename(Platform.script.toFilePath()), '..'),
-  );
-  final testFileDirectory =
-      Directory(path.join(projectRoot, 'test', 'test_files'));
-  final goldenDirectory = Directory(path.join(projectRoot, 'test', 'goldens'));
-  final grammarFile = File(path.join(projectRoot, 'grammars/dart.json'));
-  final grammar = Grammar.fromJson(jsonDecode(grammarFile.readAsStringSync()));
+  final grammar = _loadGrammar();
   final updateGoldens = Platform.environment.containsKey('UPDATE_GOLDENS');
 
   group('golden', () {
-    final testFiles = testFileDirectory
-        .listSync()
-        .whereType<File>()
-        .where((file) => path.extension(file.path) == '.dart');
+    for (final testFile in _testFiles) {
+      final goldenFile = _getTheGoldenOfTestFile(testFile);
 
-    for (final testFile in testFiles) {
-      final goldenFile = File(path.join(
-        goldenDirectory.path,
-        '${path.basename(testFile.path)}.golden',
-      ));
-      test(path.basename(testFile.path), () {
+      test(testFile.fileName, () {
         if (!goldenFile.existsSync() && !updateGoldens) {
           fail('Missing golden file: ${goldenFile.path}');
         }
@@ -53,20 +40,87 @@ void main() {
   });
 }
 
+
+extension on File {
+  String get fileName => path.basename(this.path);
+}
+
+extension on String {
+  List<String> get lines => this.trim().split('\n');
+}
+
+
+
+/// Returns the root of this project
+String get _projectRoot {
+  final scriptPath = Platform.script.toFilePath();
+  final scriptName = path.basename(scriptPath);
+  final scriptDirectory = path.join(scriptName, '..');
+  final projectRoot = path.normalize(scriptDirectory);
+  return projectRoot;
+}
+
+/// Returns the path to the Golden file of the given Test file.
+String _goldenFilePath(File testFile) {
+  final testFileName = testFile.fileName;
+  final goldenFileName = '$testFileName.golden';
+  final goldenPath = path.join(_goldensDirectory.path, goldenFileName);
+  return goldenPath;
+}
+
+/// Path to the grammar file
+final _grammarFilePath = path.join(_projectRoot, 'grammars', 'dart.json');
+
+
+
+/// Directory of Test Files
+final _testFileDirectory =
+    Directory(path.join(_projectRoot, 'test', 'test_files'));
+
+/// Directory of the Goldens
+final _goldensDirectory = Directory(path.join(_projectRoot, 'test', 'goldens'));
+
+/// The grammar file
+final _grammarFile = File(_grammarFilePath);
+
+/// Returns the test files within the test directory
+Iterable<File> get _testFiles => _testFileDirectory
+    .listSync()
+    .whereType<File>()
+    .where((file) => path.extension(file.path) == '.dart');
+
+/// Returns the Golden file of the Test file.
+File _getTheGoldenOfTestFile(File testFile) => File(_goldenFilePath(testFile));
+
+
+
+/// The Grammar
+Grammar _loadGrammar() {
+  final grammarString = _grammarFile.readAsStringSync();
+  final grammarWithFixedLookaheads = grammarString.replaceAll("(?>!", "(?!");
+  final decodedGrammar = jsonDecode(grammarWithFixedLookaheads);
+  final grammar = Grammar.fromJson(decodedGrammar);
+  return grammar;
+}
+
+
+
+/// Builds the goldens
 String _buildGoldenText(String content, List<ScopeSpan> spans) {
   final buffer = StringBuffer();
   final spansByLine = groupBy(spans, (ScopeSpan s) => s.line - 1);
+  final lines = content.lines;
 
-  final lines = content.trim().split('\n');
-  for (var i = 0; i < lines.length; i++) {
-    final line = lines[i];
+  for (var lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+    final line = lines[lineIndex];
+
     // We need the line length to wrap. If this isn't the last line, account for
     // the \n we split by.
-    final newlineLength = (i == lines.length - 1) ? 0 : 1;
+    final newlineLength = (lineIndex == lines.length - 1) ? 0 : 1;
     final lineLengthWithNewline = line.length + newlineLength;
 
     buffer.writeln('>$line');
-    final lineSpans = spansByLine[i];
+    final lineSpans = spansByLine[lineIndex];
     if (lineSpans != null) {
       for (final span in lineSpans) {
         final col = span.column - 1;
@@ -77,11 +131,13 @@ String _buildGoldenText(String content, List<ScopeSpan> spans) {
         if (col + length > lineLengthWithNewline) {
           final thisLineLength = line.length - col;
           final offsetToStartOfNextLine = lineLengthWithNewline - col;
+
           length = thisLineLength;
-          spansByLine[i + 1] ??= [];
+          spansByLine[lineIndex + 1] ??= [];
+
           // Insert the wrapped span before other spans on the next line so the
           // order is preserved.
-          spansByLine[i + 1]!.insert(
+          spansByLine[lineIndex + 1]!.insert(
             0,
             ScopeSpan(
               scopes: span.scopes,
@@ -116,5 +172,5 @@ String _buildGoldenText(String content, List<ScopeSpan> spans) {
   return buffer.toString();
 }
 
-/// Normalises newlines in code for comparing.
+/// Normalizes newlines in code for comparing.
 String _normalize(String code) => code.replaceAll('\r', '');
