@@ -1,0 +1,53 @@
+>// Copyright (c) 2023, the Dart project authors. Please see the AUTHORS file
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// for details. All rights reserved. Use of this source code is governed by a
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// BSD-style license that can be found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>inline class MyInt {
+#^^^^^^^^^^^^ keyword.declaration.dart
+#             ^^^^^ support.class.dart
+>  final int it;
+#  ^^^^^ storage.modifier.dart
+#        ^^^ support.class.dart
+#              ^ punctuation.terminator.dart
+>  MyInt(this.it);
+#  ^^^^^ support.class.dart
+#        ^^^^ variable.language.dart
+#            ^ punctuation.dot.dart
+#                ^ punctuation.terminator.dart
+>  void foo() { print('MyInt.foo'); }
+#  ^^^^ storage.type.primitive.dart
+#       ^^^ entity.name.function.dart
+#               ^^^^^ entity.name.function.dart
+#                     ^^^^^^^^^^^ string.interpolated.single.dart
+#                                 ^ punctuation.terminator.dart
+>}
+>
+>final inline = 1;
+#^^^^^ storage.modifier.dart
+#             ^ keyword.operator.assignment.dart
+#               ^ constant.numeric.dart
+#                ^ punctuation.terminator.dart
+>
+>int get inline = 1;
+#^^^ support.class.dart
+#    ^^^ keyword.declaration.dart
+#               ^ keyword.operator.assignment.dart
+#                 ^ constant.numeric.dart
+#                  ^ punctuation.terminator.dart
+>set inline(int value) {}
+#^^^ keyword.declaration.dart
+#    ^^^^^^ entity.name.function.dart
+#           ^^^ support.class.dart
+>
+>void inline() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^ entity.name.function.dart
+>  var inline = 1;
+#  ^^^ storage.type.primitive.dart
+#             ^ keyword.operator.assignment.dart
+#               ^ constant.numeric.dart
+#                ^ punctuation.terminator.dart
+>}
