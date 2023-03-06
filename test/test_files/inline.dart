@@ -10,7 +10,7 @@ inline class MyInt {
 
 final inline = 1;
 
-int get inline = 1;
+int get inline => 1;
 set inline(int value) {}
 
 void inline() {

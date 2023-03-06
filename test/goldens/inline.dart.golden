@@ -31,12 +31,12 @@
 #               ^ constant.numeric.dart
 #                ^ punctuation.terminator.dart
 >
->int get inline = 1;
+>int get inline => 1;
 #^^^ support.class.dart
 #    ^^^ keyword.declaration.dart
-#               ^ keyword.operator.assignment.dart
-#                 ^ constant.numeric.dart
-#                  ^ punctuation.terminator.dart
+#               ^^ keyword.operator.closure.dart
+#                  ^ constant.numeric.dart
+#                   ^ punctuation.terminator.dart
 >set inline(int value) {}
 #^^^ keyword.declaration.dart
 #    ^^^^^^ entity.name.function.dart
