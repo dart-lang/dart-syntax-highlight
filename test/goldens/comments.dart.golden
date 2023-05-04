@@ -108,6 +108,7 @@
 #      ^ support.class.dart
 #       ^ other.source.dart
 #        ^^^^^^^ support.class.dart
+#                ^^^^^^^^^^^^^ comment.block.dart
 #                              ^ other.source.dart
 >  void b<dynamic /* comment */ >() {}
 #  ^^^^ storage.type.primitive.dart
@@ -119,6 +120,7 @@
 #  ^^^^^^ support.class.dart
 #        ^ other.source.dart
 #         ^^^^^^^ support.class.dart
+#                 ^^^^^^^^^^^^^ comment.block.dart
 #                               ^ other.source.dart
 #                                 ^ entity.name.function.dart
 >}
