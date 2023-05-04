@@ -102,3 +102,25 @@
 >var h;
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
+>
+>class A<dynamic /* comment */ > {
+#^^^^^ keyword.declaration.dart
+#      ^ support.class.dart
+#       ^ other.source.dart
+#        ^^^^^^^ support.class.dart
+#                ^^^^^^^^^^^^^ comment.block.dart
+#                              ^ other.source.dart
+>  void b<dynamic /* comment */ >() {}
+#  ^^^^ storage.type.primitive.dart
+#        ^ keyword.operator.comparison.dart
+#         ^^^^^^^ support.class.dart
+#                 ^^^^^^^^^^^^^ comment.block.dart
+#                               ^ keyword.operator.comparison.dart
+>  Future<dynamic /* comment */ > c() {}
+#  ^^^^^^ support.class.dart
+#        ^ other.source.dart
+#         ^^^^^^^ support.class.dart
+#                 ^^^^^^^^^^^^^ comment.block.dart
+#                               ^ other.source.dart
+#                                 ^ entity.name.function.dart
+>}
