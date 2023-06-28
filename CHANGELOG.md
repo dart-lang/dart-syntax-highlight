@@ -1,3 +1,7 @@
+## 1.2.2 (2023-06-28)
+
+- Added support for `inline` keyword.
+
 ## 1.2.1 (2023-05-04)
 
 - Fixed highlighting of comments inside type arguments.
