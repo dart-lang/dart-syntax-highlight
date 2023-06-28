@@ -1,4 +1,4 @@
-## 1.2.2 (2023-05-09)
+## 1.2.2 (2023-06-28)
 
 - Added support for `inline` keyword.
 
