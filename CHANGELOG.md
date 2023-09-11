@@ -1,3 +1,7 @@
+## 1.2.3 (2023-09-11)
+
+- Removed support for `inline class` keyword and added support for `extension type`.
+
 ## 1.2.2 (2023-06-28)
 
 - Added support for `inline class`.

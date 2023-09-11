@@ -6,7 +6,7 @@
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
 >extension type MyInt(int it) {
-#^^^^^^^^^ keyword.declaration.dart
+#^^^^^^^^^^^^^^ keyword.declaration.dart
 #               ^^^^^ support.class.dart
 #                     ^^^ support.class.dart
 >  void foo() { print(it.isEven); }
