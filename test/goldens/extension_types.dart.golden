@@ -1,0 +1,71 @@
+>// Copyright (c) 2023, the Dart project authors. Please see the AUTHORS file
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// for details. All rights reserved. Use of this source code is governed by a
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// BSD-style license that can be found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>extension type MyInt(int it) {
+#^^^^^^^^^^^^^^ keyword.declaration.dart
+#               ^^^^^ support.class.dart
+#                     ^^^ support.class.dart
+>  void foo() { print(it.isEven); }
+#  ^^^^ storage.type.primitive.dart
+#       ^^^ entity.name.function.dart
+#               ^^^^^ entity.name.function.dart
+#                       ^ punctuation.dot.dart
+#                               ^ punctuation.terminator.dart
+>}
+>
+>final extension = 1;
+#^^^^^ storage.modifier.dart
+#      ^^^^^^^^^ keyword.declaration.dart
+#                ^ keyword.operator.assignment.dart
+#                  ^ constant.numeric.dart
+#                   ^ punctuation.terminator.dart
+>int get extension => 1;
+#^^^ support.class.dart
+#    ^^^ keyword.declaration.dart
+#        ^^^^^^^^^ keyword.declaration.dart
+#                  ^^ keyword.operator.closure.dart
+#                     ^ constant.numeric.dart
+#                      ^ punctuation.terminator.dart
+>set extension(int value) {}
+#^^^ keyword.declaration.dart
+#    ^^^^^^^^^ keyword.declaration.dart
+#              ^^^ support.class.dart
+>void extension() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^ keyword.declaration.dart
+>  var extension = 1;
+#  ^^^ storage.type.primitive.dart
+#      ^^^^^^^^^ keyword.declaration.dart
+#                ^ keyword.operator.assignment.dart
+#                  ^ constant.numeric.dart
+#                   ^ punctuation.terminator.dart
+>}
+>
+>final type = 1;
+#^^^^^ storage.modifier.dart
+#           ^ keyword.operator.assignment.dart
+#             ^ constant.numeric.dart
+#              ^ punctuation.terminator.dart
+>int get type => 1;
+#^^^ support.class.dart
+#    ^^^ keyword.declaration.dart
+#             ^^ keyword.operator.closure.dart
+#                ^ constant.numeric.dart
+#                 ^ punctuation.terminator.dart
+>set type(int value) {}
+#^^^ keyword.declaration.dart
+#    ^^^^ entity.name.function.dart
+#         ^^^ support.class.dart
+>void type() {
+#^^^^ storage.type.primitive.dart
+#     ^^^^ entity.name.function.dart
+>  var type = 1;
+#  ^^^ storage.type.primitive.dart
+#           ^ keyword.operator.assignment.dart
+#             ^ constant.numeric.dart
+#              ^ punctuation.terminator.dart
+>}
