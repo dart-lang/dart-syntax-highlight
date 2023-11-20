@@ -412,8 +412,7 @@
 					"end": "\\}",
 					"patterns": [
 						{
-							"include": "#constants-and-special-vars",
-							"name": "variable.parameter.dart"
+							"include": "#constants-and-special-vars"
 						},
 						{
 							"include": "#strings"
