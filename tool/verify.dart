@@ -7,7 +7,7 @@ import 'dart:io';
 
 void main() {
   // Validate the grammars/dart.json file.
-  File grammarFile = File('grammars/dart.json');
+  final grammarFile = File('grammars/dart.json');
 
   try {
     jsonDecode(grammarFile.readAsStringSync());

@@ -14,21 +14,19 @@ env:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    container:
-      image:  google/dart:dev
-
     steps:
-    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-    - name: Print Dart version
-      run: dart --version
-    - name: Install dependencies
-      run: dart pub get
-    - name: Analyze
-      run: dart analyze
-    - name: Verify grammar file
-      run: dart run tool/verify.dart
-    - name: Test
-      run: dart test
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - uses: dart-lang/setup-dart@b64355ae6ca0b5d484f0106a033dd1388965d06d
+        with:
+          sdk: stable
+      - name: Print Dart version
+        run: dart --version
+      - name: Install dependencies
+        run: dart pub get
+      - name: Analyze
+        run: dart analyze --fatal-infos
+      - name: Verify grammar file
+        run: dart run tool/verify.dart
+      - name: Test
+        run: dart test
