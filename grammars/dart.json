@@ -399,6 +399,7 @@
 		"string-interp": {
 			"patterns": [
 				{
+					"name": "string.interpolated.expression.dart",
 					"match": "\\$([a-zA-Z0-9_]+)",
 					"captures": {
 						"1": {
