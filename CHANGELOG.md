@@ -1,3 +1,8 @@
+## 1.2.4 (2023-11-26)
+
+- Include the opening `$` of a simple identifier string interpolation
+  inside the `string.interpolated.expression.dart` scope.
+
 ## 1.2.3 (2023-09-11)
 
 - Removed support for `inline class` keyword and added support for `extension type`.
