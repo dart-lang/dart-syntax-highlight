@@ -1,3 +1,7 @@
+## 1.2.5 (2023-11-27)
+
+- Don't mark empty double backticks as inline code.
+
 ## 1.2.4 (2023-11-26)
 
 - Include the opening `$` of a simple identifier string interpolation

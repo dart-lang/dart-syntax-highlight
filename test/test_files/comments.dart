@@ -11,6 +11,12 @@
 /// ...
 var a;
 
+/// ``
+var noInlineCode;
+
+/// ` `
+var inlineCode;
+
 /*
  * Old-style dartdoc
  *
