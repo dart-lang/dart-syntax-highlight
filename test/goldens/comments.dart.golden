@@ -26,6 +26,26 @@
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
+>/// ``
+#^^^^^^ comment.block.documentation.dart
+>var noInlineCode;
+#^^^ storage.type.primitive.dart
+#                ^ punctuation.terminator.dart
+>
+>/// `Stream<int>`
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+>var inlineCode;
+#^^^ storage.type.primitive.dart
+#              ^ punctuation.terminator.dart
+>
+>/// ` `
+#^^^^ comment.block.documentation.dart
+#    ^^^ comment.block.documentation.dart variable.other.source.dart
+>var inlineCodeJustWhitespace;
+#^^^ storage.type.primitive.dart
+#                            ^ punctuation.terminator.dart
+>
 >/*
 #^^ comment.block.dart
 > * Old-style dartdoc
