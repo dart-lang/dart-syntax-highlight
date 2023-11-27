@@ -14,8 +14,11 @@ var a;
 /// ``
 var noInlineCode;
 
-/// ` `
+/// `Stream<int>`
 var inlineCode;
+
+/// ` `
+var inlineCodeJustWhitespace;
 
 /*
  * Old-style dartdoc
