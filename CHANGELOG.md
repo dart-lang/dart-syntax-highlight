@@ -1,3 +1,7 @@
+## 1.2.6 (2024-01-25)
+
+- Don't highlight methods named `get`/`set` with type parameters as keywords.
+
 ## 1.2.5 (2023-11-27)
 
 - Don't mark empty double backticks as inline code.

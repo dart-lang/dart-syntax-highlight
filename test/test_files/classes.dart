@@ -25,12 +25,19 @@ class MyClass {
   void method1() {}
   void Method2() {}
   void get() {}
+  void get<T>() {}
   void set() {}
+  void set<T>() {}
 
   String? _foo;
   String? get foo => _foo;
   set foo(String? value) => _foo = value;
 }
+
+void get() {}
+void get<T>() {}
+void set() {}
+void set<T>() {}
 
 mixin MyMixin {}
 
