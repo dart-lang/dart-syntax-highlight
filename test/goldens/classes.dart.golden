@@ -77,9 +77,21 @@
 >  void get() {}
 #  ^^^^ storage.type.primitive.dart
 #       ^^^ entity.name.function.dart
+>  void get<T>() {}
+#  ^^^^ storage.type.primitive.dart
+#       ^^^ entity.name.function.dart
+#          ^ other.source.dart
+#           ^ support.class.dart
+#            ^ other.source.dart
 >  void set() {}
 #  ^^^^ storage.type.primitive.dart
 #       ^^^ entity.name.function.dart
+>  void set<T>() {}
+#  ^^^^ storage.type.primitive.dart
+#       ^^^ entity.name.function.dart
+#          ^ other.source.dart
+#           ^ support.class.dart
+#            ^ other.source.dart
 >
 >  String? _foo;
 #  ^^^^^^ support.class.dart
@@ -100,6 +112,25 @@
 #                                 ^ keyword.operator.assignment.dart
 #                                        ^ punctuation.terminator.dart
 >}
+>
+>void get() {}
+#^^^^ storage.type.primitive.dart
+#     ^^^ entity.name.function.dart
+>void get<T>() {}
+#^^^^ storage.type.primitive.dart
+#     ^^^ entity.name.function.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#          ^ other.source.dart
+>void set() {}
+#^^^^ storage.type.primitive.dart
+#     ^^^ entity.name.function.dart
+>void set<T>() {}
+#^^^^ storage.type.primitive.dart
+#     ^^^ entity.name.function.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#          ^ other.source.dart
 >
 >mixin MyMixin {}
 #^^^^^ keyword.declaration.dart

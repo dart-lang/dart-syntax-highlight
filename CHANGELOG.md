@@ -1,3 +1,16 @@
+## 1.2.6 (2024-01-25)
+
+- Don't highlight methods named `get`/`set` with type parameters as keywords.
+
+## 1.2.5 (2023-11-27)
+
+- Don't mark empty double backticks as inline code.
+
+## 1.2.4 (2023-11-26)
+
+- Include the opening `$` of a simple identifier string interpolation
+  inside the `string.interpolated.expression.dart` scope.
+
 ## 1.2.3 (2023-09-11)
 
 - Removed support for `inline class` keyword and added support for `extension type`.
