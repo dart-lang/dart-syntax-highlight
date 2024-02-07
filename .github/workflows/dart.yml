@@ -5,9 +5,9 @@ on:
     # “At 00:00 (UTC) on Sunday.”
     - cron: '0 0 * * 0'
   push:
-    branches: [ master ]
+    branches: [ master, main ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, main ]
 
 env:
   PUB_ENVIRONMENT: bot.github
@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-      - uses: dart-lang/setup-dart@b64355ae6ca0b5d484f0106a033dd1388965d06d
+      - uses: dart-lang/setup-dart@fedb1266e91cf51be2fdb382869461a434b920a3
         with:
           sdk: stable
       - name: Print Dart version
