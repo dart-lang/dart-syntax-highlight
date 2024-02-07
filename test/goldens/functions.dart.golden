@@ -26,7 +26,7 @@
 #^^^^ storage.type.primitive.dart
 #     ^^^^^^^ entity.name.function.dart
 >  return;
-#  ^^^^^^ keyword.control.dart
+#  ^^^^^^ keyword.control.return.dart
 #        ^ punctuation.terminator.dart
 >}
 >
@@ -69,7 +69,7 @@
 #                                                ^^^^^^ support.class.dart
 #                                                      ^ other.source.dart
 >  return {};
-#  ^^^^^^ keyword.control.dart
+#  ^^^^^^ keyword.control.return.dart
 #           ^ punctuation.terminator.dart
 >}
 >
