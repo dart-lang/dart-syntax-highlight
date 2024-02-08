@@ -52,7 +52,7 @@
 #           ^ punctuation.terminator.dart
 >    }
 >    return;
-#    ^^^^^^ keyword.control.dart
+#    ^^^^^^ keyword.control.return.dart
 #          ^ punctuation.terminator.dart
 >  }
 >
@@ -94,7 +94,7 @@
 #    ^^^^^^^ keyword.control.dart
 #           ^ keyword.operator.ternary.dart
 >      return;
-#      ^^^^^^ keyword.control.dart
+#      ^^^^^^ keyword.control.return.dart
 #            ^ punctuation.terminator.dart
 >  }
 >}

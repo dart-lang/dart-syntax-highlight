@@ -156,7 +156,7 @@
 #       ^^^^^^^^^^^^^^^^^^^^^ entity.name.function.dart
 #                             ^^^ support.class.dart
 >  return switch (char) {
-#  ^^^^^^ keyword.control.dart
+#  ^^^^^^ keyword.control.return.dart
 #         ^^^^^^ keyword.control.dart
 >    < space => 'control',
 #    ^ keyword.operator.comparison.dart

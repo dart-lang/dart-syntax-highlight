@@ -57,7 +57,7 @@
 #                          ^^ string.interpolated.single.dart
 #                             ^ punctuation.terminator.dart
 >  return (1, 2);
-#  ^^^^^^ keyword.control.dart
+#  ^^^^^^ keyword.control.return.dart
 #          ^ constant.numeric.dart
 #           ^ punctuation.comma.dart
 #             ^ constant.numeric.dart
