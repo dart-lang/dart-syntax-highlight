@@ -5,9 +5,9 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:test/test.dart';
 import 'package:collection/collection.dart';
 import 'package:path/path.dart' as path;
+import 'package:test/test.dart';
 
 import 'support/span_parser.dart';
 
@@ -19,7 +19,8 @@ void main() {
       Directory(path.join(projectRoot, 'test', 'test_files'));
   final goldenDirectory = Directory(path.join(projectRoot, 'test', 'goldens'));
   final grammarFile = File(path.join(projectRoot, 'grammars/dart.json'));
-  final grammar = Grammar.fromJson(jsonDecode(grammarFile.readAsStringSync()));
+  final grammar = Grammar.fromJson(
+      jsonDecode(grammarFile.readAsStringSync()) as Map<String, Object?>);
   final updateGoldens = Platform.environment.containsKey('UPDATE_GOLDENS');
 
   group('golden', () {

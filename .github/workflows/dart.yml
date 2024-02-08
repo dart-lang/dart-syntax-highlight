@@ -5,30 +5,28 @@ on:
     # “At 00:00 (UTC) on Sunday.”
     - cron: '0 0 * * 0'
   push:
-    branches: [ master ]
+    branches: [ master, main ]
   pull_request:
-    branches: [ master ]
+    branches: [ master, main ]
 
 env:
   PUB_ENVIRONMENT: bot.github
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
-
-    container:
-      image:  google/dart:dev
-
     steps:
-    - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
-    - name: Print Dart version
-      run: dart --version
-    - name: Install dependencies
-      run: dart pub get
-    - name: Analyze
-      run: dart analyze
-    - name: Verify grammar file
-      run: dart run tool/verify.dart
-    - name: Test
-      run: dart test
+      - uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - uses: dart-lang/setup-dart@fedb1266e91cf51be2fdb382869461a434b920a3
+        with:
+          sdk: stable
+      - name: Print Dart version
+        run: dart --version
+      - name: Install dependencies
+        run: dart pub get
+      - name: Analyze
+        run: dart analyze --fatal-infos
+      - name: Verify grammar file
+        run: dart run tool/verify.dart
+      - name: Test
+        run: dart test
