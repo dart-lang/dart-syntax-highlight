@@ -1,3 +1,7 @@
+## 1.2.7 (2024-02-08)
+
+- Updated the scope for `return` keywords from `keyword.control.dart` to `keyword.control.return.dart`.
+
 ## 1.2.6 (2024-01-25)
 
 - Don't highlight methods named `get`/`set` with type parameters as keywords.
