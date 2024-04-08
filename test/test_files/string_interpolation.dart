@@ -21,3 +21,47 @@ void functions() {
   print('${() => 'Hello'}');
   print('print(${(() => 'Hello')()})');
 }
+
+void nestedBraces() {
+  print(   '${    { " {} ${ "}" } {}" }      }'  );
+  print(   '${    {}      }'  );
+  print(   '${    "{}"    }'  );
+  print(   '${    "{"     }'  );
+  print(   '${    "}"     }'  );
+  print(   '${    {}      }'  );
+  print(   "${    {}      }"  );
+  print(   "${    "{}"    }"  );
+  print(   "${    "{"     }"  );
+  print(   "${    "}"     }"  );
+  print(   "${    {}      }"  );
+  print( '''${    {}      }''');
+  print( '''${    "{}"    }''');
+  print( '''${    "{"     }''');
+  print( '''${    "}"     }''');
+  print( '''${    {}      }''');
+  print( """${    {}      }""");
+  print( """${    "{}"    }""");
+  print( """${    "{"     }""");
+  print( """${    "}"     }""");
+  print( """${    {}      }""");
+  print(  r'${    {}      }'  );
+  print(  r'${    "{}"    }'  );
+  print(  r'${    "{"     }'  );
+  print(  r'${    "}"     }'  );
+  print(  r'${    {}      }'  );
+  print(  r"${    {}      }"  );
+  print(  r"${    '{}'    }"  );
+  print(  r"${    '{'     }"  );
+  print(  r"${    '}'     }"  );
+  print(  r"${    {}      }"  );
+  print(r'''${    {}      }''');
+  print(r'''${    "{}"    }''');
+  print(r'''${    "{"     }''');
+  print(r'''${    "}"     }''');
+  print(r'''${    {}      }''');
+  print(r"""${    {}      }""");
+  print(r"""${    "{}"    }""");
+  print(r"""${    "{"     }""");
+  print(r"""${    "}"     }""");
+  print(r"""${    {}      }""");
+}
