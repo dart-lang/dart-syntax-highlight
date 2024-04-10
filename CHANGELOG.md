@@ -1,3 +1,7 @@
+## 1.2.8 (2024-04-08)
+
+- Improve handling of braces inside string interpolation so `}` in expressions are not considered the end of the interpolation.
+
 ## 1.2.7 (2024-02-08)
 
 - Updated the scope for `return` keywords from `keyword.control.dart` to `keyword.control.return.dart`.
