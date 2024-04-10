@@ -432,16 +432,6 @@
 					"end": "\\}",
 					"patterns": [
 						{
-							"include": "#constants-and-special-vars"
-						},
-						{
-							"include": "#strings"
-						},
-						{
-							"name": "variable.parameter.dart",
-							"match": "[a-zA-Z0-9_]+"
-						},
-						{
 							"include": "#expression"
 						}
 					]
