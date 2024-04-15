@@ -1,0 +1,12 @@
+{
+	// To help testing with this project in VS Code, disable
+	// semantic tokens (since they override the grammar) and
+	// enable rainbow brackets (to make it clear if our scopes
+	// are preventing VS Code from matching brackets correctly).
+	"editor.semanticHighlighting.enabled": false,
+	"editor.bracketPairColorization.enabled": true,
+	// Disable formatting because some test files are
+	// formatted specifically to test certain conditions
+	// or to make the results easier to see.
+	"dart.enableSdkFormatter": false
+}

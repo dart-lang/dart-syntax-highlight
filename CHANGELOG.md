@@ -1,3 +1,8 @@
+## 1.2.8 (2024-04-08)
+
+- Improve handling of braces inside string interpolation so `}` in expressions are not considered the end of the interpolation.
+- Change nested expression scopes from `string.interpolated.expression.dart` to `meta.embedded.expression.dart`.
+
 ## 1.2.7 (2024-02-08)
 
 - Updated the scope for `return` keywords from `keyword.control.dart` to `keyword.control.return.dart`.
