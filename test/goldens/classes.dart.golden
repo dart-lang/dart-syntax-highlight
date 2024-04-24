@@ -259,3 +259,7 @@
 #^^^^^ keyword.declaration.dart
 #      ^^^^^ keyword.declaration.dart
 #            ^^^^^^^^^^^^ support.class.dart
+>macro class MyMacroClass {}
+#^^^^^ storage.modifier.dart
+#      ^^^^^ keyword.declaration.dart
+#            ^^^^^^^^^^^^ support.class.dart

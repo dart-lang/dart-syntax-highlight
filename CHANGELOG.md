@@ -1,3 +1,7 @@
+## 1.2.9 (2024-04-24)
+
+- Added support for `macro`, `augment library`, `import augment`, `augment`, `augmented`.
+
 ## 1.2.8 (2024-04-08)
 
 - Improve handling of braces inside string interpolation so `}` in expressions are not considered the end of the interpolation.

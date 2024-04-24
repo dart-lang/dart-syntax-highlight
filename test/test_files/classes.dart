@@ -69,3 +69,4 @@ interface class MyInterfaceClass {}
 sealed class MySealedClass {}
 final class MyFinalClass {}
 mixin class MyMixinClass {}
+macro class MyMacroClass {}
