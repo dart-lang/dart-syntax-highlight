@@ -1,0 +1,42 @@
+>augment library 'augmented.dart';
+#^^^^^^^^^^^^^^^ meta.declaration.dart keyword.other.import.dart
+#               ^ meta.declaration.dart
+#                ^^^^^^^^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                                ^ meta.declaration.dart punctuation.terminator.dart
+>
+>augment class MyClass {
+#^^^^^^^ storage.modifier.dart
+#        ^^^^^ keyword.declaration.dart
+#              ^^^^^^^ support.class.dart
+>  augment void myMethod() {
+#  ^^^^^^^ storage.modifier.dart
+#          ^^^^ storage.type.primitive.dart
+#               ^^^^^^^^ entity.name.function.dart
+>    augmented();
+#    ^^^^^^^^^ variable.language.dart
+#               ^ punctuation.terminator.dart
+>  }
+>
+>  String get myGetter => augmented;
+#  ^^^^^^ support.class.dart
+#         ^^^ keyword.declaration.dart
+#                      ^^ keyword.operator.closure.dart
+#                         ^^^^^^^^^ variable.language.dart
+#                                  ^ punctuation.terminator.dart
+>  set mySetter(String value) { augmented = value; }
+#  ^^^ keyword.declaration.dart
+#      ^^^^^^^^ entity.name.function.dart
+#               ^^^^^^ support.class.dart
+#                               ^^^^^^^^^ variable.language.dart
+#                                         ^ keyword.operator.assignment.dart
+#                                                ^ punctuation.terminator.dart
+>}
+>
+>augment void myFunction() {
+#^^^^^^^ storage.modifier.dart
+#        ^^^^ storage.type.primitive.dart
+#             ^^^^^^^^^^ entity.name.function.dart
+>  augmented();
+#  ^^^^^^^^^ variable.language.dart
+#             ^ punctuation.terminator.dart
+>}

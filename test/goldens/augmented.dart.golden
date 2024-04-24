@@ -1,0 +1,27 @@
+>import augment 'augmentation.dart';
+#^^^^^^^^^^^^^^ meta.declaration.dart keyword.other.import.dart
+#              ^ meta.declaration.dart
+#               ^^^^^^^^^^^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
+#                                  ^ meta.declaration.dart punctuation.terminator.dart
+>
+>class MyClass {
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^ support.class.dart
+>  void myMethod() {}
+#  ^^^^ storage.type.primitive.dart
+#       ^^^^^^^^ entity.name.function.dart
+>  String get myGetter => '';
+#  ^^^^^^ support.class.dart
+#         ^^^ keyword.declaration.dart
+#                      ^^ keyword.operator.closure.dart
+#                         ^^ string.interpolated.single.dart
+#                           ^ punctuation.terminator.dart
+>  set mySetter(String value) {}
+#  ^^^ keyword.declaration.dart
+#      ^^^^^^^^ entity.name.function.dart
+#               ^^^^^^ support.class.dart
+>}
+>
+>void myFunction() {}
+#^^^^ storage.type.primitive.dart
+#     ^^^^^^^^^^ entity.name.function.dart
