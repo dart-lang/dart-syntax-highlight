@@ -1,0 +1,40 @@
+>// Copyright (c) 2024, the Dart project authors. Please see the AUTHORS file
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// for details. All rights reserved. Use of this source code is governed by a
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>// BSD-style license that can be found in the LICENSE file.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
+>
+>var a = [
+#^^^ storage.type.primitive.dart
+#      ^ keyword.operator.assignment.dart
+>  1,
+#  ^ constant.numeric.dart
+#   ^ punctuation.comma.dart
+>  .0,
+#  ^ punctuation.dot.dart
+#   ^ constant.numeric.dart
+#    ^ punctuation.comma.dart
+>  1.2,
+#  ^^^ constant.numeric.dart
+#     ^ punctuation.comma.dart
+>  0x123,
+#  ^^^^^ constant.numeric.dart
+#       ^ punctuation.comma.dart
+>  100__000_000__000_000__000_000,
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
+#                                ^ punctuation.comma.dart
+>  0x4000_0000_0000_0000,
+#  ^^^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
+#                       ^ punctuation.comma.dart
+>  0.000_000_000_01,
+#  ^^^^^^^^^^^^^^^^ constant.numeric.dart
+#                  ^ punctuation.comma.dart
+>  0x00_14_22_01_23_45,
+#  ^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
+#                     ^ punctuation.comma.dart
+>  555_123_4567,
+#  ^^^^^^^^^^^^ constant.numeric.dart
+#              ^ punctuation.comma.dart
+>];
+# ^ punctuation.terminator.dart
