@@ -1,3 +1,7 @@
+## 1.3.0 (2024-07-31)
+
+- Added support for digit separators (`_`).
+
 ## 1.2.9 (2024-04-24)
 
 - Added support for `macro`, `augment library`, `import augment`, `augment`, `augmented`.

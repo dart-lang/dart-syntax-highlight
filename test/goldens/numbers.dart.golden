@@ -22,15 +22,19 @@
 #  ^^^^^ constant.numeric.dart
 #       ^ punctuation.comma.dart
 >  100__000_000__000_000__000_000,
+#  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
 #                                ^ punctuation.comma.dart
 >  0x4000_0000_0000_0000,
+#  ^^^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
 #                       ^ punctuation.comma.dart
 >  0.000_000_000_01,
-#  ^^ constant.numeric.dart
+#  ^^^^^^^^^^^^^^^^ constant.numeric.dart
 #                  ^ punctuation.comma.dart
 >  0x00_14_22_01_23_45,
+#  ^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
 #                     ^ punctuation.comma.dart
 >  555_123_4567,
+#  ^^^^^^^^^^^^ constant.numeric.dart
 #              ^ punctuation.comma.dart
 >];
 # ^ punctuation.terminator.dart
