@@ -1,3 +1,8 @@
+## 1.4.0 (2024-10-10)
+
+- Removed use of 'while' in the grammar to avoid some differences in implementations between GitHub and VS Code
+- Improved handling of unclosed code blocks in dartdoc comments
+
 ## 1.3.0 (2024-07-31)
 
 - Added support for digit separators (`_`).

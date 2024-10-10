@@ -12,12 +12,10 @@
 >/// ```
 #^^^^^^^ comment.block.documentation.dart
 >/// code
-#^^^ comment.block.documentation.dart
-#   ^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^^ comment.block.documentation.dart variable.other.source.dart
 >/// ```
-#^^^ comment.block.documentation.dart
-#   ^ comment.block.documentation.dart variable.other.source.dart
-#    ^^^ comment.block.documentation.dart
+#^^^^^^^ comment.block.documentation.dart
 >///
 #^^^ comment.block.documentation.dart
 >/// ...
@@ -33,8 +31,8 @@
 >/// ```
 #^^^^^^^ comment.block.documentation.dart
 >/// code
-#^^^ comment.block.documentation.dart
-#   ^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^^ comment.block.documentation.dart variable.other.source.dart
 >var doc2;
 #^^^ storage.type.primitive.dart
 #        ^ punctuation.terminator.dart
@@ -54,13 +52,16 @@
 >///
 #^^^ comment.block.documentation.dart
 >///     code1
-#^^^^^^^^^^^^^ comment.block.documentation.dart
+#^^^^^^^^ comment.block.documentation.dart
+#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
 >///     code2
-#^^^^^^^^^^^^^ comment.block.documentation.dart
+#^^^^^^^^ comment.block.documentation.dart
+#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
 >///
 #^^^ comment.block.documentation.dart
 >///     code3
-#^^^^^^^^^^^^^ comment.block.documentation.dart
+#^^^^^^^^ comment.block.documentation.dart
+#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
 >///
 #^^^ comment.block.documentation.dart
 >/// ...
@@ -76,10 +77,10 @@
 > * ```
 #^^^^^^ comment.block.documentation.dart
 > * code
-#^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
+#   ^^^^ comment.block.documentation.dart variable.other.source.dart
 > * ```
-#^^^ comment.block.documentation.dart variable.other.source.dart
-#   ^^^ comment.block.documentation.dart
+#^^^^^^ comment.block.documentation.dart
 > *
 #^^ comment.block.documentation.dart
 > * ...
@@ -97,129 +98,166 @@
 > * ```
 #^^^^^^ comment.block.documentation.dart
 > * code
-#^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
+#   ^^^^ comment.block.documentation.dart variable.other.source.dart
 > */
-#^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
 >var blockDoc2;
-#^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#             ^ punctuation.terminator.dart
 >
 >/** Block dartdoc comment with unclosed backticks.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 > *
-#^^ comment.block.documentation.dart variable.other.source.dart
+#^^ comment.block.documentation.dart
 > * `code
-#^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^ comment.block.documentation.dart
 > */
-#^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
 >var blockDoc3;
-#^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#             ^ punctuation.terminator.dart
 >
 >/** Block dartdoc comment with indented code.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 > *
-#^^ comment.block.documentation.dart variable.other.source.dart
+#^^ comment.block.documentation.dart
 > *     code1
-#^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^ comment.block.documentation.dart
+#       ^^^^^ comment.block.documentation.dart variable.other.source.dart
 > *     code2
-#^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^ comment.block.documentation.dart
+#       ^^^^^ comment.block.documentation.dart variable.other.source.dart
 > *
-#^^ comment.block.documentation.dart variable.other.source.dart
+#^^ comment.block.documentation.dart
 > *     code3
-#^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^ comment.block.documentation.dart
+#       ^^^^^ comment.block.documentation.dart variable.other.source.dart
 > *
-#^^ comment.block.documentation.dart variable.other.source.dart
+#^^ comment.block.documentation.dart
 > * ...
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^ comment.block.documentation.dart
 > */
-#^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
 >var blockDoc4;
-#^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#             ^ punctuation.terminator.dart
 >
 >/// ``
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^ comment.block.documentation.dart
 >var noInlineCode;
-#^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#                ^ punctuation.terminator.dart
 >
 >/// `Stream<int>`
-#^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
 >var inlineCode;
-#^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#              ^ punctuation.terminator.dart
 >
 >/// ` `
-#^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^ comment.block.documentation.dart variable.other.source.dart
 >var inlineCodeJustWhitespace;
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#                            ^ punctuation.terminator.dart
 >
 >/*
-#^^ comment.block.documentation.dart variable.other.source.dart
+#^^ comment.block.dart
 > * Old-style dartdoc
-#^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^^^^ comment.block.dart
 > *
-#^^ comment.block.documentation.dart variable.other.source.dart
+#^^ comment.block.dart
 > * ...
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^ comment.block.dart
 > */
-#^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.dart
 >var b;
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#     ^ punctuation.terminator.dart
 >
 >/* Inline block comment */
-#^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.dart
 >var c;
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#     ^ punctuation.terminator.dart
 >
 >/**
-#^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
 > * Nested block
-#^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^ comment.block.documentation.dart
 > *
-#^^ comment.block.documentation.dart variable.other.source.dart
+#^^ comment.block.documentation.dart
 > * /**
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^ comment.block.documentation.dart
 > *  * Nested block
-#^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 > *  */
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^ comment.block.documentation.dart
 > */
-#^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
 >var d;
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#     ^ punctuation.terminator.dart
 >
 >/**
-#^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
 > * Nested
-#^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^ comment.block.documentation.dart
 > *
-#^^ comment.block.documentation.dart variable.other.source.dart
+#^^ comment.block.documentation.dart
 > * /* Inline */
-#^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
+#   ^^^^^^^^^^^^ comment.block.documentation.dart comment.block.dart
 > */
-#^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ comment.block.documentation.dart
 >var e;
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#     ^ punctuation.terminator.dart
 >
 >/* Nested /* Inline */ */
-#^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.dart
 >var f;
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#     ^ punctuation.terminator.dart
 >
 >// Simple comment
-#^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >var g;
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#     ^ punctuation.terminator.dart
 >
 >/// Dartdoc with reference to [a].
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
+#                              ^^^ comment.block.documentation.dart variable.name.source.dart
+#                                 ^ comment.block.documentation.dart
 >/// And a link to [example.org](http://example.org/).
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
+#                  ^^^^^^^^^^^^^ comment.block.documentation.dart variable.name.source.dart
+#                               ^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 >var h;
-#^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ storage.type.primitive.dart
+#     ^ punctuation.terminator.dart
 >
 >class A<T /* comment */ > {
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^ keyword.declaration.dart
+#      ^ support.class.dart
+#       ^ other.source.dart
+#        ^ support.class.dart
+#          ^^^^^^^^^^^^^ comment.block.dart
+#                        ^ other.source.dart
 >  void b<T /* comment */ >() {}
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#  ^^^^ storage.type.primitive.dart
+#        ^ keyword.operator.comparison.dart
+#         ^ support.class.dart
+#           ^^^^^^^^^^^^^ comment.block.dart
+#                         ^ keyword.operator.comparison.dart
 >  Future<T /* comment */ > c() {}
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#  ^^^^^^ support.class.dart
+#        ^ other.source.dart
+#         ^ support.class.dart
+#           ^^^^^^^^^^^^^ comment.block.dart
+#                         ^ other.source.dart
+#                           ^ entity.name.function.dart
 >}
-#^ comment.block.documentation.dart variable.other.source.dart
