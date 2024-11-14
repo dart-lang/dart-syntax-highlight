@@ -1,4 +1,4 @@
-## 1.4.0 (2024-10-30)
+## 1.4.0 (2024-11-14)
 
 - Removed use of 'while' in the grammar to avoid some differences in implementations between GitHub and VS Code
 - Improved handling of unclosed code blocks in dartdoc comments
