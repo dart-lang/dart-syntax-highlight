@@ -5,143 +5,26 @@
 >// found in the LICENSE file.
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
->/// Multiline dartdoc comment with triple backticks.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
+>/// Multiline dartdoc comment.
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 >///
 #^^^ comment.block.documentation.dart
 >/// ```
 #^^^^^^^ comment.block.documentation.dart
->/// code
-#^^^^ comment.block.documentation.dart
-#    ^^^^ comment.block.documentation.dart variable.other.source.dart
+>/// doc
+#^^^ comment.block.documentation.dart
+#   ^^^^ comment.block.documentation.dart variable.other.source.dart
 >/// ```
-#^^^^^^^ comment.block.documentation.dart
+#^^^ comment.block.documentation.dart
+#   ^ comment.block.documentation.dart variable.other.source.dart
+#    ^^^ comment.block.documentation.dart
 >///
 #^^^ comment.block.documentation.dart
 >/// ...
 #^^^^^^^ comment.block.documentation.dart
->var doc1;
+>var a;
 #^^^ storage.type.primitive.dart
-#        ^ punctuation.terminator.dart
->
->/// Multiline dartdoc comment with unclosed triple backticks.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
->///
-#^^^ comment.block.documentation.dart
->/// ```
-#^^^^^^^ comment.block.documentation.dart
->/// code
-#^^^^ comment.block.documentation.dart
-#    ^^^^ comment.block.documentation.dart variable.other.source.dart
->var doc2;
-#^^^ storage.type.primitive.dart
-#        ^ punctuation.terminator.dart
->
->/// Multiline dartdoc comment with unclosed backticks.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
->///
-#^^^ comment.block.documentation.dart
->/// `code
-#^^^^^^^^^ comment.block.documentation.dart
->var doc3;
-#^^^ storage.type.primitive.dart
-#        ^ punctuation.terminator.dart
->
->/// Multiline dartdoc comment with indented code.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
->///
-#^^^ comment.block.documentation.dart
->///     code1
-#^^^^^^^^ comment.block.documentation.dart
-#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
->///     code2
-#^^^^^^^^ comment.block.documentation.dart
-#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
->///
-#^^^ comment.block.documentation.dart
->///     code3
-#^^^^^^^^ comment.block.documentation.dart
-#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
->///
-#^^^ comment.block.documentation.dart
->/// ...
-#^^^^^^^ comment.block.documentation.dart
->var doc4;
-#^^^ storage.type.primitive.dart
-#        ^ punctuation.terminator.dart
->
->/** Block dartdoc comment with triple backticks.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *
-#^^ comment.block.documentation.dart
-> * ```
-#^^^^^^ comment.block.documentation.dart
-> * code
-#^^^ comment.block.documentation.dart
-#   ^^^^ comment.block.documentation.dart variable.other.source.dart
-> * ```
-#^^^^^^ comment.block.documentation.dart
-> *
-#^^ comment.block.documentation.dart
-> * ...
-#^^^^^^ comment.block.documentation.dart
-> */
-#^^^ comment.block.documentation.dart
->var blockDoc1;
-#^^^ storage.type.primitive.dart
-#             ^ punctuation.terminator.dart
->
->/** Block dartdoc comment with unclosed triple backticks.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *
-#^^ comment.block.documentation.dart
-> * ```
-#^^^^^^ comment.block.documentation.dart
-> * code
-#^^^ comment.block.documentation.dart
-#   ^^^^ comment.block.documentation.dart variable.other.source.dart
-> */
-#^^^ comment.block.documentation.dart
->var blockDoc2;
-#^^^ storage.type.primitive.dart
-#             ^ punctuation.terminator.dart
->
->/** Block dartdoc comment with unclosed backticks.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *
-#^^ comment.block.documentation.dart
-> * `code
-#^^^^^^^^ comment.block.documentation.dart
-> */
-#^^^ comment.block.documentation.dart
->var blockDoc3;
-#^^^ storage.type.primitive.dart
-#             ^ punctuation.terminator.dart
->
->/** Block dartdoc comment with indented code.
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *
-#^^ comment.block.documentation.dart
-> *     code1
-#^^^^^^^ comment.block.documentation.dart
-#       ^^^^^ comment.block.documentation.dart variable.other.source.dart
-> *     code2
-#^^^^^^^ comment.block.documentation.dart
-#       ^^^^^ comment.block.documentation.dart variable.other.source.dart
-> *
-#^^ comment.block.documentation.dart
-> *     code3
-#^^^^^^^ comment.block.documentation.dart
-#       ^^^^^ comment.block.documentation.dart variable.other.source.dart
-> *
-#^^ comment.block.documentation.dart
-> * ...
-#^^^^^^ comment.block.documentation.dart
-> */
-#^^^ comment.block.documentation.dart
->var blockDoc4;
-#^^^ storage.type.primitive.dart
-#             ^ punctuation.terminator.dart
+#     ^ punctuation.terminator.dart
 >
 >/// ``
 #^^^^^^ comment.block.documentation.dart
@@ -240,24 +123,24 @@
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
->class A<T /* comment */ > {
+>class A<dynamic /* comment */ > {
 #^^^^^ keyword.declaration.dart
 #      ^ support.class.dart
 #       ^ other.source.dart
-#        ^ support.class.dart
-#          ^^^^^^^^^^^^^ comment.block.dart
-#                        ^ other.source.dart
->  void b<T /* comment */ >() {}
+#        ^^^^^^^ support.class.dart
+#                ^^^^^^^^^^^^^ comment.block.dart
+#                              ^ other.source.dart
+>  void b<dynamic /* comment */ >() {}
 #  ^^^^ storage.type.primitive.dart
 #        ^ keyword.operator.comparison.dart
-#         ^ support.class.dart
-#           ^^^^^^^^^^^^^ comment.block.dart
-#                         ^ keyword.operator.comparison.dart
->  Future<T /* comment */ > c() {}
+#         ^^^^^^^ support.class.dart
+#                 ^^^^^^^^^^^^^ comment.block.dart
+#                               ^ keyword.operator.comparison.dart
+>  Future<dynamic /* comment */ > c() {}
 #  ^^^^^^ support.class.dart
 #        ^ other.source.dart
-#         ^ support.class.dart
-#           ^^^^^^^^^^^^^ comment.block.dart
-#                         ^ other.source.dart
-#                           ^ entity.name.function.dart
+#         ^^^^^^^ support.class.dart
+#                 ^^^^^^^^^^^^^ comment.block.dart
+#                               ^ other.source.dart
+#                                 ^ entity.name.function.dart
 >}
