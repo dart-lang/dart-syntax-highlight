@@ -1,4 +1,8 @@
-## 1.4.0 (2024-11-14)
+## 1.4.1 (2024-11-18)
+
+- Fixed a bug where a closing block comment marker indented by more than 4 spaces would not end the comment.
+
+## 1.4.0 (2024-11-18)
 
 - Removed use of 'while' in the grammar to avoid some differences in implementations between GitHub and VS Code
 - Improved handling of unclosed code blocks in dartdoc comments
