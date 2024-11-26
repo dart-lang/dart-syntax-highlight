@@ -1,6 +1,6 @@
 {
 	"name": "Dart",
-	"version": "1.4.0",
+	"version": "1.4.1",
 	"fileTypes": [
 		"dart"
 	],
@@ -112,7 +112,7 @@
 					"name": "variable.other.source.dart"
 				},
 				{
-					"match": "\\s{4,}(.*)$",
+					"match": "(?:\\*|\\/\\/)\\s{4,}(.*?)(?=($|\\*\\/))",
 					"captures": {
 						"1": {
 							"name": "variable.other.source.dart"

@@ -203,6 +203,21 @@
 >
 >/**
 #^^^ comment.block.documentation.dart
+> *   /**
+#^^^^^^^^ comment.block.documentation.dart
+> *    * bbb
+#^^^^^^ comment.block.documentation.dart
+#      ^^^^^ comment.block.documentation.dart variable.other.source.dart
+> *    */
+#^^^^^^^^ comment.block.documentation.dart
+> */
+#^^^ comment.block.documentation.dart
+>var d2;
+#^^^ storage.type.primitive.dart
+#      ^ punctuation.terminator.dart
+>
+>/**
+#^^^ comment.block.documentation.dart
 > * Nested
 #^^^^^^^^^ comment.block.documentation.dart
 > *

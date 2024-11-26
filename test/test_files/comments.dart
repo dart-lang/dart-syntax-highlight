@@ -95,6 +95,13 @@ var c;
 var d;
 
 /**
+ *   /**
+ *    * bbb
+ *    */
+ */
+var d2;
+
+/**
  * Nested
  *
  * /* Inline */
