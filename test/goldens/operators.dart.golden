@@ -1,48 +1,48 @@
->// Copyright 2022 The Chromium Authors. All rights reserved.
+>// Copyright 2022 The Chromium Authors. All rights reserved.                    // Line 1
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// Use of this source code is governed by a BSD-style license that can be
+>// Use of this source code is governed by a BSD-style license that can be       // Line 2
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// found in the LICENSE file.
+>// found in the LICENSE file.                                                   // Line 3
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
->void foo() {
+>void foo() {                                                                    // Line 5
 #^^^^ storage.type.primitive.dart
 #     ^^^ entity.name.function.dart
->  Object? a;
+>  Object? a;                                                                    // Line 6
 #  ^^^^^^ support.class.dart
 #        ^ keyword.operator.ternary.dart
 #           ^ punctuation.terminator.dart
->  if (1 == 2) {}
+>  if (1 == 2) {}                                                                // Line 7
 #  ^^ keyword.control.dart
 #      ^ constant.numeric.dart
 #        ^^ keyword.operator.comparison.dart
 #           ^ constant.numeric.dart
->  if (1 != 2) {}
+>  if (1 != 2) {}                                                                // Line 8
 #  ^^ keyword.control.dart
 #      ^ constant.numeric.dart
 #        ^^ keyword.operator.comparison.dart
 #           ^ constant.numeric.dart
->  if (1 < 2) {}
+>  if (1 < 2) {}                                                                 // Line 9
 #  ^^ keyword.control.dart
 #      ^ constant.numeric.dart
 #        ^ keyword.operator.comparison.dart
 #          ^ constant.numeric.dart
->  if (1 <= 2) {}
+>  if (1 <= 2) {}                                                                // Line 10
 #  ^^ keyword.control.dart
 #      ^ constant.numeric.dart
 #        ^^ keyword.operator.comparison.dart
 #           ^ constant.numeric.dart
->  if (1 > 2) {}
+>  if (1 > 2) {}                                                                 // Line 11
 #  ^^ keyword.control.dart
 #      ^ constant.numeric.dart
 #        ^ keyword.operator.comparison.dart
 #          ^ constant.numeric.dart
->  if (1 >= 2) {}
+>  if (1 >= 2) {}                                                                // Line 12
 #  ^^ keyword.control.dart
 #      ^ constant.numeric.dart
 #        ^^ keyword.operator.comparison.dart
 #           ^ constant.numeric.dart
->  var b = 1 < 2 ? 1 / 1 : 2 * 2;
+>  var b = 1 < 2 ? 1 / 1 : 2 * 2;                                                // Line 13
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
@@ -57,144 +57,144 @@
 #                            ^ keyword.operator.arithmetic.dart
 #                              ^ constant.numeric.dart
 #                               ^ punctuation.terminator.dart
->  a ??= b;
+>  a ??= b;                                                                      // Line 14
 #    ^^ keyword.operator.ternary.dart
 #      ^ keyword.operator.assignment.dart
 #         ^ punctuation.terminator.dart
->  b += 1;
+>  b += 1;                                                                       // Line 15
 #    ^^ keyword.operator.assignment.arithmetic.dart
 #       ^ constant.numeric.dart
 #        ^ punctuation.terminator.dart
->  b -= 1;
+>  b -= 1;                                                                       // Line 16
 #    ^^ keyword.operator.assignment.arithmetic.dart
 #       ^ constant.numeric.dart
 #        ^ punctuation.terminator.dart
->  b = b / 2;
+>  b = b / 2;                                                                    // Line 17
 #    ^ keyword.operator.assignment.dart
 #        ^ keyword.operator.arithmetic.dart
 #          ^ constant.numeric.dart
 #           ^ punctuation.terminator.dart
->  b = b ~/ 2;
+>  b = b ~/ 2;                                                                   // Line 18
 #    ^ keyword.operator.assignment.dart
 #        ^ keyword.operator.bitwise.dart
 #         ^ keyword.operator.arithmetic.dart
 #           ^ constant.numeric.dart
 #            ^ punctuation.terminator.dart
->  b = b % 2;
+>  b = b % 2;                                                                    // Line 19
 #    ^ keyword.operator.assignment.dart
 #        ^ keyword.operator.arithmetic.dart
 #          ^ constant.numeric.dart
 #           ^ punctuation.terminator.dart
->  b++;
+>  b++;                                                                          // Line 20
 #   ^^ keyword.operator.increment-decrement.dart
 #     ^ punctuation.terminator.dart
->  b--;
+>  b--;                                                                          // Line 21
 #   ^^ keyword.operator.increment-decrement.dart
 #     ^ punctuation.terminator.dart
->  ++b;
+>  ++b;                                                                          // Line 22
 #  ^^ keyword.operator.increment-decrement.dart
 #     ^ punctuation.terminator.dart
->  --b;
+>  --b;                                                                          // Line 23
 #  ^^ keyword.operator.increment-decrement.dart
 #     ^ punctuation.terminator.dart
->  var c = 1 >> 2;
+>  var c = 1 >> 2;                                                               // Line 24
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
 #            ^^ keyword.operator.bitwise.dart
 #               ^ constant.numeric.dart
 #                ^ punctuation.terminator.dart
->  c >>= 1;
+>  c >>= 1;                                                                      // Line 25
 #    ^^ keyword.operator.bitwise.dart
 #      ^ keyword.operator.assignment.dart
 #        ^ constant.numeric.dart
 #         ^ punctuation.terminator.dart
->  var d = 1 << 2;
+>  var d = 1 << 2;                                                               // Line 26
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
 #            ^^ keyword.operator.bitwise.dart
 #               ^ constant.numeric.dart
 #                ^ punctuation.terminator.dart
->  d <<= 2;
+>  d <<= 2;                                                                      // Line 27
 #    ^^ keyword.operator.bitwise.dart
 #      ^ keyword.operator.assignment.dart
 #        ^ constant.numeric.dart
 #         ^ punctuation.terminator.dart
->  var e = 1 >>> 2;
+>  var e = 1 >>> 2;                                                              // Line 28
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
 #            ^^^ keyword.operator.bitwise.dart
 #                ^ constant.numeric.dart
 #                 ^ punctuation.terminator.dart
->  e >>>= 3;
+>  e >>>= 3;                                                                     // Line 29
 #    ^^^ keyword.operator.bitwise.dart
 #       ^ keyword.operator.assignment.dart
 #         ^ constant.numeric.dart
 #          ^ punctuation.terminator.dart
->  var f = -b;
+>  var f = -b;                                                                   // Line 30
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ keyword.operator.arithmetic.dart
 #            ^ punctuation.terminator.dart
->  var g = 1 & 2;
+>  var g = 1 & 2;                                                                // Line 31
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
 #            ^ keyword.operator.bitwise.dart
 #              ^ constant.numeric.dart
 #               ^ punctuation.terminator.dart
->  var h = 1 ^ 2;
+>  var h = 1 ^ 2;                                                                // Line 32
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
 #            ^ keyword.operator.bitwise.dart
 #              ^ constant.numeric.dart
 #               ^ punctuation.terminator.dart
->  var i = ~2;
+>  var i = ~2;                                                                   // Line 33
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ keyword.operator.bitwise.dart
 #           ^ constant.numeric.dart
 #            ^ punctuation.terminator.dart
->  var j = 1 & 2;
+>  var j = 1 & 2;                                                                // Line 34
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
 #            ^ keyword.operator.bitwise.dart
 #              ^ constant.numeric.dart
 #               ^ punctuation.terminator.dart
->  j &= 2;
+>  j &= 2;                                                                       // Line 35
 #    ^ keyword.operator.bitwise.dart
 #     ^ keyword.operator.assignment.dart
 #       ^ constant.numeric.dart
 #        ^ punctuation.terminator.dart
->  j ^= 2;
+>  j ^= 2;                                                                       // Line 36
 #    ^ keyword.operator.bitwise.dart
 #     ^ keyword.operator.assignment.dart
 #       ^ constant.numeric.dart
 #        ^ punctuation.terminator.dart
->  j |= 2;
+>  j |= 2;                                                                       // Line 37
 #    ^ keyword.operator.bitwise.dart
 #     ^ keyword.operator.assignment.dart
 #       ^ constant.numeric.dart
 #        ^ punctuation.terminator.dart
->  var k = 1 ^ 2;
+>  var k = 1 ^ 2;                                                                // Line 38
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
 #            ^ keyword.operator.bitwise.dart
 #              ^ constant.numeric.dart
 #               ^ punctuation.terminator.dart
->  var l = 1 | 2;
+>  var l = 1 | 2;                                                                // Line 39
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ constant.numeric.dart
 #            ^ keyword.operator.bitwise.dart
 #              ^ constant.numeric.dart
 #               ^ punctuation.terminator.dart
->  var m = !(a == a && false || true);
+>  var m = !(a == a && false || true);                                           // Line 40
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
 #          ^ keyword.operator.logical.dart
@@ -204,4 +204,4 @@
 #                            ^^ keyword.operator.bitwise.dart
 #                               ^^^^ constant.language.dart
 #                                    ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 41

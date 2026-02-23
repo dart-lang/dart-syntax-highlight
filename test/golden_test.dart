@@ -61,11 +61,42 @@ void main() {
           final actual = _buildGoldenText(content, spans);
 
           final expected = normalize(goldenFile.readAsStringSync());
-          expect(actual, expected);
+
+          expectTokenMatches(actual, expected);
         });
       }
     }
   });
+}
+
+/// Compares the text output [actual] to the golden [expected].
+///
+/// To aid reviewing failures, isolates the line of code that differs, and
+/// highlights the specific token mismatches.
+void expectTokenMatches(String actual, String expected) {
+  // Split the formatted output for each line of code in the source file.
+  //
+  // Each line of code starts with `>` and is then followed by a line for each
+  // marked token.
+  final actualBlocks = actual.split('\n>').toList();
+  final expectedBlocks = expected.split('\n>').toList();
+
+  if (actualBlocks.length != expectedBlocks.length) {
+    // Lengths differ so we can't compare one at a time, so just compare
+    // the whole string.
+    expect(actual, expected);
+  } else {
+    for (var i = 0; i < actualBlocks.length; i++) {
+      // Now compare by line, because this way the failure output will be
+      // more specific:
+      //     Which: at location [3] is '^^^ keyword.new.dart'
+      //            instead of '^^^ keyword.control.new.dart'
+
+      final actualLines = '>${actualBlocks[i]}'.split('\n');
+      final expectedLines = '>${expectedBlocks[i]}'.split('\n');
+      expect(actualLines, expectedLines);
+    }
+  }
 }
 
 String _buildGoldenText(String content, List<ScopeSpan> spans) {
@@ -88,7 +119,11 @@ String _buildGoldenText(String content, List<ScopeSpan> spans) {
       break;
     }
 
-    buffer.write('>$line$eol');
+    if (line.isEmpty) {
+      buffer.write('>$eol');
+    } else {
+      buffer.write('>${line.padRight(79)} // Line ${i + 1}$eol');
+    }
     final lineSpans = spansByLine[i];
     if (lineSpans != null) {
       for (final span in lineSpans) {

@@ -1,42 +1,42 @@
->augment library 'augmented.dart';
+>augment library 'augmented.dart';                                               // Line 1
 #^^^^^^^^^^^^^^^ meta.declaration.dart keyword.other.import.dart
 #               ^ meta.declaration.dart
 #                ^^^^^^^^^^^^^^^^ meta.declaration.dart string.interpolated.single.dart
 #                                ^ meta.declaration.dart punctuation.terminator.dart
 >
->augment class MyClass {
+>augment class MyClass {                                                         // Line 3
 #^^^^^^^ storage.modifier.dart
 #        ^^^^^ keyword.declaration.dart
 #              ^^^^^^^ support.class.dart
->  augment void myMethod() {
+>  augment void myMethod() {                                                     // Line 4
 #  ^^^^^^^ storage.modifier.dart
 #          ^^^^ storage.type.primitive.dart
 #               ^^^^^^^^ entity.name.function.dart
->    augmented();
+>    augmented();                                                                // Line 5
 #    ^^^^^^^^^ variable.language.dart
 #               ^ punctuation.terminator.dart
->  }
+>  }                                                                             // Line 6
 >
->  String get myGetter => augmented;
+>  String get myGetter => augmented;                                             // Line 8
 #  ^^^^^^ support.class.dart
 #         ^^^ keyword.declaration.dart
 #                      ^^ keyword.operator.closure.dart
 #                         ^^^^^^^^^ variable.language.dart
 #                                  ^ punctuation.terminator.dart
->  set mySetter(String value) { augmented = value; }
+>  set mySetter(String value) { augmented = value; }                             // Line 9
 #  ^^^ keyword.declaration.dart
 #      ^^^^^^^^ entity.name.function.dart
 #               ^^^^^^ support.class.dart
 #                               ^^^^^^^^^ variable.language.dart
 #                                         ^ keyword.operator.assignment.dart
 #                                                ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 10
 >
->augment void myFunction() {
+>augment void myFunction() {                                                     // Line 12
 #^^^^^^^ storage.modifier.dart
 #        ^^^^ storage.type.primitive.dart
 #             ^^^^^^^^^^ entity.name.function.dart
->  augmented();
+>  augmented();                                                                  // Line 13
 #  ^^^^^^^^^ variable.language.dart
 #             ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 14
