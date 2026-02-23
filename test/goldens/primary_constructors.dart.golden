@@ -3,11 +3,11 @@
 #      ^^^^^^^^^^^^^^ support.class.dart
 >  const new();                                                                  // Line 2
 #  ^^^^^ storage.modifier.dart
-#        ^^^ keyword.control.new.dart
+#        ^^^ keyword.new.dart
 #             ^ punctuation.terminator.dart
 >  const new named();                                                            // Line 3
 #  ^^^^^ storage.modifier.dart
-#        ^^^ keyword.control.new.dart
+#        ^^^ keyword.new.dart
 #            ^^^^^ entity.name.function.dart
 #                   ^ punctuation.terminator.dart
 >}                                                                               // Line 4
@@ -25,12 +25,12 @@
 #  ^^^^^ storage.modifier.dart
 #        ^^^^^^^^^^^ support.class.dart
 #                   ^ punctuation.dot.dart
-#                    ^^^ keyword.control.new.dart
+#                    ^^^ entity.name.function.dart
 #                         ^ punctuation.terminator.dart
 >
 >  String factory() => 'method';                                                 // Line 10
 #  ^^^^^^ support.class.dart
-#         ^^^^^^^ keyword.declaration.dart
+#         ^^^^^^^ entity.name.function.dart
 #                   ^^ keyword.operator.closure.dart
 #                      ^^^^^^^^ string.interpolated.single.dart
 #                              ^ punctuation.terminator.dart
@@ -59,7 +59,7 @@
 >
 >  void factory() => 'method';                                                   // Line 18
 #  ^^^^ storage.type.primitive.dart
-#       ^^^^^^^ keyword.declaration.dart
+#       ^^^^^^^ entity.name.function.dart
 #                 ^^ keyword.operator.closure.dart
 #                    ^^^^^^^^ string.interpolated.single.dart
 #                            ^ punctuation.terminator.dart
@@ -81,7 +81,7 @@
 >  external void factory();                                                      // Line 25
 #  ^^^^^^^^ keyword.declaration.dart
 #           ^^^^ storage.type.primitive.dart
-#                ^^^^^^^ keyword.declaration.dart
+#                ^^^^^^^ entity.name.function.dart
 #                         ^ punctuation.terminator.dart
 >}                                                                               // Line 26
 >
@@ -111,7 +111,7 @@
 >
 >  String factory() => 'method';                                                 // Line 33
 #  ^^^^^^ support.class.dart
-#         ^^^^^^^ keyword.declaration.dart
+#         ^^^^^^^ entity.name.function.dart
 #                   ^^ keyword.operator.closure.dart
 #                      ^^^^^^^^ string.interpolated.single.dart
 #                              ^ punctuation.terminator.dart
@@ -145,7 +145,7 @@
 #        ^ keyword.operator.assignment.dart
 #          ^^^^^^^^^^^ support.class.dart
 #                     ^ punctuation.dot.dart
-#                      ^^^ keyword.control.new.dart
+#                      ^^^ entity.name.function.dart
 #                           ^ punctuation.terminator.dart
 >  var _ = NewWithType.named();                                                  // Line 46
 #  ^^^ storage.type.primitive.dart
@@ -157,15 +157,15 @@
 >  var _ = new NewWithType.new();                                                // Line 47
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
-#          ^^^ keyword.control.new.dart
+#          ^^^ keyword.new.dart
 #              ^^^^^^^^^^^ support.class.dart
 #                         ^ punctuation.dot.dart
-#                          ^^^ keyword.control.new.dart
+#                          ^^^ entity.name.function.dart
 #                               ^ punctuation.terminator.dart
 >  var _ = new NewWithType.named();                                              // Line 48
 #  ^^^ storage.type.primitive.dart
 #        ^ keyword.operator.assignment.dart
-#          ^^^ keyword.control.new.dart
+#          ^^^ keyword.new.dart
 #              ^^^^^^^^^^^ support.class.dart
 #                         ^ punctuation.dot.dart
 #                          ^^^^^ entity.name.function.dart
@@ -176,7 +176,7 @@
 #          ^^^^^ storage.modifier.dart
 #                ^^^^^^^^^^^ support.class.dart
 #                           ^ punctuation.dot.dart
-#                            ^^^ keyword.control.new.dart
+#                            ^^^ entity.name.function.dart
 #                                 ^ punctuation.terminator.dart
 >  var _ = const NewWithType.named();                                            // Line 50
 #  ^^^ storage.type.primitive.dart
