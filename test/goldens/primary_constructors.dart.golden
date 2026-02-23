@@ -1,0 +1,211 @@
+>class NewWithoutType {                                                          // Line 1
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^^^^^^^^ support.class.dart
+>  const new();                                                                  // Line 2
+#  ^^^^^ storage.modifier.dart
+#        ^^^ keyword.control.new.dart
+#             ^ punctuation.terminator.dart
+>  const new named();                                                            // Line 3
+#  ^^^^^ storage.modifier.dart
+#        ^^^ keyword.control.new.dart
+#            ^^^^^ entity.name.function.dart
+#                   ^ punctuation.terminator.dart
+>}                                                                               // Line 4
+>
+>class NewWithType {                                                             // Line 6
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^^^^^ support.class.dart
+>  const NewWithType.named();                                                    // Line 7
+#  ^^^^^ storage.modifier.dart
+#        ^^^^^^^^^^^ support.class.dart
+#                   ^ punctuation.dot.dart
+#                    ^^^^^ entity.name.function.dart
+#                           ^ punctuation.terminator.dart
+>  const NewWithType.new();                                                      // Line 8
+#  ^^^^^ storage.modifier.dart
+#        ^^^^^^^^^^^ support.class.dart
+#                   ^ punctuation.dot.dart
+#                    ^^^ keyword.control.new.dart
+#                         ^ punctuation.terminator.dart
+>
+>  String factory() => 'method';                                                 // Line 10
+#  ^^^^^^ support.class.dart
+#         ^^^^^^^ keyword.declaration.dart
+#                   ^^ keyword.operator.closure.dart
+#                      ^^^^^^^^ string.interpolated.single.dart
+#                              ^ punctuation.terminator.dart
+>}                                                                               // Line 11
+>
+>class FactoryWithoutType {                                                      // Line 13
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^^^^^^^^^^^^ support.class.dart
+>  FactoryWithoutType._();                                                       // Line 14
+#  ^^^^^^^^^^^^^^^^^^ support.class.dart
+#                    ^ punctuation.dot.dart
+#                        ^ punctuation.terminator.dart
+>  factory() => FactoryWithoutType._();                                          // Line 15
+#  ^^^^^^^ keyword.declaration.dart
+#            ^^ keyword.operator.closure.dart
+#               ^^^^^^^^^^^^^^^^^^ support.class.dart
+#                                 ^ punctuation.dot.dart
+#                                     ^ punctuation.terminator.dart
+>  factory named() => FactoryWithoutType._();                                    // Line 16
+#  ^^^^^^^ keyword.declaration.dart
+#          ^^^^^ entity.name.function.dart
+#                  ^^ keyword.operator.closure.dart
+#                     ^^^^^^^^^^^^^^^^^^ support.class.dart
+#                                       ^ punctuation.dot.dart
+#                                           ^ punctuation.terminator.dart
+>
+>  void factory() => 'method';                                                   // Line 18
+#  ^^^^ storage.type.primitive.dart
+#       ^^^^^^^ keyword.declaration.dart
+#                 ^^ keyword.operator.closure.dart
+#                    ^^^^^^^^ string.interpolated.single.dart
+#                            ^ punctuation.terminator.dart
+>}                                                                               // Line 19
+>
+>class FactoryWithExternal {                                                     // Line 21
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^^^^^^^^^^^^^ support.class.dart
+>  external factory();                                                           // Line 22
+#  ^^^^^^^^ keyword.declaration.dart
+#           ^^^^^^^ keyword.declaration.dart
+#                    ^ punctuation.terminator.dart
+>  external factory named();                                                     // Line 23
+#  ^^^^^^^^ keyword.declaration.dart
+#           ^^^^^^^ keyword.declaration.dart
+#                   ^^^^^ entity.name.function.dart
+#                          ^ punctuation.terminator.dart
+>
+>  external void factory();                                                      // Line 25
+#  ^^^^^^^^ keyword.declaration.dart
+#           ^^^^ storage.type.primitive.dart
+#                ^^^^^^^ keyword.declaration.dart
+#                         ^ punctuation.terminator.dart
+>}                                                                               // Line 26
+>
+>class FactoryWithType {                                                         // Line 28
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^^^^^^^^^ support.class.dart
+>  FactoryWithType._();                                                          // Line 29
+#  ^^^^^^^^^^^^^^^ support.class.dart
+#                 ^ punctuation.dot.dart
+#                     ^ punctuation.terminator.dart
+>  factory FactoryWithType() => FactoryWithType._();                             // Line 30
+#  ^^^^^^^ keyword.declaration.dart
+#          ^^^^^^^^^^^^^^^ support.class.dart
+#                            ^^ keyword.operator.closure.dart
+#                               ^^^^^^^^^^^^^^^ support.class.dart
+#                                              ^ punctuation.dot.dart
+#                                                  ^ punctuation.terminator.dart
+>  factory FactoryWithType.named() => FactoryWithType._();                       // Line 31
+#  ^^^^^^^ keyword.declaration.dart
+#          ^^^^^^^^^^^^^^^ support.class.dart
+#                         ^ punctuation.dot.dart
+#                          ^^^^^ entity.name.function.dart
+#                                  ^^ keyword.operator.closure.dart
+#                                     ^^^^^^^^^^^^^^^ support.class.dart
+#                                                    ^ punctuation.dot.dart
+#                                                        ^ punctuation.terminator.dart
+>
+>  String factory() => 'method';                                                 // Line 33
+#  ^^^^^^ support.class.dart
+#         ^^^^^^^ keyword.declaration.dart
+#                   ^^ keyword.operator.closure.dart
+#                      ^^^^^^^^ string.interpolated.single.dart
+#                              ^ punctuation.terminator.dart
+>}                                                                               // Line 34
+>
+>class PrimaryWithoutName(final int a) {                                         // Line 36
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^^^^^^^^^^^^ support.class.dart
+#                         ^^^^^ storage.modifier.dart
+#                               ^^^ support.class.dart
+>  this {}                                                                       // Line 37
+#  ^^^^ variable.language.dart
+>}                                                                               // Line 38
+>
+>class PrimaryWithName.named(final int a) {                                      // Line 40
+#^^^^^ keyword.declaration.dart
+#      ^^^^^^^^^^^^^^^ support.class.dart
+#                     ^ punctuation.dot.dart
+#                      ^^^^^ entity.name.function.dart
+#                            ^^^^^ storage.modifier.dart
+#                                  ^^^ support.class.dart
+>  this {}                                                                       // Line 41
+#  ^^^^ variable.language.dart
+>}                                                                               // Line 42
+>
+>void f() {                                                                      // Line 44
+#^^^^ storage.type.primitive.dart
+#     ^ entity.name.function.dart
+>  var _ = NewWithType.new();                                                    // Line 45
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^^^^^^^^^ support.class.dart
+#                     ^ punctuation.dot.dart
+#                      ^^^ keyword.control.new.dart
+#                           ^ punctuation.terminator.dart
+>  var _ = NewWithType.named();                                                  // Line 46
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^^^^^^^^^ support.class.dart
+#                     ^ punctuation.dot.dart
+#                      ^^^^^ entity.name.function.dart
+#                             ^ punctuation.terminator.dart
+>  var _ = new NewWithType.new();                                                // Line 47
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^ keyword.control.new.dart
+#              ^^^^^^^^^^^ support.class.dart
+#                         ^ punctuation.dot.dart
+#                          ^^^ keyword.control.new.dart
+#                               ^ punctuation.terminator.dart
+>  var _ = new NewWithType.named();                                              // Line 48
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^ keyword.control.new.dart
+#              ^^^^^^^^^^^ support.class.dart
+#                         ^ punctuation.dot.dart
+#                          ^^^^^ entity.name.function.dart
+#                                 ^ punctuation.terminator.dart
+>  var _ = const NewWithType.new();                                              // Line 49
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^^^ storage.modifier.dart
+#                ^^^^^^^^^^^ support.class.dart
+#                           ^ punctuation.dot.dart
+#                            ^^^ keyword.control.new.dart
+#                                 ^ punctuation.terminator.dart
+>  var _ = const NewWithType.named();                                            // Line 50
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^^^ storage.modifier.dart
+#                ^^^^^^^^^^^ support.class.dart
+#                           ^ punctuation.dot.dart
+#                            ^^^^^ entity.name.function.dart
+#                                   ^ punctuation.terminator.dart
+>  var _ = NewWithType.new;                                                      // Line 51
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^^^^^^^^^ support.class.dart
+#                     ^ punctuation.dot.dart
+#                      ^^^ keyword.control.new.dart
+#                         ^ punctuation.terminator.dart
+>  var _ = NewWithType.named;                                                    // Line 52
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^^^^^^^^^ support.class.dart
+#                     ^ punctuation.dot.dart
+#                           ^ punctuation.terminator.dart
+>  var _ = FactoryWithType.named().factory();                                    // Line 53
+#  ^^^ storage.type.primitive.dart
+#        ^ keyword.operator.assignment.dart
+#          ^^^^^^^^^^^^^^^ support.class.dart
+#                         ^ punctuation.dot.dart
+#                          ^^^^^ entity.name.function.dart
+#                                 ^ punctuation.dot.dart
+#                                  ^^^^^^^ keyword.declaration.dart
+#                                           ^ punctuation.terminator.dart
+>}                                                                               // Line 54
