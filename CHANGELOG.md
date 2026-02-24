@@ -1,3 +1,7 @@
+## 1.5.0 (2026-02-23)
+
+- Improved handling of `new` and `factory`, including in syntax for Primary Constructors
+
 ## 1.4.1 (2024-11-18)
 
 - Fixed a bug where a closing block comment marker indented by more than 4 spaces would not end the comment.
