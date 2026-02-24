@@ -191,7 +191,7 @@
 #        ^ keyword.operator.assignment.dart
 #          ^^^^^^^^^^^ support.class.dart
 #                     ^ punctuation.dot.dart
-#                      ^^^ keyword.control.new.dart
+#                      ^^^ entity.name.function.dart
 #                         ^ punctuation.terminator.dart
 >  var _ = NewWithType.named;                                                    // Line 52
 #  ^^^ storage.type.primitive.dart
