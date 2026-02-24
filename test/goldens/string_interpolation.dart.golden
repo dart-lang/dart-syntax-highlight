@@ -1,25 +1,25 @@
->// Copyright 2022 The Chromium Authors. All rights reserved.
+>// Copyright 2022 The Chromium Authors. All rights reserved.                    // Line 1
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// Use of this source code is governed by a BSD-style license that can be
+>// Use of this source code is governed by a BSD-style license that can be       // Line 2
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// found in the LICENSE file.
+>// found in the LICENSE file.                                                   // Line 3
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
->void values() {
+>void values() {                                                                 // Line 5
 #^^^^ storage.type.primitive.dart
 #     ^^^^^^ entity.name.function.dart
->  final i = 1;
+>  final i = 1;                                                                  // Line 6
 #  ^^^^^ storage.modifier.dart
 #          ^ keyword.operator.assignment.dart
 #            ^ constant.numeric.dart
 #             ^ punctuation.terminator.dart
->  final j = 2;
+>  final j = 2;                                                                  // Line 7
 #  ^^^^^ storage.modifier.dart
 #          ^ keyword.operator.assignment.dart
 #            ^ constant.numeric.dart
 #             ^ punctuation.terminator.dart
 >
->  print('the value of \$i is $i');
+>  print('the value of \$i is $i');                                              // Line 9
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^ string.interpolated.single.dart
 #                      ^^ string.interpolated.single.dart constant.character.escape.dart
@@ -28,7 +28,7 @@
 #                              ^ string.interpolated.single.dart meta.embedded.expression.dart variable.parameter.dart
 #                               ^ string.interpolated.single.dart
 #                                 ^ punctuation.terminator.dart
->  print('the value after \$i is ${i + 1}');
+>  print('the value after \$i is ${i + 1}');                                     // Line 10
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^ string.interpolated.single.dart
 #                         ^^ string.interpolated.single.dart constant.character.escape.dart
@@ -40,7 +40,7 @@
 #                                       ^ string.interpolated.single.dart meta.embedded.expression.dart
 #                                        ^ string.interpolated.single.dart
 #                                          ^ punctuation.terminator.dart
->  print('the value of \$i + \$j is ${i + j}');
+>  print('the value of \$i + \$j is ${i + j}');                                  // Line 11
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^ string.interpolated.single.dart
 #                      ^^ string.interpolated.single.dart constant.character.escape.dart
@@ -54,53 +54,53 @@
 #                                          ^ string.interpolated.single.dart meta.embedded.expression.dart
 #                                           ^ string.interpolated.single.dart
 #                                             ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 12
 >
->void functions() {
+>void functions() {                                                              // Line 14
 #^^^^ storage.type.primitive.dart
 #     ^^^^^^^^^ entity.name.function.dart
->  print('${() {
+>  print('${() {                                                                 // Line 15
 #  ^^^^^ entity.name.function.dart
 #        ^ string.interpolated.single.dart
 #         ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
->    return 'Hello';
+>    return 'Hello';                                                             // Line 16
 #^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #    ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart variable.parameter.dart
 #          ^^^^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
->  }}');
+>  }}');                                                                         // Line 17
 #^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #    ^ string.interpolated.single.dart
 #      ^ punctuation.terminator.dart
->  print('print(${() {
+>  print('print(${() {                                                           // Line 18
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^ string.interpolated.single.dart
 #               ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
->    return 'Hello';
+>    return 'Hello';                                                             // Line 19
 #^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #    ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart variable.parameter.dart
 #          ^^^^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
->  }()})');
+>  }()})');                                                                      // Line 20
 #^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #      ^^ string.interpolated.single.dart
 #         ^ punctuation.terminator.dart
->  print('${() => 'Hello'}');
+>  print('${() => 'Hello'}');                                                    // Line 21
 #  ^^^^^ entity.name.function.dart
 #        ^ string.interpolated.single.dart
 #         ^^^^^^^^^^^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #                         ^ string.interpolated.single.dart
 #                           ^ punctuation.terminator.dart
->  print('print(${(() => 'Hello')()})');
+>  print('print(${(() => 'Hello')()})');                                         // Line 22
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^ string.interpolated.single.dart
 #               ^^^^^^^^^^^^^^^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #                                   ^^ string.interpolated.single.dart
 #                                      ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 23
 >
->void nestedBraces() {
+>void nestedBraces() {                                                           // Line 25
 #^^^^ storage.type.primitive.dart
 #     ^^^^^^^^^^^^ entity.name.function.dart
->  print(   '${    { " {} ${ "}" } {}" }      }'  );
+>  print(   '${    { " {} ${ "}" } {}" }      }'  );                             // Line 26
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.single.dart
 #            ^^^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
@@ -108,13 +108,13 @@
 #                                     ^^^^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #                                              ^ string.interpolated.single.dart
 #                                                  ^ punctuation.terminator.dart
->  print(   '${    {}      }'  );
+>  print(   '${    {}      }'  );                                                // Line 27
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.single.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.single.dart
 #                               ^ punctuation.terminator.dart
->  print(   '${    "{}"    }'  );
+>  print(   '${    "{}"    }'  );                                                // Line 28
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.single.dart
 #            ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
@@ -122,7 +122,7 @@
 #                      ^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.single.dart
 #                               ^ punctuation.terminator.dart
->  print(   '${    "{"     }'  );
+>  print(   '${    "{"     }'  );                                                // Line 29
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.single.dart
 #            ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
@@ -130,7 +130,7 @@
 #                     ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.single.dart
 #                               ^ punctuation.terminator.dart
->  print(   '${    "}"     }'  );
+>  print(   '${    "}"     }'  );                                                // Line 30
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.single.dart
 #            ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
@@ -138,49 +138,49 @@
 #                     ^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.single.dart
 #                               ^ punctuation.terminator.dart
->  print(   '${    {}      }'  );
+>  print(   '${    {}      }'  );                                                // Line 31
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.single.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.single.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.single.dart
 #                               ^ punctuation.terminator.dart
->  print(   "${    {}      }"  );
+>  print(   "${    {}      }"  );                                                // Line 32
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.double.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.double.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.double.dart
 #                               ^ punctuation.terminator.dart
->  print(   "${    "{}"    }"  );
+>  print(   "${    "{}"    }"  );                                                // Line 33
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.double.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.double.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.double.dart
 #                               ^ punctuation.terminator.dart
->  print(   "${    "{"     }"  );
+>  print(   "${    "{"     }"  );                                                // Line 34
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.double.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.double.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.double.dart
 #                               ^ punctuation.terminator.dart
->  print(   "${    "}"     }"  );
+>  print(   "${    "}"     }"  );                                                // Line 35
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.double.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.double.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.double.dart
 #                               ^ punctuation.terminator.dart
->  print(   "${    {}      }"  );
+>  print(   "${    {}      }"  );                                                // Line 36
 #  ^^^^^ entity.name.function.dart
 #           ^ string.interpolated.double.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.double.dart meta.embedded.expression.dart
 #                           ^ string.interpolated.double.dart
 #                               ^ punctuation.terminator.dart
->  print( '''${    {}      }''');
+>  print( '''${    {}      }''');                                                // Line 37
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.single.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.triple.single.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print( '''${    "{}"    }''');
+>  print( '''${    "{}"    }''');                                                // Line 38
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.single.dart
 #            ^^^^^^ string.interpolated.triple.single.dart meta.embedded.expression.dart
@@ -188,7 +188,7 @@
 #                      ^^^^^ string.interpolated.triple.single.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print( '''${    "{"     }''');
+>  print( '''${    "{"     }''');                                                // Line 39
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.single.dart
 #            ^^^^^^ string.interpolated.triple.single.dart meta.embedded.expression.dart
@@ -196,7 +196,7 @@
 #                     ^^^^^^ string.interpolated.triple.single.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print( '''${    "}"     }''');
+>  print( '''${    "}"     }''');                                                // Line 40
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.single.dart
 #            ^^^^^^ string.interpolated.triple.single.dart meta.embedded.expression.dart
@@ -204,19 +204,19 @@
 #                     ^^^^^^ string.interpolated.triple.single.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print( '''${    {}      }''');
+>  print( '''${    {}      }''');                                                // Line 41
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.single.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.triple.single.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print( """${    {}      }""");
+>  print( """${    {}      }""");                                                // Line 42
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.double.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.triple.double.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print( """${    "{}"    }""");
+>  print( """${    "{}"    }""");                                                // Line 43
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.double.dart
 #            ^^^^^^ string.interpolated.triple.double.dart meta.embedded.expression.dart
@@ -224,7 +224,7 @@
 #                      ^^^^^ string.interpolated.triple.double.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print( """${    "{"     }""");
+>  print( """${    "{"     }""");                                                // Line 44
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.double.dart
 #            ^^^^^^ string.interpolated.triple.double.dart meta.embedded.expression.dart
@@ -232,7 +232,7 @@
 #                     ^^^^^^ string.interpolated.triple.double.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print( """${    "}"     }""");
+>  print( """${    "}"     }""");                                                // Line 45
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.double.dart
 #            ^^^^^^ string.interpolated.triple.double.dart meta.embedded.expression.dart
@@ -240,90 +240,90 @@
 #                     ^^^^^^ string.interpolated.triple.double.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print( """${    {}      }""");
+>  print( """${    {}      }""");                                                // Line 46
 #  ^^^^^ entity.name.function.dart
 #         ^^^ string.interpolated.triple.double.dart
 #            ^^^^^^^^^^^^^^^ string.interpolated.triple.double.dart meta.embedded.expression.dart
 #                           ^^^ string.interpolated.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print(  r'${    {}      }'  );
+>  print(  r'${    {}      }'  );                                                // Line 47
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.single.dart
 #                               ^ punctuation.terminator.dart
->  print(  r'${    "{}"    }'  );
+>  print(  r'${    "{}"    }'  );                                                // Line 48
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.single.dart
 #                               ^ punctuation.terminator.dart
->  print(  r'${    "{"     }'  );
+>  print(  r'${    "{"     }'  );                                                // Line 49
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.single.dart
 #                               ^ punctuation.terminator.dart
->  print(  r'${    "}"     }'  );
+>  print(  r'${    "}"     }'  );                                                // Line 50
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.single.dart
 #                               ^ punctuation.terminator.dart
->  print(  r'${    {}      }'  );
+>  print(  r'${    {}      }'  );                                                // Line 51
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.single.dart
 #                               ^ punctuation.terminator.dart
->  print(  r"${    {}      }"  );
+>  print(  r"${    {}      }"  );                                                // Line 52
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.double.dart
 #                               ^ punctuation.terminator.dart
->  print(  r"${    '{}'    }"  );
+>  print(  r"${    '{}'    }"  );                                                // Line 53
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.double.dart
 #                               ^ punctuation.terminator.dart
->  print(  r"${    '{'     }"  );
+>  print(  r"${    '{'     }"  );                                                // Line 54
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.double.dart
 #                               ^ punctuation.terminator.dart
->  print(  r"${    '}'     }"  );
+>  print(  r"${    '}'     }"  );                                                // Line 55
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.double.dart
 #                               ^ punctuation.terminator.dart
->  print(  r"${    {}      }"  );
+>  print(  r"${    {}      }"  );                                                // Line 56
 #  ^^^^^ entity.name.function.dart
 #          ^^^^^^^^^^^^^^^^^^ string.quoted.double.dart
 #                               ^ punctuation.terminator.dart
->  print(r'''${    {}      }''');
+>  print(r'''${    {}      }''');                                                // Line 57
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print(r'''${    "{}"    }''');
+>  print(r'''${    "{}"    }''');                                                // Line 58
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print(r'''${    "{"     }''');
+>  print(r'''${    "{"     }''');                                                // Line 59
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print(r'''${    "}"     }''');
+>  print(r'''${    "}"     }''');                                                // Line 60
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print(r'''${    {}      }''');
+>  print(r'''${    {}      }''');                                                // Line 61
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.single.dart
 #                               ^ punctuation.terminator.dart
->  print(r"""${    {}      }""");
+>  print(r"""${    {}      }""");                                                // Line 62
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print(r"""${    "{}"    }""");
+>  print(r"""${    "{}"    }""");                                                // Line 63
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print(r"""${    "{"     }""");
+>  print(r"""${    "{"     }""");                                                // Line 64
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print(r"""${    "}"     }""");
+>  print(r"""${    "}"     }""");                                                // Line 65
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.double.dart
 #                               ^ punctuation.terminator.dart
->  print(r"""${    {}      }""");
+>  print(r"""${    {}      }""");                                                // Line 66
 #  ^^^^^ entity.name.function.dart
 #        ^^^^^^^^^^^^^^^^^^^^^^ string.quoted.triple.double.dart
 #                               ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 67

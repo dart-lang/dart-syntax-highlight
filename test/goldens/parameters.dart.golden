@@ -1,38 +1,38 @@
->void f1() {}
+>void f1() {}                                                                    // Line 1
 #^^^^ storage.type.primitive.dart
 #     ^^ entity.name.function.dart
->void f2(String a) {}
-#^^^^ storage.type.primitive.dart
-#     ^^ entity.name.function.dart
-#        ^^^^^^ support.class.dart
->void f3(String a, [int? b]) {}
+>void f2(String a) {}                                                            // Line 2
 #^^^^ storage.type.primitive.dart
 #     ^^ entity.name.function.dart
 #        ^^^^^^ support.class.dart
-#                ^ punctuation.comma.dart
-#                   ^^^ support.class.dart
-#                      ^ keyword.operator.ternary.dart
->void f4(String a, {int? b}) {}
+>void f3(String a, [int? b]) {}                                                  // Line 3
 #^^^^ storage.type.primitive.dart
 #     ^^ entity.name.function.dart
 #        ^^^^^^ support.class.dart
 #                ^ punctuation.comma.dart
 #                   ^^^ support.class.dart
 #                      ^ keyword.operator.ternary.dart
->void f5(String a, {required int b}) {}
+>void f4(String a, {int? b}) {}                                                  // Line 4
+#^^^^ storage.type.primitive.dart
+#     ^^ entity.name.function.dart
+#        ^^^^^^ support.class.dart
+#                ^ punctuation.comma.dart
+#                   ^^^ support.class.dart
+#                      ^ keyword.operator.ternary.dart
+>void f5(String a, {required int b}) {}                                          // Line 5
 #^^^^ storage.type.primitive.dart
 #     ^^ entity.name.function.dart
 #        ^^^^^^ support.class.dart
 #                ^ punctuation.comma.dart
 #                   ^^^^^^^^ storage.modifier.dart
 #                            ^^^ support.class.dart
->void f6(
+>void f6(                                                                        // Line 6
 #^^^^ storage.type.primitive.dart
 #     ^^ entity.name.function.dart
->  String a,
+>  String a,                                                                     // Line 7
 #  ^^^^^^ support.class.dart
 #          ^ punctuation.comma.dart
->  List<Map<String, String>> Function(String a) b,
+>  List<Map<String, String>> Function(String a) b,                               // Line 8
 #  ^^^^ support.class.dart
 #      ^ other.source.dart
 #       ^^^ support.class.dart
@@ -43,4 +43,4 @@
 #                            ^^^^^^^^ support.class.dart
 #                                     ^^^^^^ support.class.dart
 #                                                ^ punctuation.comma.dart
->) {}
+>) {}                                                                            // Line 9

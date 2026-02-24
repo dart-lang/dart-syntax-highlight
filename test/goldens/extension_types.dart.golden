@@ -1,71 +1,71 @@
->// Copyright (c) 2023, the Dart project authors. Please see the AUTHORS file
+>// Copyright (c) 2023, the Dart project authors. Please see the AUTHORS file    // Line 1
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// for details. All rights reserved. Use of this source code is governed by a
+>// for details. All rights reserved. Use of this source code is governed by a   // Line 2
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// BSD-style license that can be found in the LICENSE file.
+>// BSD-style license that can be found in the LICENSE file.                     // Line 3
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
->extension type MyInt(int it) {
+>extension type MyInt(int it) {                                                  // Line 5
 #^^^^^^^^^^^^^^ keyword.declaration.dart
 #               ^^^^^ support.class.dart
 #                     ^^^ support.class.dart
->  void foo() { print(it.isEven); }
+>  void foo() { print(it.isEven); }                                              // Line 6
 #  ^^^^ storage.type.primitive.dart
 #       ^^^ entity.name.function.dart
 #               ^^^^^ entity.name.function.dart
 #                       ^ punctuation.dot.dart
 #                               ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 7
 >
->final extension = 1;
+>final extension = 1;                                                            // Line 9
 #^^^^^ storage.modifier.dart
 #      ^^^^^^^^^ keyword.declaration.dart
 #                ^ keyword.operator.assignment.dart
 #                  ^ constant.numeric.dart
 #                   ^ punctuation.terminator.dart
->int get extension => 1;
+>int get extension => 1;                                                         // Line 10
 #^^^ support.class.dart
 #    ^^^ keyword.declaration.dart
 #        ^^^^^^^^^ keyword.declaration.dart
 #                  ^^ keyword.operator.closure.dart
 #                     ^ constant.numeric.dart
 #                      ^ punctuation.terminator.dart
->set extension(int value) {}
+>set extension(int value) {}                                                     // Line 11
 #^^^ keyword.declaration.dart
 #    ^^^^^^^^^ keyword.declaration.dart
 #              ^^^ support.class.dart
->void extension() {
+>void extension() {                                                              // Line 12
 #^^^^ storage.type.primitive.dart
 #     ^^^^^^^^^ keyword.declaration.dart
->  var extension = 1;
+>  var extension = 1;                                                            // Line 13
 #  ^^^ storage.type.primitive.dart
 #      ^^^^^^^^^ keyword.declaration.dart
 #                ^ keyword.operator.assignment.dart
 #                  ^ constant.numeric.dart
 #                   ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 14
 >
->final type = 1;
+>final type = 1;                                                                 // Line 16
 #^^^^^ storage.modifier.dart
 #           ^ keyword.operator.assignment.dart
 #             ^ constant.numeric.dart
 #              ^ punctuation.terminator.dart
->int get type => 1;
+>int get type => 1;                                                              // Line 17
 #^^^ support.class.dart
 #    ^^^ keyword.declaration.dart
 #             ^^ keyword.operator.closure.dart
 #                ^ constant.numeric.dart
 #                 ^ punctuation.terminator.dart
->set type(int value) {}
+>set type(int value) {}                                                          // Line 18
 #^^^ keyword.declaration.dart
 #    ^^^^ entity.name.function.dart
 #         ^^^ support.class.dart
->void type() {
+>void type() {                                                                   // Line 19
 #^^^^ storage.type.primitive.dart
 #     ^^^^ entity.name.function.dart
->  var type = 1;
+>  var type = 1;                                                                 // Line 20
 #  ^^^ storage.type.primitive.dart
 #           ^ keyword.operator.assignment.dart
 #             ^ constant.numeric.dart
 #              ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 21
