@@ -1,40 +1,40 @@
->// Copyright (c) 2024, the Dart project authors. Please see the AUTHORS file
+>// Copyright (c) 2024, the Dart project authors. Please see the AUTHORS file    // Line 1
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// for details. All rights reserved. Use of this source code is governed by a
+>// for details. All rights reserved. Use of this source code is governed by a   // Line 2
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// BSD-style license that can be found in the LICENSE file.
+>// BSD-style license that can be found in the LICENSE file.                     // Line 3
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
->var a = [
+>var a = [                                                                       // Line 5
 #^^^ storage.type.primitive.dart
 #      ^ keyword.operator.assignment.dart
->  1,
+>  1,                                                                            // Line 6
 #  ^ constant.numeric.dart
 #   ^ punctuation.comma.dart
->  .0,
+>  .0,                                                                           // Line 7
 #  ^ punctuation.dot.dart
 #   ^ constant.numeric.dart
 #    ^ punctuation.comma.dart
->  1.2,
+>  1.2,                                                                          // Line 8
 #  ^^^ constant.numeric.dart
 #     ^ punctuation.comma.dart
->  0x123,
+>  0x123,                                                                        // Line 9
 #  ^^^^^ constant.numeric.dart
 #       ^ punctuation.comma.dart
->  100__000_000__000_000__000_000,
+>  100__000_000__000_000__000_000,                                               // Line 10
 #  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
 #                                ^ punctuation.comma.dart
->  0x4000_0000_0000_0000,
+>  0x4000_0000_0000_0000,                                                        // Line 11
 #  ^^^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
 #                       ^ punctuation.comma.dart
->  0.000_000_000_01,
+>  0.000_000_000_01,                                                             // Line 12
 #  ^^^^^^^^^^^^^^^^ constant.numeric.dart
 #                  ^ punctuation.comma.dart
->  0x00_14_22_01_23_45,
+>  0x00_14_22_01_23_45,                                                          // Line 13
 #  ^^^^^^^^^^^^^^^^^^^ constant.numeric.dart
 #                     ^ punctuation.comma.dart
->  555_123_4567,
+>  555_123_4567,                                                                 // Line 14
 #  ^^^^^^^^^^^^ constant.numeric.dart
 #              ^ punctuation.comma.dart
->];
+>];                                                                              // Line 15
 # ^ punctuation.terminator.dart

@@ -1,60 +1,60 @@
->// Copyright 2022 The Chromium Authors. All rights reserved.
+>// Copyright 2022 The Chromium Authors. All rights reserved.                    // Line 1
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// Use of this source code is governed by a BSD-style license that can be
+>// Use of this source code is governed by a BSD-style license that can be       // Line 2
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// found in the LICENSE file.
+>// found in the LICENSE file.                                                   // Line 3
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
->class Class1 {}
+>class Class1 {}                                                                 // Line 5
 #^^^^^ keyword.declaration.dart
 #      ^^^^^^ support.class.dart
 >
->abstract class Class2 implements Class1 {
+>abstract class Class2 implements Class1 {                                       // Line 7
 #^^^^^^^^ keyword.declaration.dart
 #         ^^^^^ keyword.declaration.dart
 #               ^^^^^^ support.class.dart
 #                      ^^^^^^^^^^ keyword.declaration.dart
 #                                 ^^^^^^ support.class.dart
->  String get a;
+>  String get a;                                                                 // Line 8
 #  ^^^^^^ support.class.dart
 #         ^^^ keyword.declaration.dart
 #              ^ punctuation.terminator.dart
->  set a(String value);
+>  set a(String value);                                                          // Line 9
 #  ^^^ keyword.declaration.dart
 #      ^ entity.name.function.dart
 #        ^^^^^^ support.class.dart
 #                     ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 10
 >
->class Class3 extends Class2 with MyMixin {
+>class Class3 extends Class2 with MyMixin {                                      // Line 12
 #^^^^^ keyword.declaration.dart
 #      ^^^^^^ support.class.dart
 #             ^^^^^^^ keyword.declaration.dart
 #                     ^^^^^^ support.class.dart
 #                            ^^^^ keyword.declaration.dart
 #                                 ^^^^^^^ support.class.dart
->  @override
+>  @override                                                                     // Line 13
 #  ^^^^^^^^^ storage.type.annotation.dart
->  String get a => '';
+>  String get a => '';                                                           // Line 14
 #  ^^^^^^ support.class.dart
 #         ^^^ keyword.declaration.dart
 #               ^^ keyword.operator.closure.dart
 #                  ^^ string.interpolated.single.dart
 #                    ^ punctuation.terminator.dart
 >
->  @override
+>  @override                                                                     // Line 16
 #  ^^^^^^^^^ storage.type.annotation.dart
->  set a(String value) {}
+>  set a(String value) {}                                                        // Line 17
 #  ^^^ keyword.declaration.dart
 #      ^ entity.name.function.dart
 #        ^^^^^^ support.class.dart
 >
->  void method() {}
+>  void method() {}                                                              // Line 19
 #  ^^^^ storage.type.primitive.dart
 #       ^^^^^^ entity.name.function.dart
->}
+>}                                                                               // Line 20
 >
->class Class4<T extends Class2> implements Class1 {}
+>class Class4<T extends Class2> implements Class1 {}                             // Line 22
 #^^^^^ keyword.declaration.dart
 #      ^^^^^^ support.class.dart
 #            ^ other.source.dart
@@ -65,45 +65,45 @@
 #                               ^^^^^^^^^^ keyword.declaration.dart
 #                                          ^^^^^^ support.class.dart
 >
->class MyClass {
+>class MyClass {                                                                 // Line 24
 #^^^^^ keyword.declaration.dart
 #      ^^^^^^^ support.class.dart
->  void method1() {}
+>  void method1() {}                                                             // Line 25
 #  ^^^^ storage.type.primitive.dart
 #       ^^^^^^^ entity.name.function.dart
->  void Method2() {}
+>  void Method2() {}                                                             // Line 26
 #  ^^^^ storage.type.primitive.dart
 #       ^^^^^^^ support.class.dart
->  void get() {}
+>  void get() {}                                                                 // Line 27
 #  ^^^^ storage.type.primitive.dart
 #       ^^^ entity.name.function.dart
->  void get<T>() {}
+>  void get<T>() {}                                                              // Line 28
 #  ^^^^ storage.type.primitive.dart
 #       ^^^ entity.name.function.dart
 #          ^ other.source.dart
 #           ^ support.class.dart
 #            ^ other.source.dart
->  void set() {}
+>  void set() {}                                                                 // Line 29
 #  ^^^^ storage.type.primitive.dart
 #       ^^^ entity.name.function.dart
->  void set<T>() {}
+>  void set<T>() {}                                                              // Line 30
 #  ^^^^ storage.type.primitive.dart
 #       ^^^ entity.name.function.dart
 #          ^ other.source.dart
 #           ^ support.class.dart
 #            ^ other.source.dart
 >
->  String? _foo;
+>  String? _foo;                                                                 // Line 32
 #  ^^^^^^ support.class.dart
 #        ^ keyword.operator.ternary.dart
 #              ^ punctuation.terminator.dart
->  String? get foo => _foo;
+>  String? get foo => _foo;                                                      // Line 33
 #  ^^^^^^ support.class.dart
 #        ^ keyword.operator.ternary.dart
 #          ^^^ keyword.declaration.dart
 #                  ^^ keyword.operator.closure.dart
 #                         ^ punctuation.terminator.dart
->  set foo(String? value) => _foo = value;
+>  set foo(String? value) => _foo = value;                                       // Line 34
 #  ^^^ keyword.declaration.dart
 #      ^^^ entity.name.function.dart
 #          ^^^^^^ support.class.dart
@@ -111,32 +111,32 @@
 #                         ^^ keyword.operator.closure.dart
 #                                 ^ keyword.operator.assignment.dart
 #                                        ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 35
 >
->void get() {}
+>void get() {}                                                                   // Line 37
 #^^^^ storage.type.primitive.dart
 #     ^^^ entity.name.function.dart
->void get<T>() {}
+>void get<T>() {}                                                                // Line 38
 #^^^^ storage.type.primitive.dart
 #     ^^^ entity.name.function.dart
 #        ^ other.source.dart
 #         ^ support.class.dart
 #          ^ other.source.dart
->void set() {}
+>void set() {}                                                                   // Line 39
 #^^^^ storage.type.primitive.dart
 #     ^^^ entity.name.function.dart
->void set<T>() {}
+>void set<T>() {}                                                                // Line 40
 #^^^^ storage.type.primitive.dart
 #     ^^^ entity.name.function.dart
 #        ^ other.source.dart
 #         ^ support.class.dart
 #          ^ other.source.dart
 >
->mixin MyMixin {}
+>mixin MyMixin {}                                                                // Line 42
 #^^^^^ keyword.declaration.dart
 #      ^^^^^^^ support.class.dart
 >
->mixin MyMixin2<T> on Class1 {}
+>mixin MyMixin2<T> on Class1 {}                                                  // Line 44
 #^^^^^ keyword.declaration.dart
 #      ^^^^^^^^ support.class.dart
 #              ^ other.source.dart
@@ -145,18 +145,18 @@
 #                  ^^ keyword.control.catch-exception.dart
 #                     ^^^^^^ support.class.dart
 >
->extension on String {}
+>extension on String {}                                                          // Line 46
 #^^^^^^^^^ keyword.declaration.dart
 #          ^^ keyword.control.catch-exception.dart
 #             ^^^^^^ support.class.dart
 >
->extension StringExtension on String {}
+>extension StringExtension on String {}                                          // Line 48
 #^^^^^^^^^ keyword.declaration.dart
 #          ^^^^^^^^^^^^^^^ support.class.dart
 #                          ^^ keyword.control.catch-exception.dart
 #                             ^^^^^^ support.class.dart
 >
->extension StringListExtension on List<String> {}
+>extension StringListExtension on List<String> {}                                // Line 50
 #^^^^^^^^^ keyword.declaration.dart
 #          ^^^^^^^^^^^^^^^^^^^ support.class.dart
 #                              ^^ keyword.control.catch-exception.dart
@@ -165,7 +165,7 @@
 #                                      ^^^^^^ support.class.dart
 #                                            ^ other.source.dart
 >
->extension<T extends String> on T {}
+>extension<T extends String> on T {}                                             // Line 52
 #^^^^^^^^^ keyword.declaration.dart
 #         ^ keyword.operator.comparison.dart
 #          ^ support.class.dart
@@ -175,15 +175,15 @@
 #                            ^^ keyword.control.catch-exception.dart
 #                               ^ support.class.dart
 >
->class my_lowercase_class {
+>class my_lowercase_class {                                                      // Line 54
 #^^^^^ keyword.declaration.dart
->  my_lowercase_class? foo() => null;
+>  my_lowercase_class? foo() => null;                                            // Line 55
 #                    ^ keyword.operator.ternary.dart
 #                      ^^^ entity.name.function.dart
 #                            ^^ keyword.operator.closure.dart
 #                               ^^^^ constant.language.dart
 #                                   ^ punctuation.terminator.dart
->  List<my_lowercase_class>? bar() => null;
+>  List<my_lowercase_class>? bar() => null;                                      // Line 56
 #  ^^^^ support.class.dart
 #      ^ other.source.dart
 #                         ^ other.source.dart
@@ -192,16 +192,16 @@
 #                                  ^^ keyword.operator.closure.dart
 #                                     ^^^^ constant.language.dart
 #                                         ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 57
 >
->class A1<T> {}
+>class A1<T> {}                                                                  // Line 59
 #^^^^^ keyword.declaration.dart
 #      ^^ support.class.dart
 #        ^ other.source.dart
 #         ^ support.class.dart
 #          ^ other.source.dart
 >
->class A2<T> extends A1<T> {}
+>class A2<T> extends A1<T> {}                                                    // Line 61
 #^^^^^ keyword.declaration.dart
 #      ^^ support.class.dart
 #        ^ other.source.dart
@@ -213,7 +213,7 @@
 #                       ^ support.class.dart
 #                        ^ other.source.dart
 >
->class A3<T> implements A1<T> {}
+>class A3<T> implements A1<T> {}                                                 // Line 63
 #^^^^^ keyword.declaration.dart
 #      ^^ support.class.dart
 #        ^ other.source.dart
@@ -225,7 +225,7 @@
 #                          ^ support.class.dart
 #                           ^ other.source.dart
 >
->class A4<T> extends Class1 with MyMixin2<T> {}
+>class A4<T> extends Class1 with MyMixin2<T> {}                                  // Line 65
 #^^^^^ keyword.declaration.dart
 #      ^^ support.class.dart
 #        ^ other.source.dart
@@ -239,27 +239,27 @@
 #                                         ^ support.class.dart
 #                                          ^ other.source.dart
 >
->base class MyBaseClass {}
+>base class MyBaseClass {}                                                       // Line 67
 #^^^^ keyword.declaration.dart
 #     ^^^^^ keyword.declaration.dart
 #           ^^^^^^^^^^^ support.class.dart
->interface class MyInterfaceClass {}
+>interface class MyInterfaceClass {}                                             // Line 68
 #^^^^^^^^^ keyword.declaration.dart
 #          ^^^^^ keyword.declaration.dart
 #                ^^^^^^^^^^^^^^^^ support.class.dart
->sealed class MySealedClass {}
+>sealed class MySealedClass {}                                                   // Line 69
 #^^^^^^ keyword.declaration.dart
 #       ^^^^^ keyword.declaration.dart
 #             ^^^^^^^^^^^^^ support.class.dart
->final class MyFinalClass {}
+>final class MyFinalClass {}                                                     // Line 70
 #^^^^^ storage.modifier.dart
 #      ^^^^^ keyword.declaration.dart
 #            ^^^^^^^^^^^^ support.class.dart
->mixin class MyMixinClass {}
+>mixin class MyMixinClass {}                                                     // Line 71
 #^^^^^ keyword.declaration.dart
 #      ^^^^^ keyword.declaration.dart
 #            ^^^^^^^^^^^^ support.class.dart
->macro class MyMacroClass {}
+>macro class MyMacroClass {}                                                     // Line 72
 #^^^^^ storage.modifier.dart
 #      ^^^^^ keyword.declaration.dart
 #            ^^^^^^^^^^^^ support.class.dart

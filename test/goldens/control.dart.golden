@@ -1,118 +1,118 @@
->// Copyright 2022 The Chromium Authors. All rights reserved.
+>// Copyright 2022 The Chromium Authors. All rights reserved.                    // Line 1
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// Use of this source code is governed by a BSD-style license that can be
+>// Use of this source code is governed by a BSD-style license that can be       // Line 2
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->// found in the LICENSE file.
+>// found in the LICENSE file.                                                   // Line 3
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
 >
->void err() {
+>void err() {                                                                    // Line 5
 #^^^^ storage.type.primitive.dart
 #     ^^^ entity.name.function.dart
->  try {
+>  try {                                                                         // Line 6
 #  ^^^ keyword.control.catch-exception.dart
->    throw '';
+>    throw '';                                                                   // Line 7
 #    ^^^^^ keyword.control.catch-exception.dart
 #          ^^ string.interpolated.single.dart
 #            ^ punctuation.terminator.dart
->  } on ArgumentError {
+>  } on ArgumentError {                                                          // Line 8
 #    ^^ keyword.control.catch-exception.dart
 #       ^^^^^^^^^^^^^ support.class.dart
->    rethrow;
+>    rethrow;                                                                    // Line 9
 #    ^^^^^^^ keyword.control.catch-exception.dart
 #           ^ punctuation.terminator.dart
->  } catch (e) {
+>  } catch (e) {                                                                 // Line 10
 #    ^^^^^ keyword.control.catch-exception.dart
->    print('e');
+>    print('e');                                                                 // Line 11
 #    ^^^^^ entity.name.function.dart
 #          ^^^ string.interpolated.single.dart
 #              ^ punctuation.terminator.dart
->  }
->}
+>  }                                                                             // Line 12
+>}                                                                               // Line 13
 >
->void loops() {
+>void loops() {                                                                  // Line 15
 #^^^^ storage.type.primitive.dart
 #     ^^^^^ entity.name.function.dart
->  while (1 > 2) {
+>  while (1 > 2) {                                                               // Line 16
 #  ^^^^^ keyword.control.dart
 #         ^ constant.numeric.dart
 #           ^ keyword.operator.comparison.dart
 #             ^ constant.numeric.dart
->    if (3 > 4) {
+>    if (3 > 4) {                                                                // Line 17
 #    ^^ keyword.control.dart
 #        ^ constant.numeric.dart
 #          ^ keyword.operator.comparison.dart
 #            ^ constant.numeric.dart
->      continue;
+>      continue;                                                                 // Line 18
 #      ^^^^^^^^ keyword.control.dart
 #              ^ punctuation.terminator.dart
->    } else {
+>    } else {                                                                    // Line 19
 #      ^^^^ keyword.control.dart
->      break;
+>      break;                                                                    // Line 20
 #      ^^^^^ keyword.control.dart
 #           ^ punctuation.terminator.dart
->    }
->    return;
+>    }                                                                           // Line 21
+>    return;                                                                     // Line 22
 #    ^^^^^^ keyword.control.return.dart
 #          ^ punctuation.terminator.dart
->  }
+>  }                                                                             // Line 23
 >
->  do {
+>  do {                                                                          // Line 25
 #  ^^ keyword.control.dart
->    print('');
+>    print('');                                                                  // Line 26
 #    ^^^^^ entity.name.function.dart
 #          ^^ string.interpolated.single.dart
 #             ^ punctuation.terminator.dart
->  } while (1 > 2);
+>  } while (1 > 2);                                                              // Line 27
 #    ^^^^^ keyword.control.dart
 #           ^ constant.numeric.dart
 #             ^ keyword.operator.comparison.dart
 #               ^ constant.numeric.dart
 #                 ^ punctuation.terminator.dart
->}
+>}                                                                               // Line 28
 >
->void switches() {
+>void switches() {                                                               // Line 30
 #^^^^ storage.type.primitive.dart
 #     ^^^^^^^^ entity.name.function.dart
->  Object? i = 1;
+>  Object? i = 1;                                                                // Line 31
 #  ^^^^^^ support.class.dart
 #        ^ keyword.operator.ternary.dart
 #            ^ keyword.operator.assignment.dart
 #              ^ constant.numeric.dart
 #               ^ punctuation.terminator.dart
->  switch (i as int) {
+>  switch (i as int) {                                                           // Line 32
 #  ^^^^^^ keyword.control.dart
 #            ^^ keyword.cast.dart
 #               ^^^ support.class.dart
->    case 1:
+>    case 1:                                                                     // Line 33
 #    ^^^^ keyword.control.dart
 #         ^ constant.numeric.dart
 #          ^ keyword.operator.ternary.dart
->      break;
+>      break;                                                                    // Line 34
 #      ^^^^^ keyword.control.dart
 #           ^ punctuation.terminator.dart
->    default:
+>    default:                                                                    // Line 35
 #    ^^^^^^^ keyword.control.dart
 #           ^ keyword.operator.ternary.dart
->      return;
+>      return;                                                                   // Line 36
 #      ^^^^^^ keyword.control.return.dart
 #            ^ punctuation.terminator.dart
->  }
->}
+>  }                                                                             // Line 37
+>}                                                                               // Line 38
 >
->void conditions() {
+>void conditions() {                                                             // Line 40
 #^^^^ storage.type.primitive.dart
 #     ^^^^^^^^^^ entity.name.function.dart
->  if (1 > 2) {
+>  if (1 > 2) {                                                                  // Line 41
 #  ^^ keyword.control.dart
 #      ^ constant.numeric.dart
 #        ^ keyword.operator.comparison.dart
 #          ^ constant.numeric.dart
->  } else if (3 > 4) {
+>  } else if (3 > 4) {                                                           // Line 42
 #    ^^^^ keyword.control.dart
 #         ^^ keyword.control.dart
 #             ^ constant.numeric.dart
 #               ^ keyword.operator.comparison.dart
 #                 ^ constant.numeric.dart
->  } else {}
+>  } else {}                                                                     // Line 43
 #    ^^^^ keyword.control.dart
->}
+>}                                                                               // Line 44
