@@ -8,7 +8,9 @@
 >///                                                                             // Line 4
 #^^^ comment.block.documentation.dart
 >int? x1;                                                                        // Line 5
-#^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^ support.class.dart
+#   ^ keyword.operator.ternary.dart
+#       ^ punctuation.terminator.dart
 >
 >/// ```                                                                         // Line 7
 #^^^^^^^ comment.block.documentation.dart
