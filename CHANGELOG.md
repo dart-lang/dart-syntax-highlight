@@ -1,3 +1,7 @@
+## 1.6.0 (2026-07-28)
+
+- Improved handling of unclosed code blocks in doc comments.
+
 ## 1.5.0 (2026-02-23)
 
 - Improved handling of `new` and `factory`, including in syntax for Primary Constructors

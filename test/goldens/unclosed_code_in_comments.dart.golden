@@ -1,0 +1,45 @@
+>/// Text                                                                        // Line 1
+#^^^^^^^^ comment.block.documentation.dart
+>/// ```                                                                         // Line 2
+#^^^^^^^ comment.block.documentation.dart
+>/// code                                                                        // Line 3
+#^^^^ comment.block.documentation.dart
+#    ^^^^ comment.block.documentation.dart variable.other.source.dart
+>///                                                                             // Line 4
+#^^^ comment.block.documentation.dart
+>int? x1;                                                                        // Line 5
+#^^^ support.class.dart
+#   ^ keyword.operator.ternary.dart
+#       ^ punctuation.terminator.dart
+>
+>/// ```                                                                         // Line 7
+#^^^^^^^ comment.block.documentation.dart
+>/// code                                                                        // Line 8
+#^^^^^^^^ comment.block.documentation.dart
+>///                                                                             // Line 9
+#^^^ comment.block.documentation.dart
+>int? x2;                                                                        // Line 10
+#^^^ support.class.dart
+#   ^ keyword.operator.ternary.dart
+#       ^ punctuation.terminator.dart
+>
+>/// Text                                                                        // Line 12
+#^^^^^^^^ comment.block.documentation.dart
+>/// ```                                                                         // Line 13
+#^^^^^^^ comment.block.documentation.dart
+>/// code                                                                        // Line 14
+#^^^^ comment.block.documentation.dart
+#    ^^^^ comment.block.documentation.dart variable.other.source.dart
+>int? x3;                                                                        // Line 15
+#^^^ support.class.dart
+#   ^ keyword.operator.ternary.dart
+#       ^ punctuation.terminator.dart
+>
+>/// ```                                                                         // Line 17
+#^^^^^^^ comment.block.documentation.dart
+>/// code                                                                        // Line 18
+#^^^^^^^^ comment.block.documentation.dart
+>int? x4;                                                                        // Line 19
+#^^^ support.class.dart
+#   ^ keyword.operator.ternary.dart
+#       ^ punctuation.terminator.dart
