@@ -24,6 +24,8 @@ var doc3;
 
 /// Multiline dartdoc comment with indented code.
 ///
+///    notcode
+///
 ///     code1
 ///     code2
 ///
@@ -56,6 +58,8 @@ var blockDoc2;
 var blockDoc3;
 
 /** Block dartdoc comment with indented code.
+ *
+ *    notcode
  *
  *     code1
  *     code2

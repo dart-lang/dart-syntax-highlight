@@ -51,228 +51,235 @@
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 >///                                                                             // Line 26
 #^^^ comment.block.documentation.dart
->///     code1                                                                   // Line 27
-#^^^^^^^^ comment.block.documentation.dart
-#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
->///     code2                                                                   // Line 28
-#^^^^^^^^ comment.block.documentation.dart
-#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
->///                                                                             // Line 29
+>///    notcode                                                                  // Line 27
+#^^^^^^^^^^^^^^ comment.block.documentation.dart
+>///                                                                             // Line 28
 #^^^ comment.block.documentation.dart
->///     code3                                                                   // Line 30
+>///     code1                                                                   // Line 29
+#^^^^^^^^ comment.block.documentation.dart
+#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
+>///     code2                                                                   // Line 30
 #^^^^^^^^ comment.block.documentation.dart
 #        ^^^^^ comment.block.documentation.dart variable.other.source.dart
 >///                                                                             // Line 31
 #^^^ comment.block.documentation.dart
->/// ...                                                                         // Line 32
+>///     code3                                                                   // Line 32
+#^^^^^^^^ comment.block.documentation.dart
+#        ^^^^^ comment.block.documentation.dart variable.other.source.dart
+>///                                                                             // Line 33
+#^^^ comment.block.documentation.dart
+>/// ...                                                                         // Line 34
 #^^^^^^^ comment.block.documentation.dart
->var doc4;                                                                       // Line 33
+>var doc4;                                                                       // Line 35
 #^^^ storage.type.primitive.dart
 #        ^ punctuation.terminator.dart
 >
->/** Block dartdoc comment with triple backticks.                                // Line 35
+>/** Block dartdoc comment with triple backticks.                                // Line 37
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *                                                                              // Line 36
+> *                                                                              // Line 38
 #^^ comment.block.documentation.dart
-> * ```                                                                          // Line 37
-#^^^^^^ comment.block.documentation.dart
-> * code                                                                         // Line 38
-#^^^ comment.block.documentation.dart
-#   ^^^^ comment.block.documentation.dart variable.other.source.dart
 > * ```                                                                          // Line 39
 #^^^^^^ comment.block.documentation.dart
-> *                                                                              // Line 40
-#^^ comment.block.documentation.dart
-> * ...                                                                          // Line 41
-#^^^^^^ comment.block.documentation.dart
-> */                                                                             // Line 42
-#^^^ comment.block.documentation.dart
->var blockDoc1;                                                                  // Line 43
-#^^^ storage.type.primitive.dart
-#             ^ punctuation.terminator.dart
->
->/** Block dartdoc comment with unclosed triple backticks.                       // Line 45
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *                                                                              // Line 46
-#^^ comment.block.documentation.dart
-> * ```                                                                          // Line 47
-#^^^^^^ comment.block.documentation.dart
-> * code                                                                         // Line 48
+> * code                                                                         // Line 40
 #^^^ comment.block.documentation.dart
 #   ^^^^ comment.block.documentation.dart variable.other.source.dart
-> */                                                                             // Line 49
+> * ```                                                                          // Line 41
+#^^^^^^ comment.block.documentation.dart
+> *                                                                              // Line 42
+#^^ comment.block.documentation.dart
+> * ...                                                                          // Line 43
+#^^^^^^ comment.block.documentation.dart
+> */                                                                             // Line 44
 #^^^ comment.block.documentation.dart
->var blockDoc2;                                                                  // Line 50
+>var blockDoc1;                                                                  // Line 45
 #^^^ storage.type.primitive.dart
 #             ^ punctuation.terminator.dart
 >
->/** Block dartdoc comment with unclosed backticks.                              // Line 52
+>/** Block dartdoc comment with unclosed triple backticks.                       // Line 47
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
+> *                                                                              // Line 48
+#^^ comment.block.documentation.dart
+> * ```                                                                          // Line 49
+#^^^^^^ comment.block.documentation.dart
+> * code                                                                         // Line 50
+#^^^ comment.block.documentation.dart
+#   ^^^^ comment.block.documentation.dart variable.other.source.dart
+> */                                                                             // Line 51
+#^^^ comment.block.documentation.dart
+>var blockDoc2;                                                                  // Line 52
+#^^^ storage.type.primitive.dart
+#             ^ punctuation.terminator.dart
+>
+>/** Block dartdoc comment with unclosed backticks.                              // Line 54
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *                                                                              // Line 53
+> *                                                                              // Line 55
 #^^ comment.block.documentation.dart
-> * `code                                                                        // Line 54
+> * `code                                                                        // Line 56
 #^^^^^^^^ comment.block.documentation.dart
-> */                                                                             // Line 55
+> */                                                                             // Line 57
 #^^^ comment.block.documentation.dart
->var blockDoc3;                                                                  // Line 56
+>var blockDoc3;                                                                  // Line 58
 #^^^ storage.type.primitive.dart
 #             ^ punctuation.terminator.dart
 >
->/** Block dartdoc comment with indented code.                                   // Line 58
+>/** Block dartdoc comment with indented code.                                   // Line 60
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *                                                                              // Line 59
+> *                                                                              // Line 61
 #^^ comment.block.documentation.dart
-> *     code1                                                                    // Line 60
+> *    notcode                                                                   // Line 62
+#^^^^^^^^^^^^^ comment.block.documentation.dart
+> *                                                                              // Line 63
+#^^ comment.block.documentation.dart
+> *     code1                                                                    // Line 64
 #^^^^^^^ comment.block.documentation.dart
 #       ^^^^^ comment.block.documentation.dart variable.other.source.dart
-> *     code2                                                                    // Line 61
+> *     code2                                                                    // Line 65
 #^^^^^^^ comment.block.documentation.dart
 #       ^^^^^ comment.block.documentation.dart variable.other.source.dart
-> *                                                                              // Line 62
+> *                                                                              // Line 66
 #^^ comment.block.documentation.dart
-> *     code3                                                                    // Line 63
+> *     code3                                                                    // Line 67
 #^^^^^^^ comment.block.documentation.dart
 #       ^^^^^ comment.block.documentation.dart variable.other.source.dart
-> *                                                                              // Line 64
+> *                                                                              // Line 68
 #^^ comment.block.documentation.dart
-> * ...                                                                          // Line 65
+> * ...                                                                          // Line 69
 #^^^^^^ comment.block.documentation.dart
-> */                                                                             // Line 66
+> */                                                                             // Line 70
 #^^^ comment.block.documentation.dart
->var blockDoc4;                                                                  // Line 67
+>var blockDoc4;                                                                  // Line 71
 #^^^ storage.type.primitive.dart
 #             ^ punctuation.terminator.dart
 >
->/// ``                                                                          // Line 69
+>/// ``                                                                          // Line 73
 #^^^^^^ comment.block.documentation.dart
->var noInlineCode;                                                               // Line 70
+>var noInlineCode;                                                               // Line 74
 #^^^ storage.type.primitive.dart
 #                ^ punctuation.terminator.dart
 >
->/// `Stream<int>`                                                               // Line 72
+>/// `Stream<int>`                                                               // Line 76
 #^^^^ comment.block.documentation.dart
 #    ^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
->var inlineCode;                                                                 // Line 73
+>var inlineCode;                                                                 // Line 77
 #^^^ storage.type.primitive.dart
 #              ^ punctuation.terminator.dart
 >
->/// ` `                                                                         // Line 75
+>/// ` `                                                                         // Line 79
 #^^^^ comment.block.documentation.dart
 #    ^^^ comment.block.documentation.dart variable.other.source.dart
->var inlineCodeJustWhitespace;                                                   // Line 76
+>var inlineCodeJustWhitespace;                                                   // Line 80
 #^^^ storage.type.primitive.dart
 #                            ^ punctuation.terminator.dart
 >
->/*                                                                              // Line 78
+>/*                                                                              // Line 82
 #^^ comment.block.dart
-> * Old-style dartdoc                                                            // Line 79
+> * Old-style dartdoc                                                            // Line 83
 #^^^^^^^^^^^^^^^^^^^^ comment.block.dart
-> *                                                                              // Line 80
+> *                                                                              // Line 84
 #^^ comment.block.dart
-> * ...                                                                          // Line 81
+> * ...                                                                          // Line 85
 #^^^^^^ comment.block.dart
-> */                                                                             // Line 82
+> */                                                                             // Line 86
 #^^^ comment.block.dart
->var b;                                                                          // Line 83
+>var b;                                                                          // Line 87
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
->/* Inline block comment */                                                      // Line 85
+>/* Inline block comment */                                                      // Line 89
 #^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.dart
->var c;                                                                          // Line 86
+>var c;                                                                          // Line 90
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
->/**                                                                             // Line 88
+>/**                                                                             // Line 92
 #^^^ comment.block.documentation.dart
-> * Nested block                                                                 // Line 89
+> * Nested block                                                                 // Line 93
 #^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *                                                                              // Line 90
+> *                                                                              // Line 94
 #^^ comment.block.documentation.dart
-> * /**                                                                          // Line 91
+> * /**                                                                          // Line 95
 #^^^^^^ comment.block.documentation.dart
-> *  * Nested block                                                              // Line 92
+> *  * Nested block                                                              // Line 96
 #^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
-> *  */                                                                          // Line 93
+> *  */                                                                          // Line 97
 #^^^^^^ comment.block.documentation.dart
-> */                                                                             // Line 94
+> */                                                                             // Line 98
 #^^^ comment.block.documentation.dart
->var d;                                                                          // Line 95
+>var d;                                                                          // Line 99
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
->/**                                                                             // Line 97
+>/**                                                                             // Line 101
 #^^^ comment.block.documentation.dart
-> *   /**                                                                        // Line 98
+> *   /**                                                                        // Line 102
 #^^^^^^^^ comment.block.documentation.dart
-> *    * bbb                                                                     // Line 99
-#^^^^^^ comment.block.documentation.dart
-#      ^^^^^ comment.block.documentation.dart variable.other.source.dart
-> *    */                                                                        // Line 100
+> *    * bbb                                                                     // Line 103
+#^^^^^^^^^^^ comment.block.documentation.dart
+> *    */                                                                        // Line 104
 #^^^^^^^^ comment.block.documentation.dart
-> */                                                                             // Line 101
+> */                                                                             // Line 105
 #^^^ comment.block.documentation.dart
->var d2;                                                                         // Line 102
+>var d2;                                                                         // Line 106
 #^^^ storage.type.primitive.dart
 #      ^ punctuation.terminator.dart
 >
->/**                                                                             // Line 104
+>/**                                                                             // Line 108
 #^^^ comment.block.documentation.dart
-> * Nested                                                                       // Line 105
+> * Nested                                                                       // Line 109
 #^^^^^^^^^ comment.block.documentation.dart
-> *                                                                              // Line 106
+> *                                                                              // Line 110
 #^^ comment.block.documentation.dart
-> * /* Inline */                                                                 // Line 107
+> * /* Inline */                                                                 // Line 111
 #^^^ comment.block.documentation.dart
 #   ^^^^^^^^^^^^ comment.block.documentation.dart comment.block.dart
-> */                                                                             // Line 108
+> */                                                                             // Line 112
 #^^^ comment.block.documentation.dart
->var e;                                                                          // Line 109
+>var e;                                                                          // Line 113
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
->/* Nested /* Inline */ */                                                       // Line 111
+>/* Nested /* Inline */ */                                                       // Line 115
 #^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.dart
->var f;                                                                          // Line 112
+>var f;                                                                          // Line 116
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
->// Simple comment                                                               // Line 114
+>// Simple comment                                                               // Line 118
 #^^^^^^^^^^^^^^^^^ comment.line.double-slash.dart
->var g;                                                                          // Line 115
+>var g;                                                                          // Line 119
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
->/// Dartdoc with reference to [a].                                              // Line 117
+>/// Dartdoc with reference to [a].                                              // Line 121
 #^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 #                              ^^^ comment.block.documentation.dart variable.name.source.dart
 #                                 ^ comment.block.documentation.dart
->/// And a link to [example.org](http://example.org/).                           // Line 118
+>/// And a link to [example.org](http://example.org/).                           // Line 122
 #^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 #                  ^^^^^^^^^^^^^ comment.block.documentation.dart variable.name.source.dart
 #                               ^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
->var h;                                                                          // Line 119
+>var h;                                                                          // Line 123
 #^^^ storage.type.primitive.dart
 #     ^ punctuation.terminator.dart
 >
->class A<T /* comment */ > {                                                     // Line 121
+>class A<T /* comment */ > {                                                     // Line 125
 #^^^^^ keyword.declaration.dart
 #      ^ support.class.dart
 #       ^ other.source.dart
 #        ^ support.class.dart
 #          ^^^^^^^^^^^^^ comment.block.dart
 #                        ^ other.source.dart
->  void b<T /* comment */ >() {}                                                 // Line 122
+>  void b<T /* comment */ >() {}                                                 // Line 126
 #  ^^^^ storage.type.primitive.dart
 #        ^ keyword.operator.comparison.dart
 #         ^ support.class.dart
 #           ^^^^^^^^^^^^^ comment.block.dart
 #                         ^ keyword.operator.comparison.dart
->  Future<T /* comment */ > c() {}                                               // Line 123
+>  Future<T /* comment */ > c() {}                                               // Line 127
 #  ^^^^^^ support.class.dart
 #        ^ other.source.dart
 #         ^ support.class.dart
 #           ^^^^^^^^^^^^^ comment.block.dart
 #                         ^ other.source.dart
 #                           ^ entity.name.function.dart
->}                                                                               // Line 124
+>}                                                                               // Line 128

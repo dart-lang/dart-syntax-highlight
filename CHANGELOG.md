@@ -1,3 +1,7 @@
+## 1.7.0 (2026-09-10)
+
+- Require 5 spaces (4 + 1 after comment markers) for text to be considered code in documentation comments ([see here](https://dart.dev/effective-dart/documentation#markdown)).
+
 ## 1.6.0 (2026-07-28)
 
 - Improved handling of unclosed code blocks in doc comments.
