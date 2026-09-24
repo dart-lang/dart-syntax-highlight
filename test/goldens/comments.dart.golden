@@ -294,11 +294,14 @@
 #^^^^ comment.block.documentation.dart
 #    ^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
 >/// ```                                                                         // Line 134
-#^^^^^^^ comment.block.documentation.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^ comment.block.documentation.dart variable.other.source.dart
 >/// three backticks is nested code                                              // Line 135
-#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
 >/// ```                                                                         // Line 136
-#^^^^^^^ comment.block.documentation.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^ comment.block.documentation.dart variable.other.source.dart
 >/// more code                                                                   // Line 137
 #^^^^ comment.block.documentation.dart
 #    ^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
@@ -322,16 +325,17 @@
 #^^^^ comment.block.documentation.dart
 #    ^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
 >/// ```                                                                         // Line 147
-#^^^^^^^ comment.block.documentation.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^ comment.block.documentation.dart variable.other.source.dart
 >/// still code                                                                  // Line 148
-#^^^^^^^^^^^^^^ comment.block.documentation.dart
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
 >/// ``````````````````                                                          // Line 149
 #^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
 >///                                                                             // Line 150
 #^^^ comment.block.documentation.dart
 >/// Text                                                                        // Line 151
-#^^^^ comment.block.documentation.dart
-#    ^^^^ comment.block.documentation.dart variable.other.source.dart
+#^^^^^^^^ comment.block.documentation.dart
 >var moreClosingBackticks;                                                       // Line 152
 #^^^ storage.type.primitive.dart
 #                        ^ punctuation.terminator.dart

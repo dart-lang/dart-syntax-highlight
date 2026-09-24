@@ -1,3 +1,7 @@
+## 1.8.0 (2026-09-24)
+
+- Support fenced code blocks in documentation comments that use more than three backticks to allow nesting.
+
 ## 1.7.0 (2026-09-10)
 
 - Require 5 spaces (4 + 1 after comment markers) for text to be considered code in documentation comments ([see here](https://dart.dev/effective-dart/documentation#markdown)).
