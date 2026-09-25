@@ -283,3 +283,59 @@
 #                         ^ other.source.dart
 #                           ^ entity.name.function.dart
 >}                                                                               // Line 128
+>
+>/// Multiline dartdoc comment with more than three backticks.                   // Line 130
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
+>///                                                                             // Line 131
+#^^^ comment.block.documentation.dart
+>/// ``````                                                                      // Line 132
+#^^^^^^^^^^ comment.block.documentation.dart
+>/// code in six backticks                                                       // Line 133
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+>/// ```                                                                         // Line 134
+#^^^^ comment.block.documentation.dart
+#    ^^^ comment.block.documentation.dart variable.other.source.dart
+>/// three backticks is nested code                                              // Line 135
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+>/// ```                                                                         // Line 136
+#^^^^ comment.block.documentation.dart
+#    ^^^ comment.block.documentation.dart variable.other.source.dart
+>/// more code                                                                   // Line 137
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+>/// ``````                                                                      // Line 138
+#^^^^^^^^^^ comment.block.documentation.dart
+>///                                                                             // Line 139
+#^^^ comment.block.documentation.dart
+>/// Text                                                                        // Line 140
+#^^^^^^^^ comment.block.documentation.dart
+>var moreBackticks;                                                              // Line 141
+#^^^ storage.type.primitive.dart
+#                 ^ punctuation.terminator.dart
+>
+>/// Multiline dartdoc comment with more closing backticks.                      // Line 143
+#^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
+>///                                                                             // Line 144
+#^^^ comment.block.documentation.dart
+>/// ``````                                                                      // Line 145
+#^^^^^^^^^^ comment.block.documentation.dart
+>/// code in six backticks                                                       // Line 146
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+>/// ```                                                                         // Line 147
+#^^^^ comment.block.documentation.dart
+#    ^^^ comment.block.documentation.dart variable.other.source.dart
+>/// still code                                                                  // Line 148
+#^^^^ comment.block.documentation.dart
+#    ^^^^^^^^^^ comment.block.documentation.dart variable.other.source.dart
+>/// ``````````````````                                                          // Line 149
+#^^^^^^^^^^^^^^^^^^^^^^ comment.block.documentation.dart
+>///                                                                             // Line 150
+#^^^ comment.block.documentation.dart
+>/// Text                                                                        // Line 151
+#^^^^^^^^ comment.block.documentation.dart
+>var moreClosingBackticks;                                                       // Line 152
+#^^^ storage.type.primitive.dart
+#                        ^ punctuation.terminator.dart
